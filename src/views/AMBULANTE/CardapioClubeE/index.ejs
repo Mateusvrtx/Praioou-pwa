@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/CardapioClubeE/assets/img/iconWeb.svg">
+    <script src="/ambulante/CardapioClubeE/assets/script.js" defer></script>
+    <link rel="stylesheet" href="/ambulante/CardapioClubeE/assets/style.css">
+    <title>Trocar Conta</title>
+</head>
+<body>
+    <img src="/ambulante/CardapioClubeE/assets/img/logo.png" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/HomeClick.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/CardapioClubeE/assets/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <div class="caixa">
+        <div class="titulo">
+            <h1>Selecione os itens que deseja no seu cardapio</h1>
+        </div>
+        <div class="container-cardapio">
+            <% produtos.forEach(produto => {
+                let produtoClube = 'false';
+                if (produto.bl_produto_clube === true) {
+                    produtoClube = 'true'; 
+                }
+            %>
+                <div class="caixa-comida">
+                    <img src="/uploads/<%= produto.nm_imgProduto %>" alt="" class="imgProduto">
+                    <h1 class="nome-comida"><%= produto.nm_produto %></h1>
+                    <div class="pontoss">
+                        <p class="valor">R$ <%= produto.vl_produto %></p>
+                        <div class="transform">
+                            <img src="/ambulante/CardapioClubeE/assets/img/transform.png" alt="" width="9vw">
+                        </div>
+                        <p class="pontos"><%= produto.vl_produto * 10 %> Pontos</p>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="produtos" id="<%= produto.cd_produto %>" value="<%= produtoClube %>">
+                        <label for="<%= produto.cd_produto %>"></label>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        
+            
+        </div>
+        <div class="caixa-azul">
+            <div class="btn-edit">
+                <button id="btnAddProduto">Adicionar produtos selecionados</button>
+                <h1 style="margin: 0; font-size: 7vw;" id="contador">a</h1>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

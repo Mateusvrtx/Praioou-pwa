@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <link rel="stylesheet" href="/ambulante/AlterarDados/assets/style.css">
+    <title></title>
+</head>
+<body>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <container class="Bcgd">
+        <h1>Seus Dados</h1>
+        <section class="Form">
+            <div class="ajusteForm">
+
+                <p class="NmSm">Nome</p>
+                <div class="input">
+                    <p>Um nome qualquer</p>
+                    <img src="ambulante/AlterarDados/assets/img/Lapis.png" alt="" class="lapis">
+                </div>
+
+                <p class="NmSm">Sobrenome</p>
+                <div class="input">
+                    <p>Um nome qualquer</p>
+                    <img src="ambulante/AlterarDados/assets/img/Lapis.png" alt="" class="lapis">
+                </div>
+
+                <p class="NmSm">Telefone</p>
+                <section class="tel">
+                    <div class="Pais">
+                        <img src="ambulante/AlterarDados/assets/img/BandeiraBrasil.png" alt="" class="bandeira">
+                        <img src="ambulante/AlterarDados/assets/img/Seta.png" alt="" class="seta">
+                    </div>
+                    <div class="inputN">
+                        <div class="ajusteCd">
+                            <p class="Parag" id="CodigoP">+55</p>
+                            <p class="Parag">(13) 974035658</p>
+                        </div>
+                        <img src="ambulante/AlterarDados/assets/img/Lapis.png" alt="" class="lapis">
+                    </div>
+                </section>
+
+                <p class="NmSm">CPF</p>
+                <section class="cpf">
+                    <div class="inputCpf">
+                        <p class="Parag">234.234.234-34</p>
+                    </div>
+                    <div id="info">
+                        <img src="ambulante/AlterarDados/assets/img/Informacao.png" alt="" >
+                    </div>
+                </section>
+
+                <section class="ajusteBtn">
+                    <div class="Btn">Salvar</div>
+                </section>
+
+                <section class="link">
+                    <p><a href="">Entrar em contato</a></p>
+                </section>
+
+            </div>
+        </section>
+    </container>
+
+    <section id="PopUp">
+        <h1 class="H1Pop">Ops, temos um problema</h1>
+        <p class="ParagPop">
+            Você não pode alterar o seu CPF, caso você tenha visto algo de errado ou tenha visto que digitou algum numero errado, entre em contato conosco para poder editar seu CPF
+        </p>
+    </section>
+
+    <script src="/ambulante/AlterarDados/assets/script.js"></script>
+</body>
+</html>

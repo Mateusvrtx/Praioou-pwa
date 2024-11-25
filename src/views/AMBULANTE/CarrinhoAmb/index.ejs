@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/CarrinhoAmb/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/CarrinhoAmb/assets/style.css">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <title>Carrinho</title>
+</head>
+
+<body>
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/HomeClick.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>
+
+    <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+
+            <div class="slide first">
+                <img src="<%= primeiraFoto %>" alt="imagem fofa">
+            </div>
+            
+            <% outrasFotos.forEach(foto => { %>
+                <div class="slide">
+                    <img src="<%= foto %>" alt="imagem carrinho">
+                </div>
+            <% }) %>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+
+    </div>
+
+    <div class="Complex">
+        <h2 class="titleB">
+            <%= carrinho.nm_carrinho %>
+        </h2>
+        <div class="edita">
+            <div class="nameBtn">
+                <h2 style="font-size: 6vw;">R$ <%= carrinho.vl_reserva %>
+                </h2>
+                <h5 class="ajustar">Por 4 Cadeiras</h5>
+            </div>
+            <div class="btn">
+                <button class="butão" id="abreConjuntos">Conjuntos</button>
+            </div>
+            <!-- BIANCA - modal dos Conjuntos das cadeiras disponíveis  -->
+             <div id="modalConjuntos" class="modal-conjuntos">
+                <img src="/ambulante/CarrinhoAmb/assets/img/fundoModal.png" alt="fundo de praia do modal" class="img-modal">
+                <div class="modal-conteudo">
+                    <span id="fechaConjuntos" class="icon-fechar">&times;</span>
+                    <span class="icon-dica" id="abreEsclarecimento">&quest;</span>
+                    <p class="title">Selecione quantos conjuntos estão ocupados</p>
+                        <div id="conjuntosDisponiveis"></div>
+                    <div class="ajuste-salvar">
+                        <button class="btn-salvar" id="salvarConjuntos">Salvar alterações</button>
+                    </div>
+                    
+                </div>
+                <!-- Modal de Esclarecimento -->
+                <div id="modalEsclarecimento">
+                    <div class="ajuste-title">
+                        <img class="icon-dica" src="https://s3-alpha-sig.figma.com/img/73c2/175e/959bf52ef9a210268adb685ebcbfb059?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=a-MS8uMbhWiG0VHA8fvRdf0yRXZ7YC1oLcOMygte7EQpqVlEFXQeRSO1XUCsGhnPZptd~wEIiDLPy5UyjitXWhu4OOXm0Pg0QiWBKKR96JHH9vV7bpQBB3x2Nh9MmffCHgMTcQaUG9UC8ZmDgSHy~sq7sB0RHpfehEHz4HYh0luNzkmThs2Mzr06wwNXTBlSLE-LGy-yq4Cj8tmaPA5XmDBe6c2zzMsXuqZxaBmpsn1uggxguff8lnpzXqXWq4fCHfG5F7fx1VveX-OvwcDpByD5QzRr3S1SUrkkMZ6ur6I9k5vIO5A-h5VzRxWTLpqqSVa0K-vzx2vgFr3BQtnmGw__" alt="ícone de interrogação dentro de um círculo">
+                        <h3 class="ajuste-text">Conjuntos ocupados</h3>
+                    </div>
+                    <span class="icon-fechar" id="fechaEsclarecimento">&times;</span>    
+                    <p class="ajuste-text">
+                        Para marcar algum conjunto como ocupado basta clicar nele até ele se tornar cinza, isso nos ajuda a ter um maior controle sobre os seus conjuntos e assim evitar erros na hora que seus clientes forem fazer uma reserva.
+                        Para marcar um conjunto ocupado (cinza) como disponível basta clicar de novo até o mesmo ficar colorido.
+                        Ao final das suas alterações não se esqueça de salvá-las.
+                    </p>
+                </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="textos">
+        <p class="descri">
+            <%= carrinho.ds_carrinho %>
+        </p>
+        <div class="locali">
+            <p style="color:black; font-weight: 600;">Localização:</p>
+            <p class="ender">
+                <%= carrinho.ds_localizacao %>
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <a style="text-decoration: none;" href="/AddCardapio/<%= carrinho.cd_carrinho   %>">
+            <div class="CardLink">
+                <img src="/ambulante/CarrinhoAmb/assets/img/edit.png" alt="">
+                <h3>Editar Cardápio</h3>
+            </div>
+        </a>
+        <a href="/AddClube" style="text-decoration: none;"><div class="CardLink">
+            <img src="/ambulante/CarrinhoAmb/assets/img/clubeCriar.png" alt="">
+            <h3>Adicionar Clube</h3>
+        </div></a>
+        <a href="/editarCarrinho/<%= carrinho.cd_carrinho %>" style="text-decoration: none;">
+            <div class="CardLink">
+                <img src="/ambulante/CarrinhoAmb/assets/img/config.png" alt="">
+                <h3>Editar Carrinho</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="MediaTotal">
+        <div class="Media">
+            <h1 class="NumberMedia">4.7</h1>
+            <img class="estrelaP" src="/ambulante/CarrinhoAmb/assets/img/estrelas.png" alt="">
+        </div>
+        <h3 class="Total"><strong>393</strong> Comentários</h3>
+    </div>
+
+    <div class="NumberComent">
+
+
+        <div class="treeComent">
+
+            <div class="caixaComent">
+                <h4 style="font-size: 5vw; color: #FFBF26;">5</h4>
+                <img class="estrela" src="/ambulante/CarrinhoAmb/assets/img/estrelas.png" alt="">
+                <div class="CollumComent">
+                    <p style="font-weight: 700; font-size: 4vw;"    >158</p>
+                    <p class="long">Comentarios</p>
+                </div>
+            </div>
+
+            <div class="caixaComent">
+                <h4 style="font-size: 5vw; color: #FFBF26;">4</h4>
+                <img class="estrela" src="/ambulante/CarrinhoAmb/assets/img/estrelas.png" alt="">
+                <div class="CollumComent">
+                    <p style="font-weight: 700; font-size: 4vw;">128</p>
+                    <p class="long">Comentarios</p>
+                </div>
+            </div>
+
+            <div class="caixaComent">
+                <h4 style="font-size: 5vw; color: #FFBF26;">3</h4>
+                <img class="estrela" src="/ambulante/CarrinhoAmb/assets/img/estrelas.png" alt="">
+                <div class="CollumComent">
+                    <p style="font-weight: 700; font-size: 4vw;">18</p>
+                    <p class="long">Comentarios</p>
+                </div>
+            </div>
+        </div>
+
+<div class="twoComent">
+
+    <div class="caixaComent">
+        <h4 style="font-size: 5vw; color: #FFBF26;">4</h4>
+        <img class="estrela" src="/ambulante/CarrinhoAmb/assets/img/estrelas.png" alt="">
+        <div class="CollumComent">
+            <p style="font-weight: 700; font-size: 4vw;">128</p>
+            <p class="long">Comentarios</p>
+        </div>
+    </div>
+    
+    <div class="caixaComent">
+        <h4 style="font-size: 5vw; color: #FFBF26;">3</h4>
+        <img class="estrela" src="/ambulante/CarrinhoAmb/assets/img/estrelas.png" alt="">
+        <div class="CollumComent">
+            <p style="font-weight: 700; font-size: 4vw;">18</p>
+            <p class="long">Comentarios</p>
+        </div>
+    </div>
+        </div>
+
+</div>
+
+<!-- BIANCA: tô indo de acordo com a minha parte do tutoial depois da tela inicialB -->
+<container id="Passo6">
+    <div class="blur"></div>
+    <div class="CardP6">
+        <div class="baseP1">
+        <img src="/ambulante/padrao/img/coquinho.svg" class="imgCoquinhoP1">
+        <p>Clica aqui nesse carrinho que eu vou te mostrar uma coisa muito legal!</p>
+        <div class="DownT">
+            <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+            <img src="/ambulante/InicialB/assets/img/setaT.png"id="setaP1" class="imgSeta">
+        </div>
+    </div>
+</container>
+
+</body>
+<script src="/ambulante/CarrinhoAmb/assets/script.js"></script>
+
+</html>

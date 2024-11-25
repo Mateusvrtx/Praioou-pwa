@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/banhista/ClubeEntrar/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/banhista//ClubeEntrar/assets/style.css">
+    <title>Entrar em um clube</title>
+</head>
+<body>
+
+    <img src="/banhista/ClubeEntrar/assets/img/logo.png" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/cardapio/assets/img/HomeClick.png" >Inicio</a>
+            <a href="#" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png" alt="">Reserva</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png" alt="">Sacola</a>
+            <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png" alt="">Perfil</a>
+          </nav>
+    </div>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/planos/assets/img/voltar.png" id="voltar"></a>
+        <a href=""><img class="Clube" src="/banhista/carrinho/assets/img/coroa.png" alt=""></a>
+    </header>
+
+    <div class="perfil">
+
+        <div class="img-barraca">
+            <img src="/uploads/<%=ftCarrinho%>" alt="">
+        </div>
+
+        <div class="info-barraca">
+            <div class="nome-barraca">
+                <p class="titulo"><%= clube.nm_clube %></p>
+                <p class="data">Criado em: <%= new Date(clube.dt_criacao).toLocaleDateString('pt-BR')%></p>
+            </div>
+            <div class="membros">
+                <p class="quantidade"><%=membros%></p>
+                <p class="membros-text">membros</p>
+            </div>
+        </div>
+
+        <div class="btn">
+            <div class="btn-participar">
+                <p class="titu-btn">Participar</p>
+                <p class="preco"> R$ <%= clube.vl_entrada %></p>
+            </div>
+        </div>
+        
+        <div class="caixa">
+            <div class="caixa-beneficios">
+                <p class="titulo-beneficios">Benefícios</p>
+                <div class="lista">
+                    <ul class="vantagens">
+                        <li>Ganho de pontos </li>
+                        <li>Troca de pontos por produtos</li>
+                        <li>Itens exclusivos na barraca</li>
+                        <li>Tolerância aumentada</li>
+                        <li>Descontos exclusivos</li>
+                        <li>Avisos antecipados</li>
+                    </ul>
+                </div>
+                <p class="subtitulo-beneficios">Diferencial</p>
+                <div class="diferencial">
+                    <p class="texto-diferencial"><%= clube.ds_diferencial %></p>
+                    <img src="/banhista/ClubeEntrar/assets/img/castelo.png" class="castelo">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

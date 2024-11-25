@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/banhista/cupons/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/banhista/cupons/assets/style.css">
+    <title>Meus cupons</title>
+</head>
+
+<body>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/banhista/padrao/img/voltar.svg" id="voltar"></a>
+    </header>
+
+    <img src="/banhista/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio"><img
+                    src="/banhista/cardapio/assets/img/HomeClick.png">Inicio</a>
+            <a href="/suasReservas" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png"
+                    alt="">Reserva</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png"
+                    alt="">Sacola</a>
+            <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png"
+                    alt="">Perfil</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="texto">
+            <h1>Cupons</h1>
+            <h4>Todos os seus cupons </h4>
+        </div>
+    </div>
+
+    <div class="btnsCupon">
+        <div class="btnsAjusteCupon">
+            <div class="QtCupon">
+                <p>Total de cupons:</p>
+                <p style="font-size: 6vw;"> <%= qttCupons %></p>
+            </div>
+            <div id="btnfiltroCupon">
+                <p>Filtrar</p>
+                <img src="/banhista/cupons/assets/img/filtro.png" alt="">
+            </div>
+        </div>
+        <hr /> <!--  isso aqui faz uma linha -->
+    </div>
+
+    <div class="boxgodgod">
+        <% cupons.forEach(cupom => { %> 
+        <div class="box">
+            <div class="contentetxt">
+                <h3 style="margin: 0;"><%= cupom.nmCarrinho %></h3>
+                <div class="row">
+                    <h2 style="margin: 0;">R$ <%= cupom.preco %></h2>
+                    <h6 style="margin: 0;">*valido somente para consumo</h6>
+                </div>
+                <div class="rowmage">
+                    <img src="/banhista/cupons/assets/img/relogio.png" alt="">
+                    <h4 style="margin: 0;">valido até <%= cupom.validade %></h4>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+
+    <!-- Começo do filtro -->
+
+    <section id="modalBk" class="no-scroll ">
+        <div class="modal">
+            <div class="ajusteModal">
+                <h1>Filtrar por</h1>
+
+                <h3>Data de vencimento</h3>
+
+                <div class="dt-container">
+
+                    <input type="date" name="data" id="dtVen">
+
+                </div>
+
+                <h3>Valor do cupom</h3>
+
+                <div class="radio">
+                    <label class="Radios">
+                        <input type="radio" name="vl" class="inputR" value="50">
+                        <span class="btnR">Até R$50,00</span>
+                    </label>
+                    <label class="Radios">
+                        <input type="radio" name="vl" class="inputR" value="100">
+                        <span class="btnR">Até R$100,00</span>
+                    </label>
+                    <label class="Radios">
+                        <input type="radio" name="vl" class="inputR" value="101">
+                        <span class="btnR">+ de R$100,00</span>
+                    </label>
+                </div>
+
+                <div class="btns">
+
+                    <div id="btnL">Limpar Filtros</div>
+                    <div id="btnF">Aplicar filtros</div>
+
+                </div>
+            </div>
+    </section>
+
+    <script src="banhista/cupons/assets/script.js"></script>
+
+</body>
+
+</html>

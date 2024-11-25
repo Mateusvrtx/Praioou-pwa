@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Montserrat';
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 2vw;
+    background-color: #E2F2F1;
+    box-shadow: 0 0 1px 1px black;
+    position: fixed;
+    z-index: 999;
+}
+
+#btn_voltar {
+    height: 6vw;
+}
+
+#copyright {
+    display: grid;
+    justify-items: center;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo_praioou {
+    width: 20%;
+    height: min-content;
+}
+
+#geolocalBtn {
+    border: 1px solid #000;
+    background-color: #E2F2F1;
+    padding: 2vw;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:focus {
+        background-color: #008B92;
+        border-color: #00404A;
+    }
+    &:focus-within #geolocalImg {
+        filter: invert();
+    }
+}
+
+#geolocalImg {
+    height: 6vw;
+    transition: filter 0.3s ease;
+}
+
+#map {
+    width: 100%;
+    height: 80vh;
+    position: fixed;
+    z-index: 10;
+    top: 8vh;
+}
+
+/* Marca d'água que fica no canto do mapa */
+.leaflet-right {
+    display: none;
+}
+
+#carrossel {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 100; /* Z-index menor para ficar atrás da base */
+    bottom: 12vh; /* Ajuste para o carrossel não sobrepor a base */
+    transition: bottom 0.5s ease;
+}
+
+.carrossel-horizontal {
+    display: flex;
+    transition: transform 0.5s ease;
+    align-items: center;
+}
+
+.carrossel-item {
+    min-width: 100%;
+    border-radius: 2vw;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s ease;
+    background-color: #E2F2F1;
+    padding: 4vw 0 0;
+}
+
+#ponto {
+    width: 100%;
+    overflow: hidden;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+}
+
+.carrossel-item img {
+    width: 93%;
+    display: block;
+    border-radius: 2vw;
+    object-fit: cover;
+}
+
+.ponto-info {
+    background: #E2F2F1;
+    color: black;
+    box-sizing: border-box;
+    transition: max-height 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0 4vw 6vw 4vw;
+    font-size: smaller;
+    margin: 0;
+}
+
+.carrossel-item.expanded .ponto-info {
+    max-height: 25vh;
+    & h3 {
+        line-height: 0;
+    }
+}
+
+.ajuste-base {
+    position: fixed;
+    bottom: 0vh;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 200; /* Certifique-se de que está acima do carrossel */
+}
+
+.base {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E2F2F1;
+    box-sizing: border-box;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#btn_chuveirinhos, #btn_banheiros {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    font-size: 1rem;
+    padding: 4vw;
+    color: #E2F2F1;
+    background-color: #00404A;
+    border: 0;
+    border-radius: 2vw;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    &:focus {
+        background-color: #008B92;
+    }
+}
+
+li {
+    margin-bottom: 5vh;
+    list-style: none;
+    font-size: small;
+    text-align: center;
+}
+
+/* Estilos para os cartões */
+.card-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 2vw;
+}
+
+.card {
+    background-color: #00404A;
+    border-radius: 1vw;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 4vw;
+    transition: transform 0.2s ease;
+}
+
+.card img {
+    width: 50%;
+    height: 12vh;
+    display: block;
+    border-radius: 1vw;
+    margin-right: 2vw;
+    object-fit: cover;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info h2 {
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+}
+
+.card-info span {
+    font-size: 0.7rem;
+    color: #E2F2F1;
+}
+
+#lista-container {
+    width: 100%;
+    background: #E2F2F1;
+    max-height: 60vh; 
+    z-index: 300;
+    display: flex; /* Inicialmente escondido */
+    position: relative;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+#lista-container.show {
+    max-height: 60vh;
+    padding: 2vw;
+}
+
+#lista-filtrada {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 100%;
+}
+
+.carrossel-item .ponto-info .distanciaMetros {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.arranjo-ponto {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ajuste-salvar {
+    width: 100%;
+}
+
+.btn-salvar {
+    background-color: #00404A;
+    color: white;
+    border: 0;
+    padding: 2vw;
+    border-radius: 1vw;
+    float: right;
+}
+
+#ModalLoc {
+    display: none;
+    position: fixed;
+    background-color: white;
+    padding: 4vw;
+    margin: 5vw;
+    border-radius: 3vw;
+    animation: pop 0.5s ease-in-out;
+    transform: scale(0.9);
+    z-index: 999;
+    top: 30%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 0px 100vh rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+#btnAtivar {
+    background-color: #00404A;
+    border: 0;
+    padding: 4vw;
+    border-radius: 3vw;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+}

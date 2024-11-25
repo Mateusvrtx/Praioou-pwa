@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/banhista/mapa/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/banhista/padrao/style.css">
+    <link rel="stylesheet" href="/banhista/reservando/assets/style.css">
+    <script src="/banhista/reservando/assets/script.js" defer></script>
+    <title>Reserva</title>
+</head>
+<body>
+    
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/banhista/padrao/img/voltar.svg" id="voltar"></a>
+    </header>
+    
+    <img src="/banhista/padrao/img/logo.svg" class="logo">
+    
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/padrao/img/Home.png" >Inicio</a>
+            <a href="/suasReservas" class="active" id="NavReserva"> <img src="/banhista/padrao/img/Reserva.png" alt="">Reservas</a>
+            <a href="" class="active" id="NavPedido"> <img src="/banhista/padrao/img/Pedido.png" alt="">Sacola</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/banhista/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>        
+    
+    <section class="reserva">
+        <div class="container">
+            <div class="calendario"> <!-- PARTE DO TOPO COM OS DIAS DA SEMANA -->
+                <div class="dias"></div>
+            </div>
+            <div class="ajuste-reserva">
+                <h4 class="h4">Para quem é a reserva?</h4>
+                <form action="" >
+                    <div class="ajuste-input">
+                        <input type="radio" name="opcaoNome" id="paraMim" value="reservaDoUsuario">
+                        <label for="paraMim">Para mim</label>
+                    </div>
+                    <div class="ajuste-input">
+                        <input type="radio" name="opcaoNome" id="paraOutro" value="reservaOutraPessoa">
+                        <label for="paraOutro">Para outra pessoa</label>
+                    </div>
+                    <div class="ajuste-input">
+                        <input type="text" id="nomeResp" class="input" placeholder="Digite o nome do responsável pela reserva" style="display: none;">
+                    </div>
+                </form>
+                <h4 class="h42">Escolha um horário</h4>
+                <div class="horariosDisponiveis">
+                    <div class="horariosContainer">
+                        <% horas.forEach(hora => { %>
+                            <input type="radio" name="horaEscolhida" id="<%=hora%>" value-horario="<%=hora%>">
+                            <label for="<%=hora%>"><%= hora %></label>
+                            <% }) %>
+                            
+                            <!-- <input type="radio" name="horaEscolhida" id="horario2" value-horario="8:00">
+                            <label for="horario2">8:00</label>
+                            
+                            <input type="radio" name="horaEscolhida" id="horario3" value-horario="9:00">
+                            <label for="horario3">9:00</label>
+                            
+                            <input type="radio" name="horaEscolhida" id="horario4" value-horario="10:00">
+                            <label for="horario4">10:00</label>
+                            
+                            <input type="radio" name="horaEscolhida" id="horario5" value-horario="11:00">
+                            <label for="horario5">11:00</label>
+                            
+                            <input type="radio" name="horaEscolhida" id="horario6" value-horario="12:00">
+                            <label for="horario6">12:00</label> -->
+                        </div>
+                    </div>
+                    <h4 class="h42" style="margin-top: 8vw;">Quantidade de pessoas</h4>
+                    <div class="ajuste-quantidade">
+                        <button id="menos">-</button>
+                        <span id="quantidade">4</span> 
+                        <button id="mais">+</button>
+                    </div>
+                    <h3 id="vl-reserva" style="margin-top: 7vw; margin-bottom: 8vw;">Valor da reserva: <a id="reserva-valor">R$45,00</a></h3>
+                    <div style="width: 100%; display: flex;justify-content: center;">
+                        <button id="btn-reservar" >Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modalAviso">
+            <div class="ajusteTexto">
+                <h3 class="texto-modal">Ops, temos um aviso <span id="fecharModal">&times;</span></h3>
+                <p>
+                    O número máximo de pessoas por conjunto é de 8 pessoas, a partir do momento que ultrapassa 
+                    esse número solicitamos que complete essa reserva e efetue outra.
+                </p>
+                <legenda>
+                    *Em caso de dúvidas entre em contato conosco pelo SAC.
+                </legenda>
+            </div>
+        </div>
+        <div id="modalAbrir">
+            <div class="blur-modal"></div>
+            <div id="modalConfirmarReserva">
+                <h3>Confirme para reservar</h3>
+                <section class="termos">
+                    <span>Ao aceitar esses termos você confirma que esta de acordo com os termos de uso da plataforma perante as reservas, onde os mesmos são:</span>
+                    <ol>
+                        <li class="titulo">Política de Cancelamento e Vouchers de Consumo:</li>
+                        <p class="texto">O banhista poderá cancelar sua reserva até 15 (quinze) minutos antes do horário de encerramento da mesma (considerando os 30 minutos de acréscimo gratuitos) para ter direito a um voucher de consumo no valor integral da reserva.</p>
+                        <p class="texto">Caso o cancelamento não seja realizado dentro do prazo estipulado, o valor da reserva não será convertido em voucher.</p>
+                        
+                        <li class="titulo">Não Comparecimento e Denúncias:</li>
+                        <p class="texto">Em caso de não comparecimento à reserva feita, o ambulante tem o direito de fazer uma denúncia contra o banhista. A denúncia poderá resultar em sanções que vão desde advertências até a suspensão do acesso à plataforma.</p>
+                        <p class="texto">A plataforma não se responsabiliza por quaisquer sanções aplicadas decorrentes de denúncias e confia nos procedimentos internos para validar tais ocorrências.</p>
+                        
+                        <li class="titulo">Política de Reembolso:</li>
+                        <p class="texto">A plataforma não realiza devoluções monetárias, uma vez que o valor da reserva é transferido diretamente para o ambulante. O único benefício oferecido em caso de cancelamento, conforme a regra, é o voucher de consumo.</p>
+                        <p class="texto">Se um ambulante decidir cancelar a reserva por ele mesmo, mesmo após a compra de tempo adicional pelo banhista, não haverá devolução do dinheiro por parte da plataforma.</p>
+                        
+                        <li class="titulo">Responsabilidade da Plataforma:</li>
+                        <p class="texto">A plataforma não se responsabiliza por atos de má-fé cometidos por ambulantes ou banhistas. Em caso de suspeita de lesão ou atitude imprópria, ambas as partes podem realizar denúncias formais por meio do sistema de suporte da plataforma.</p>
+                        <p class="texto">A plataforma não se responsabiliza pela disponibilidade de cadeiras ou conjuntos no momento da chegada do banhista. Eventuais questões relacionadas à falta de equipamentos devem ser resolvidas diretamente com o ambulante responsável.</p>
+                        
+                        <li class="titulo">Itens Pessoais e Dados Pessoais:</li>
+                        <p class="texto">A plataforma não se responsabiliza por itens pessoais esquecidos ou deixados no local da reserva.</p>
+                        <p class="texto">A plataforma mantém a privacidade de seus usuários e não disponibiliza dados pessoais, como números de telefone, a terceiros.</p>
+                        
+                        <li class="titulo">Tempo Adicional e Cancelamentos pelo Ambulante:</li>
+                        <p class="texto">Caso o banhista adquira tempo adicional além dos 30 minutos gratuitos e, mesmo assim, o ambulante decida cancelar a reserva, a plataforma não realizará devolução do valor pago pelo tempo extra.</p>
+                        <p class="texto">O ambulante pode exercer o direito de cancelar reservas, devendo tal prática ser analisada conforme as políticas de uso.</p>
+                        
+                    </ol>
+                    <div class="info">
+                        <p><span class="destaque">Aceitação dos Termos:</span> Ao realizar uma reserva na plataforma, o usuário concorda integralmente com os termos descritos acima e se compromete a agir em conformidade com as políticas de cancelamento, responsabilidade e conduta.</p>
+                        <p><span class="destaque">Última atualização:</span> 09/11/2024</p>
+                        <p><span class="destaque">Dúvidas e Suporte:</span> Para mais informações ou reportar problemas, entre em contato com o suporte da plataforma.</p>
+                    </div>
+                </section>            
+                <div class="ajusteCheck">
+                    <input type="checkbox" name="termos" id="termosReserva" required>
+                    <label for="termosReserva">Li e concordo com todos os termos apresentados</label>
+                </div>     
+                <span class="aviso"></span>
+                <form id="formReservar">
+                    <button type="submit" id="btnPagar">Pagar reserva</button>
+                </form>
+                
+            </div>
+        </div>
+        <div id="modalReservaFeita">
+            <div class="ajusteTitle">
+                <h3>Reserva feita</h3>
+                <span id="fechaModal">&times;</span>
+            </div>
+            <p>Sua reserva foi feita com sucesso. Você tem<span class="dec"> 30 minutos </span>de tolerância em relação ao horário da sua reserva.</p>
+            <p class="dec-texto">
+                Em caso de atraso superior a <span class="dec">30 min</span> (e sem a compra de acréscimos), sua reserva será <span class="dec">cancelada</span> e o valor da reserva <span class="dec">não</span> será revertido para um cupom de consumo.
+            </p>
+            <p>Para visualizar suas reservas, clique no atalho “Reservas” no seu perfil. Lá, você também conseguirá adquirir acréscimos de tempo.</p>
+        </div>        
+    </body>
+    </html>

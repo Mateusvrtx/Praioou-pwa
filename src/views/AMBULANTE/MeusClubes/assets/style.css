@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: #E9F6FF;
+    background-image: url(img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    width: 25vw;
+    left: 50%;
+    top: 5vw;
+    transform: translate(-50%);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 4;
+    bottom: 3vw;
+    width: 98%;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 5vw;
+    justify-content: space-around;
+    padding: 2vw 0;
+    left: 1vw;
+    border: solid 1px #CCCCCC;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  }
+  
+.navbar a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.navbar .active img{
+    width: 7vw;
+}
+
+#NavInicio {
+  color: #008B92;  
+}
+
+#voltar {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 10vw;
+    margin: 2vw;
+}
+
+.navSup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30%;
+}
+
+.texto{
+    padding-left: 4vw;
+}
+
+.texto h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 8vw;
+}
+
+.texto h4{
+    margin-top: -10%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3vw;
+    padding-left: 2vw;
+}
+
+.caixa{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10vw;
+}
+
+.clube-container{
+    margin-top: 6vw;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #00404A;
+    border-radius: 2vw;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5vw;
+    margin-left: 2vw;
+}
+
+.nome-clube{
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.nome-barraca{
+    color: #ffffff;
+    font-size: 2.5vw;
+}
+
+.info-barraca p{
+    margin: 0;
+}
+
+.data{
+    color: #E9F6FF;
+    font-size: 3vw;
+}
+
+.data p{
+    margin: 0;
+}
+
+.membros p{
+    padding: 0;
+}
+
+.membros{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 1vw;
+}
+
+.qtd{
+    margin: 0;
+    font-size: 7vw;
+    font-weight: bold;
+}
+
+.membro{
+    margin: 0 ;
+    font-size: 3.6vw;
+    font-weight: 500;
+}
+
+.edit{
+    width: 70%;
+    color: #00404A;
+    background-color: #fff;
+    border: none;
+    font-weight: 500;
+    font-size: 3vw;
+    border-radius: 1vw;
+    margin-top: 1vw;
+}
+
+.a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
