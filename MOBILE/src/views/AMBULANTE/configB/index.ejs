@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/configB/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/configB/assets/style.css">
+    <title>Configurações</title>
+</head>
+
+<body data-theme="<%= themePreference %>">
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/inicio.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil" style="color: #008B92"> <img src="/ambulante/padrao/img/perfil-colorido.png" alt="">Perfil</a>
+        </nav>
+    </div>
+
+<div class="componentesIni">
+    <img class="imgPerfil" src="/uploads/<%=ftPerfil%>" alt="">
+    <div class="dados">
+        <h3 style="font-weight: 600;"><%= nome %> <%= SobreNome %></h5>
+        <a class="editardad" href="">Editar meus dados <img src="/ambulante/configB/assets/img/seta-verde.png" alt=""></a>
+    </div>
+</div>
+
+<h3>Configurações de Conta</h3>
+<div class="CaixaPrincipal">
+    
+    <div class="positionDuo">
+    <div class="Topbox">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/cadeado.png" alt="">
+        <h4>Editar Senha</h4>
+    </div>
+    <div class="Lowbox" id="openModal">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/idioma.png" alt="">
+        <h4>Ver sobre idiomas</h4>
+    </div>
+</div>
+        <div class="Sidebox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/email.png" alt="">
+            <h4>Editar email</h4>
+        </div>
+</div>
+
+<h3 class="space">Contato e Avaliações</h3>
+<div class="CaixaPrincipal">
+    
+    <div class="positionDuo">
+        <a href="/problemas">
+            <div class="Topbox">
+                <img class="IdenticImage" src="/ambulante/configB/assets/img/sac.png" alt="">
+                <h4>Entrar em contato</h4>
+            </div>
+        </a>
+    <div class="Lowbox">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/faq.png" alt="">
+        <h4>Dúvidas frequentes</h4>
+    </div>
+</div>
+<div class="positionDuo">
+        <div class="Sidebox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/avaliacao.png" alt="">
+            <h4>Avaliar o app</h4>
+        </div>
+        <div class="Sidebox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/denuncia.png" alt="">
+            <h4>Fazer Denuncia</h4>
+        </div>
+    </div>
+</div>
+<h3 class="space">Termos e Privacidade</h3>
+<div class="CaixaPrincipal">
+    
+    <div class="positionDuo">
+    <div class="Topbox">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/termos.png" alt="">
+        <h4>Termos de uso</h4>
+    </div>
+    <div class="Lowbox">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/bola.png" alt="">
+        <h4>Sobre o Praioou</h4>
+    </div>
+</div>
+
+        <div class="Sidebox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/privacidade.png" alt="">
+            <h4>Política de privacidade</h4>
+        </div>
+
+</div>
+
+<h3 class="space">Nossas Redes</h3>
+<div class="CaixaPrincipal">
+    <a href="https://www.instagram.com/eai_praioou?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+        <div class="Lowbox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/instagram.png" alt="">
+            <h4>Instagram</h4>
+        </div>
+    </a>
+
+        <div class="Sidebox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/linkedin.png" alt="">
+            <h4>Linkedin</h4>
+        </div>
+</div>
+
+<h3 class="space">Contas</h3>
+<div class="CaixaPrincipal">
+    
+    <div class="positionDuo">
+    <div class="Topbox">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/addUso.png" alt="">
+        <h4>Trocar de Conta</h4>
+    </div>
+    <div class="Lowbox">
+        <img class="IdenticImage" src="/ambulante/configB/assets/img/exit.png" alt="">
+        <h4>Sair do Aplicativo</h4>
+    </div>
+</div>
+
+        <div class="Sidebox">
+            <img class="IdenticImage" src="/ambulante/configB/assets/img/deleteUso.png" alt="">
+            <h4>Desativar conta</h4>
+        </div>
+
+</div>
+
+<div class="fooyrt"></div>
+
+<script src="AMBULANTE/configB/assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+:root {
+    --azul_claro: #E9F6FF;
+    --azul_principal: #0A9396;
+    --azul_escuro: #00404A;
+    --amarelo_clube: #EE9B00;
+    --preto: #000;
+    --cinza: #848484;
+    --cinza_escuro: #515151;
+    --branco: #fff;
+}
+
+.fundo {
+    background: rgb(10,147,150);
+    background: linear-gradient(rgba(10,147,150,0.3) 0%, rgba(233,246,255,1) 24%);
+    position: fixed;
+    width: 100%;
+    height: -webkit-fill-available;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.conteudo {
+    position: relative;
+    z-index: 2;
+    top: 20vh;
+    margin: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo {
+    text-align: center;
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo h2 {
+    color: var(--azul_escuro);
+    margin: 0;
+}
+
+.topo p {
+    font-size: small;
+    font-weight: 600;
+    color: var(--cinza_escuro);
+    margin-top: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    position: relative;
+    top: 2vh;
+    width: 100%;
+}
+
+.form span {
+    font-size: smaller;
+    color: var(--azul_escuro);
+    font-weight: 600;
+}
+
+.espacamento {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.form input, .form textarea {
+    border: 0.5px #00404A solid;
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.19);
+}
+
+.form input::placeholder, .form textarea::placeholder {
+    font-weight: 600;
+}
+
+.btnEnviar {
+    background-color: var(--azul_escuro);
+    color: var(--branco);
+    padding: 1.5vw 12vw;
+    border-radius: 10vw;
+    position: relative;
+    top: 5vh;
+    font-weight: 600;
+    border: 0;
+    font-size: 1.1rem;
+}
