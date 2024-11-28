@@ -6,7 +6,6 @@ const { conexaoSequelize, nmBanco } = require('./config/bdConnection');
 const path = require('path');
 const routes = require('./src/routes/index');
 const cors = require('cors');
-require('dotenv').config(); // Carregar variáveis de ambiente a partir do arquivo .env
 
 const app = express();
 const server = http.createServer(app);
@@ -37,8 +36,7 @@ app.use(cookieParser());
 app.use(express.static('./src/views/'));
 
 //Manifest do PWA
-app.use('/public', express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
     res.setHeader('Service-Worker-Allowed', '/');

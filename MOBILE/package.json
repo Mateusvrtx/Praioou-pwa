@@ -1,11 +1,9 @@
 {
-  "name": "praioou",
+  "name": "telas-banca-node",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "vercel-build": "npm install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +14,6 @@
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.13",
-    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-validator": "^7.1.0",
