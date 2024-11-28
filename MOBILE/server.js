@@ -36,7 +36,8 @@ app.use(cookieParser());
 app.use(express.static('./src/views/'));
 
 //Manifest do PWA
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 
 app.use((req, res, next) => {
     res.setHeader('Service-Worker-Allowed', '/');
