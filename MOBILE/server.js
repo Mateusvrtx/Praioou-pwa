@@ -6,6 +6,7 @@ const { conexaoSequelize, nmBanco } = require('./config/bdConnection');
 const path = require('path');
 const routes = require('./src/routes/index');
 const cors = require('cors');
+require('dotenv').config(); // Carregar variáveis de ambiente a partir do arquivo .env
 
 const app = express();
 const server = http.createServer(app);
