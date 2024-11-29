@@ -15,12 +15,12 @@ global.__basedir = __dirname;
 
 app.use(cors());
 
-conexaoSequelize.authenticate().then(() => {
-    console.log(`>>> Conexão com o banco ${nmBanco} estabelecida com sucesso!`);
-}).catch(erroConn => {
-    console.log(`>>> Erro ao conectar-se ao banco ${nmBanco}`);
-    console.log(erroConn);
-});
+// conexaoSequelize.authenticate().then(() => {
+//     console.log(`>>> Conexão com o banco ${nmBanco} estabelecida com sucesso!`);
+// }).catch(erroConn => {
+//     console.log(`>>> Erro ao conectar-se ao banco ${nmBanco}`);
+//     console.log(erroConn);
+// });
 
 global.ambulantes = [];
 
