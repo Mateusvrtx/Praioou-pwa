@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static('./src/views/'));
 
 // Configuração do Manifest PWA
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
     res.setHeader('Service-Worker-Allowed', '/');
     res.setHeader('Cache-Control', 'no-store');

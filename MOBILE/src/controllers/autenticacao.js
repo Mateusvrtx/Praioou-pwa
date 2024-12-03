@@ -116,11 +116,11 @@ module.exports = {
     },
 
     verificarAutenticacao: async (req, resp, next) => {
-        if (req.cookies.cookie_usuario) {
+        // if (req.cookies.cookie_usuario) {
             next();
-        } else {
-            return resp.redirect('/');
-        }
+        // } else {
+        //     return resp.redirect('/');
+        // }
     },
     
     updateThemePreferenceB: async (req, res) => {
