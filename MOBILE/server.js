@@ -16,7 +16,6 @@ app.use('/uploads', express.static(path.join(__dirname, 'resources/static/assets
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static('./src/views/'));
 
 // Configuração do Manifest PWA
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -30,8 +29,8 @@ app.use((req, res, next) => {
 app.use('/', routes);
 
 // Configuração do EJS
-app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('view engine', 'ejs');
 
 // Porta configurável com fallback
 const porta = process.env.PORT || 3000;
