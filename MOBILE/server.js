@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 app.use('/', routes);
 
 // Configuração do EJS
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname, 'src/views/'));
 app.set('view engine', 'ejs');
 
 // Porta configurável com fallback
