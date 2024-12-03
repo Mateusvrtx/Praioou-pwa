@@ -16,6 +16,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'resources/static/assets
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static('./src/views/'));
 
 // Configuração do Manifest PWA
 app.use('/public', express.static(path.join(__dirname, 'public')));
