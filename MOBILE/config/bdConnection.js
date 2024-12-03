@@ -1,18 +1,18 @@
-require('dotenv').config(); // Carrega as variáveis do .env
 const { Sequelize } = require('sequelize');
+require('dotenv').config();  // Isso carrega as variáveis de ambiente do arquivo .env
 
-// Use as variáveis de ambiente do .env
-const usuario = process.env.DB_USERNAME;
-const senha = process.env.DB_PASSWORD;
-const host = process.env.DB_HOST;
-const nmBanco = process.env.DB_DBNAME;
-
-// Configuração do Sequelize
 const conexaoSequelize = new Sequelize(
-    `mysql://${usuario}:${senha}@${host}:3306/${nmBanco}`
+  process.env.DB_DBNAME,      // Nome do banco de dados
+  process.env.DB_USERNAME,    // Nome de usuário
+  process.env.DB_PASSWORD,    // Senha
+  {
+    host: process.env.DB_HOST, // Host do banco
+    port: process.env.DB_PORT || 3306, // Porta (caso não seja especificado, assume 3306)
+    dialect: 'mysql',          // Dialeto MySQL
+    logging: false,            // Desativa logs SQL, se desejar
+  }
 );
 
 module.exports = {
-    nmBanco,
-    conexaoSequelize,
+  conexaoSequelize,
 };
