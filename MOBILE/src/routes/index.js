@@ -64,7 +64,7 @@ router.get('/cardapio/:id', auth.verificarAutenticacao, async (req, resp) => {
 
     return resp.render('banhista/cardapio/index.ejs',{carrinho:carrinho}); 
 });
-router.get('/inicial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/inicial/index.ejs'); });
+router.get('/inicial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('BANHISTA/inicial/index.ejs'); });
 router.get('/carrinho', auth.verificarAutenticacao, carrinho.todasBarracas);
 router.get('/reserva/:id', auth.verificarAutenticacao, carrinho.perfilBarraca);
 router.get('/trocar-conta', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/TrocarConta/index.ejs'); })
