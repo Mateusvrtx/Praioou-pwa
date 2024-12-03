@@ -55,7 +55,7 @@ router.get('/duvidas', async (req, resp) => { return resp.render('sac/duvidas/in
 router.get('/denuncia', async (req, resp) => { return resp.render('sac/denuncia/index.ejs'); });
 
 // BANHISTA
-router.get('/CadBanhista', async (req, resp) => { return resp.render('banhista/CadBanhista/index.ejs'); });
+router.get('/CadBanhista', async (req, resp) => { return resp.render('BANHISTA/CadBanhista/index.ejs'); });
 router.get('/cardapio/:id', auth.verificarAutenticacao, async (req, resp) => { 
 
     const IdCarrinho = req.params.id;
