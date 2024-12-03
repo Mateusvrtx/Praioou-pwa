@@ -22,12 +22,12 @@ app.use(cors());
 //     console.log(erroConn);
 // });
 
-global.ambulantes = [];
+// global.ambulantes = [];
 
-app.use((req, res, next) => {
-    req.io = io;
-    next();
-});
+// app.use((req, res, next) => {
+//     req.io = io;
+//     next();
+// });
 
 app.use('/uploads', express.static(path.join(__dirname, 'resources/static/assets/uploads')));
 app.use(express.urlencoded({ extended: false }));
@@ -36,7 +36,8 @@ app.use(cookieParser());
 app.use(express.static('./src/views/'));
 
 //Manifest do PWA
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 
 app.use((req, res, next) => {
     res.setHeader('Service-Worker-Allowed', '/');
@@ -46,24 +47,24 @@ app.use((req, res, next) => {
 
 app.use('/', routes);
 
-io.on('connection', (socket) => {
-    console.log('Novo cliente conectado:', socket.id);
+// io.on('connection', (socket) => {
+//     console.log('Novo cliente conectado:', socket.id);
 
-    socket.on('registerAmbulante', (ambulanteId) => {
-        global.ambulantes[ambulanteId] = socket.id;
-        console.log(`Ambulante ${ambulanteId} registrado com socket ${socket.id}`);
-    });
+//     socket.on('registerAmbulante', (ambulanteId) => {
+//         global.ambulantes[ambulanteId] = socket.id;
+//         console.log(`Ambulante ${ambulanteId} registrado com socket ${socket.id}`);
+//     });
 
-    socket.on('disconnect', () => {
-        for (let ambulanteId in global.ambulantes) {
-            if (global.ambulantes[ambulanteId] === socket.id) {
-                delete global.ambulantes[ambulanteId];
-                break;
-            }
-        }
-        console.log('Cliente desconectado:', socket.id);
-    });
-});
+//     socket.on('disconnect', () => {
+//         for (let ambulanteId in global.ambulantes) {
+//             if (global.ambulantes[ambulanteId] === socket.id) {
+//                 delete global.ambulantes[ambulanteId];
+//                 break;
+//             }
+//         }
+//         console.log('Cliente desconectado:', socket.id);
+//     });
+// });
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src', 'views'));
