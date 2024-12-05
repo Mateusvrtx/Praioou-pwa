@@ -34,7 +34,7 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
 // Porta configurável com fallback
-const porta = 3000;
+const porta = 3001;
 server.listen(porta, () => {
     console.log(`Servidor rodando na porta ${porta}`);
 });
