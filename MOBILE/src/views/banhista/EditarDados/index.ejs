@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,50 @@
     <link rel="stylesheet" href="/banhista/EditarDados/assets/style.css">
     <title>Trocar Conta</title>
 </head>
+
 <body>
     <img src="/banhista/EditarDados/assets/img/logo.png" class="logo">
 
     <div class="corpo">
         <nav class="navbar">
-            <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/cardapio/assets/img/HomeClick.png" >Inicio</a>
+            <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/cardapio/assets/img/HomeClick.png">Inicio</a>
             <a href="#" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png" alt="">Reserva</a>
             <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png" alt="">Sacola</a>
             <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png" alt="">Perfil</a>
-          </nav>
+        </nav>
     </div>
 
     <header class="navSup">
         <a onclick="window.history.back()"><img src="/ambulante/planos/assets/img/voltar.png" id="voltar"></a>
     </header>
 
-    <div class="container">
-        <div class="texto">
-            <h1>Seus dados</h1>
+    <h1 class="h1">Seus dados</h1>
+
+    <section class="ajusteC">
+        <div class="ajustar">
+            <div class="inputA">
+                <input type="text" id="nome" placeholder="Mateus">
+                <img src="/banhista/EditarDados/assets/img/lapis.png" alt="" class="lapis">
+            </div>
         </div>
-    </div>
-    <div class="caixa">
+
+        <div class="ajustar">
+            <div class="inputA">
+                <input type="text" id="sobrenome" placeholder="Silva Oliveira">
+                <img src="/banhista/EditarDados/assets/img/lapis.png" alt="" class="lapis">
+            </div>
+        </div>
+
+        <div class="ajustar">
+            <div class="inputA">
+                <input type="number" id="numero" placeholder="(13) 982028749">
+                <img src="/banhista/EditarDados/assets/img/lapis.png" alt="" class="lapis">
+            </div>
+        </div>
+    </section>
+
+    <!--
+        <div class="caixa">
         <div class="inputs">
             <div class="input">
                 <label for="nome">Nome</label>
@@ -73,5 +96,7 @@
             </div>
         </div>
     </div>
+    -->
 </body>
+
 </html>

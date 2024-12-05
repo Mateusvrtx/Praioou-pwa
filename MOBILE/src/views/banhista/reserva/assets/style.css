@@ -625,6 +625,7 @@ a {
   justify-content: center;
   gap: 5vw;
   margin-top: 5vw;
+  margin-bottom: 8vw;
 }
 
 .rating1 {
@@ -668,10 +669,10 @@ a {
 }
 
 .qtEstrela {
-    margin: 2vw;
-    color: #474747;
-    font-weight: 700;
-    font-size: small;
+  margin: 2vw;
+  color: #474747;
+  font-weight: 700;
+  font-size: small;
 }
 
 .estrela2 {
