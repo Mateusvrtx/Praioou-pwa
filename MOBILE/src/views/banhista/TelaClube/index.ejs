@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/BANHISTA/PADRAO/img/iconWeb.svg">
+    <link rel="stylesheet" href="/banhista/TelaClube/assets/style.css">
+    <title>Clube Inicial</title>
+</head>
+
+<body>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/banhista/padrao/img/voltar.svg" id="voltar"></a>
+    </header>
+
+    <img src="/banhista/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio"><img
+                    src="/banhista/cardapio/assets/img/HomeClick.png">Inicio</a>
+            <a href="#" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png"
+                    alt="">Reserva</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png"
+                    alt="">Sacola</a>
+            <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png"
+                    alt="">Perfil</a>
+        </nav>
+    </div>
+
+
+    <div class="caixa">
+        <img class="imageCarrinho" src="/banhista/TelaClube/assets/img/Carrinho(6).webp" alt="">
+        <div class="texto">
+            <h3 class="h3">Clube do Roberto</h3>
+            <h5 class="h5">Criado em: 19/02/2023</h5>
+            <h5 class="h5">Membros: 225</h5>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="btn">Cupons</button>
+        <button class="btn">Historico</button>
+        <button class="circulo"><img src="/banhista/TelaClube/assets/img/info.png" alt=""></button>
+    </div>
+
+    <div class="ajuste">
+        <div class="caixa2">
+            <h4 class="h4">Total de pontos: <strong>896</strong> <img src="/banhista/TelaClube/assets/img/coroa.png"
+                    alt=""></h4>
+        </div>
+    </div>
+
+    <div class="btncarrinho">
+        <button class="filtro" id="filtro">Filtrar</button>
+        <a href="/ProdutoEscolhidoClube">
+            <button class="car"><img src="/banhista/TelaClube/assets/img/carrinho.png" alt=""></button>
+        </a>
+    </div>
+
+    <div class="alimentos">
+        <div class="card">
+            <div class="curti">
+                <img class="queijo" src="/banhista/TelaClube/assets/img/queijo.png" alt="">
+                <div class="coracao">
+                    <input class="chk" type="checkbox" id="checkbox">
+                    <label for="checkbox">
+                        <img src="/banhista/TelaClube/assets/img/curazon.png" alt="Coração">
+                    </label>
+                </div>
+            </div>
+            <div class="txt">
+                <h3>Queijo assado</h3>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo dolor pariatur impedit
+                    voluptate
+                </h4>
+            </div>
+            <div class="pontseta">
+                <h4><strong>390</strong> pontos</h4>
+                <a href="/EscolhidoClube">
+                    <img class="seta" src="/banhista/TelaClube/assets/img/next.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <section id="modalBk" class="no-scroll ">
+            <div class="modal">
+                <div class="ajusteModal">
+                    <h1>Filtrar por</h1>
+    
+                    <h3>Tipo</h3>
+    
+                    <div class="check">
+                        <label for="check" class="checklbl">
+                            <input type="checkbox" name="check" class="checkR" id="Salgado">
+                            <span class="btnC">Salgado</span>
+                        </label>
+                        <label for="check" class="checklbl">
+                            <input type="checkbox" name="check" class="checkR" id="Doce">
+                            <span class="btnC">Doce</span>
+                        </label>
+                        <label for="check" class="checklbl">
+                            <input type="checkbox" name="check" class="checkR" id="Bebida">
+                            <span class="btnC">Bebida</span>
+                        </label>
+                    </div>
+    
+                    <h3>Pontos</h3>
+    
+                    <div class="radio">
+                        <label class="Radios">
+                            <input type="radio" name="tempo" class="inputR" value="10">
+                            <span class="btnR">100 a 300 pts.</span>
+                        </label>
+                        <label class="Radios">
+                            <input type="radio" name="tempo" class="inputR" value="15">
+                            <span class="btnR">400 a 800 pts.</span>
+                        </label>
+                        <label class="Radios">
+                            <input type="radio" name="tempo" class="inputR" value="20">
+                            <span class="btnR">+900 pontos</span>
+                        </label>
+                    </div>
+    
+                    <div class="btns">
+    
+                        <div id="btnL">Limpar Filtros</div>
+                        <div id="btnF">Aplicar filtros</div>
+    
+                    </div>
+                </div>
+        </section>
+
+        <script src="/banhista/TelaClube/assets/script.js"></script>
+
+</body>
+
+</html>

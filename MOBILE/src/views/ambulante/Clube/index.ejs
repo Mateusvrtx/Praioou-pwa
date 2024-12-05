@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/Clube/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <link rel="stylesheet" href="/ambulante/Clube/assets/style.css">
+    <script src="/ambulante/Clube/assets/script.js" defer></script>
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <title>Clube</title>
+</head>
+<body>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/inicio.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido" style="color: #EE9B00;"> <img src="/ambulante/padrao/img/coroa-colorido.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>
+    
+    <h1 class="ttl">Seus Clubes</h1>
+    <h4 class="subtt">Veja todos os seus clubes em um só lugar</h4>
+    <section>
+        <container class="geral">
+            <div id="Vazio" style="display: none;"> 
+                <div>
+                    <h3>Ops, parece que você ainda não tem nada aqui</h3>
+                    <img src="/ambulante/padrao/img/CoquinhoTriste.svg" alt="Coquinho triste">
+                </div>
+            </div>
+            <div class="caixa">
+                <% clubes.forEach(clube => { 
+                    let img = clube.imgClube
+                    if (img === null) {
+                        img = 'indisponivel.png'
+                    }
+                    %>
+                <div class="clube-container">
+                    <img src="/uploads/<%=img%>" class="imgClube">
+                    <div class="info">
+                        <div class="info-barraca">
+                            <p class="nome-clube"><%= clube.nmClube %></p>
+                            <p class="nome-barraca"><%= clube.nmCarrinho %></p>
+                        </div>
+                        <div class="data">
+                            <p>Criação: <%=  clube.dtCriacao%></p>
+                        </div>
+                    </div>
+        
+                    <div class="membros">
+                        <div class="a">
+                            <p class="qtd"><%= clube.qttMembros %></p>
+                            <p class="membro">Membros</p>
+                        </div>
+                        <a href="/EditClube/<%=clube.idClube%>"><button class="edit">Editar Clube</button></a>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+            <div id="Clubes" style="display: none;"> 
+                    
+            </div>
+
+            <a href="/AddClube">
+                <button id="btnAddClube">
+                    <img src="/ambulante/Clube/assets/img/btnAdd.svg">
+                </button>
+            </a>
+        </container>
+    </section>
+
+</body>
+</html>

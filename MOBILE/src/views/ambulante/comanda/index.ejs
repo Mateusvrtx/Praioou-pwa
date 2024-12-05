@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/comanda/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/comanda/assets/style.css">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <script src="/ambulante/comanda/assets/script.js" defer></script>
+    <title>Comanda</title>
+</head>
+<body>
+    
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+        <!-- <a href=""><img src="/ambulante/InicialB/assets/img/noti.png" class="noti"></a> -->
+        <div class="ntf">
+            <a href="/notificacaoB"><img src="/ambulante/InicialB/assets/img/iconntf.svg" class="noti"></a>
+        </div>
+    </header>
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio" style="color: black;"><img src="/ambulante/padrao/img/inicio.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil" style="color: #008B92;"> <img src="/ambulante/padrao/img/comanda-colorido.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>
+
+    <div class="ttl">
+        <div>
+            <h1>Pedidos</h1>
+            <h3>Suas Comandas</h3>
+        </div>
+
+        <div id="slcTutorial">
+            <select name="carrinhos" id="sltBarraca">
+                <option value="default"></option>
+                <% carrinho.forEach(carrinho => { %>
+                  <option value="<%= carrinho.cd_carrinho %>"><%= carrinho.nm_carrinho %></option>
+                <% }) %>
+              </select>
+        </div>
+          
+    </div>
+
+    
+    <section class="comandas">
+        <container class="estrutura">
+            <div class="Pss2" id="InfoComanda">
+                <div class="stts">
+                    <div class="status">
+                        <h3 style="color: #AE2012;">Pendentes: <strong>6</strong></h3>
+                    </div>
+                    
+                    <div class="status">
+                        <h3 style="color: #00404A;">Entregues: <strong>18</strong></h3>
+                    </div>
+                </div>
+                
+                <div class="stts2">
+                    <input type="date" id="data">
+                    
+                    <div><h3>Pedidos totais: 24</h3></div>
+                </div>
+            </div>
+
+            <container class="cards">
+                <div class="cardsTutorial">
+                    
+                    <div class="card">
+                        <div class="ft">
+                            <h1>K</h1>
+                        </div>
+    
+                        <h4>Horario: <strong>14:30</strong></h4>
+                        <h4>Pedido</h4>
+                        <ul class="detalhes">
+                            <li>Pastel Carne</li>
+                            <li>Pastel Queijo</li>
+                            <li>Coca-Cola</li>
+                            <li>Pepsi</li>
+                        </ul>
+    
+                        <img src="/ambulante/comanda/assets/img/setaComanda.svg" class="setaComanda" id="setaComanda1">
+                    </div>
+
+                    <!-- card de clube -->
+                        <div class="card">
+                                <div class="ft">
+                                    <h1>K</h1>
+                                    <img src="/ambulante/comanda/assets/img/coroaComanda.svg" class="coroaComanda">
+                                </div>
+    
+                            <h4>Horario: <strong>14:30</strong></h4>
+                            <h4>Pedido</h4>
+                            <ul class="detalhes">
+                                <li>Pastel Carne</li>
+                                <li>Pastel Queijo</li>
+                                <li>Coca-Cola</li>
+                                <li>Pepsi</li>
+                            </ul>
+    
+                            <img src="/ambulante/comanda/assets/img/setaComanda.svg" class="setaComanda" id="setaComanda2">
+    
+                            <div class="modalComanda" id="ModalComanda2">
+                                <div class="CardModal">
+                                    <h1 class="nomeModal">Whindershon</h1>
+            
+                                    <h2>Data: <strong>02/05/2045</strong></h2>
+                                    <h2>Horário: <strong>15:30</strong></h2>
+            
+                                    <h1 class="TTLpedido">Pedido</h1>
+            
+                                    <table>
+                                        <tr>
+                                            <th style="color: #515151; border: solid 0.2vw; border-left: none; border-top: none;">Produto</th>
+                                            <th style="color: #515151; border-bottom: solid 0.2vw;">Qtd</th>
+                                            <th style="color: #515151; border: solid 0.2vw; border-right: none; border-top: none;">Valor</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Pastel carne</td>
+                                            <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">1x</td>
+                                            <td>R$ 15,80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pastel queijo</td>
+                                            <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">1x</td>
+                                            <td>R$ 15,80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coca-cola</td>
+                                            <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">2x</td>
+                                            <td>R$ 25,80</td>
+                                        </tr>
+                                    </table>
+            
+                                    <h2>Valor total: <strong>R$ 82,50</strong></h2>
+                                    <h2>Forma Pagamento: <strong>Cartão de credito</strong></h2>
+                                    <div style="display: flex; justify-content: space-between; margin-top: 4vw;">
+                                        <button class="btnModal" id="btnfechar2">Cancelar</button>
+            
+                                        <button class="btnModal" id="btnEntregar">Entregar</button>
+                                    </div>
+                                    <img src="/ambulante/comanda/assets/img/corteComanda.svg" class="imgCorte">
+                                </div>
+                            </div>
+                     </div>
+                 </div>
+            </container>
+        </container>
+    </section>
+
+    <!--Modal Maria-->
+
+    <!-- <section id="BodyModal">
+        <div class="ModalPerConfi">
+            <div class="Fechar"><p class="btnFechar">X</p></div>
+            <h1>Deseja marcar esse pedido como pronto?</h1>
+            <p>*Essa ação não poderá ser revertida</p>
+            <div id="Confirmar">Confirmar</div>
+        </div>
+    </section>
+    <section id="BodyModalConf">
+        <div class="ModalConfi">
+            <div class="Fechar"><p class="btnConfiFechar">X</p></div>
+            <h1>O pedido já foi liberado para o cliente</h1>
+            <img src="AMBULANTE/comanda/assets/img/verificado 2.png"/>
+        </div>
+    </section> -->
+
+    <section id="BodyModalConf">
+        <div class="ModalConfi">
+            <div class="Fechar"><p class="btnConfiFechar">X</p></div>
+            <h1>O pedido já foi liberado para o cliente</h1>
+            <img src="AMBULANTE/comanda/assets/img/verificado 2.png"/>
+        </div>
+    </section>
+
+    <!-- TUTORIAL -->
+
+
+    <!-- PASSO 1 -->
+    <!-- <container id="Passo1">
+        <div class="blur"></div>
+        <div class="CardP1">
+            <div class="baseP1">
+
+                <img src="/ambulante/padrao/img/coquinho.svg" class="imgCoquinhoP1">
+
+                <p>
+                    Clicando no ícone de comanda da sua navbar você é redirecionado pra sua tela de comanda, aqui você consegue ver todos os pedidos que foram feitos em cada carrinho
+                </p>
+
+                <div class="DownT">
+                    <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+                    <img src="/ambulante/padrao/img/setaT.png"id="setaP1" class="imgSeta">
+                </div>
+            </div>
+            <img src="/ambulante/comanda/assets/img/setaP1.svg" class="setaP1" id="setaP1">
+        </div>
+    </container>
+
+    <!-- PASSO 2 -->
+    <container id="Passo2">
+        <div class="blur"></div>
+        <div class="CardP1" style="bottom: 40vw;">
+            <div class="baseP1" style="height: 40vw;">
+
+                <img src="/ambulante/padrao/img/coquinhoPiscando.svg" class="imgCoquinhoPiscando">
+
+                <p>
+                    Aqui você seleciona de qual carrinho você deseja ver as comandas, se você tem mais de um carrinho sempre lembre de conferir isso para ver se você esta fazendo os pedidos do carrinho certo (dica de amigo em)
+                </p>
+
+                <div class="DownT">
+                    <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+                    <img src="/ambulante/padrao/img/setaT.png"  class="imgSeta" id="setaP2">
+                </div>
+            </div>
+        </div>  
+    </container>
+
+    <!-- PASSO 3 -->
+    <container id="Passo3">
+        <div class="blur"></div>
+        <div class="CardP1" style="bottom: 40vw;">
+            <div class="baseP1" style="height: 40vw;">
+
+                <img src="/ambulante/InicialB/assets/img/coquinho.svg" class="imgCoquinhoP1">
+
+                <p>
+                    Aqui você consegue ver quantos pedidos ainda estão pendentes, quantos ja foram entregue, o total de pedidos que você ja recebeu no dia e a data do dia em especifico
+                </p>
+
+                <div class="DownT">
+                    <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+                    <img src="/ambulante/InicialB/assets/img/setaT.png" class="imgSeta" id="setaP3">
+                </div>
+            </div>
+        </div>  
+    </container>
+
+    <!-- PASSO 4 -->
+    <container id="Passo4">
+        <div class="blur"></div>
+        <div class="CardP1" style="bottom: 10vw;">
+            <div class="baseP1" style="height: 40vw;">
+
+                <img src="/ambulante/InicialB/assets/img/coquinho.svg" class="imgCoquinhoP1">
+
+                <p>
+                    Essas daqui são as suas comandas, elas são bem bonitinhas né? se você clicar nelas abre um modal explicando certinho todo o pedido
+                </p>
+
+                <div class="DownT">
+                    <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+                    <img src="/ambulante/InicialB/assets/img/setaT.png" class="imgSeta" id="setaP4">
+                </div>
+            </div>
+        </div>  
+    </container>
+
+    <!-- PASSO 5 -->
+    <container id="Passo5">
+        <div class="blur"></div>
+        <div class="CardP1" style="bottom: 1vw;">
+            <div class="baseP1" style="height: 32vw;">
+
+                <img src="/ambulante/InicialB/assets/img/coquinho.svg" class="imgCoquinhoP1">
+
+                <p style="font-size: 3vw;">
+                    A comanda aberta fica assim, aqui você consegue ver todos os detalhes do pedido e marcar que ele ja esta pronto para entregar pro seu cliente, mas caso seja necessário você também pode cancelar o pedido
+                </p>
+
+                <div class="DownT">
+                    <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+                    <img src="/ambulante/InicialB/assets/img/setaT.png" class="imgSeta" id="setaP5">
+                </div>
+            </div>
+        </div>  
+    </container>
+
+    <div class="modalComanda" id="ModalComanda1">
+        <div class="CardModal">
+            <h1 class="nomeModal">Whindershon</h1>
+
+            <h2>Data: <strong>02/05/2045</strong></h2>
+            <h2>Horário: <strong>15:30</strong></h2>
+
+            <h1 class="TTLpedido">Pedido</h1>
+
+            <table>
+                <tr>
+                    <th style="color: #515151; border: solid 0.2vw; border-left: none; border-top: none;">Produto</th>
+                    <th style="color: #515151; border-bottom: solid 0.2vw;">Qtd</th>
+                    <th style="color: #515151; border: solid 0.2vw; border-right: none; border-top: none;">Valor</th>
+                </tr>
+                <tr>
+                    <td>Pastel carne</td>
+                    <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">1x</td>
+                    <td>R$ 15,80</td>
+                </tr>
+                <tr>
+                    <td>Pastel queijo</td>
+                    <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">1x</td>
+                    <td>R$ 15,80</td>
+                </tr>
+                <tr>
+                    <td>Coca-cola</td>
+                    <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">2x</td>
+                    <td>R$ 25,80</td>
+                </tr>
+            </table>
+
+            <h2>Valor total: <strong>R$ 82,50</strong></h2>
+            <h2>Forma Pagamento: <strong>Cartão de credito</strong></h2>
+            <div style="display: flex; justify-content: space-between; margin-top: 4vw;">
+                <button class="btnCancelar">Cancelar</button>
+
+                <button class="btnEntregar">Entregar</button>
+            </div>
+            <img src="/ambulante/comanda/assets/img/corteComanda.svg" class="imgCorte">
+        </div>
+    </div>
+
+    <!-- PASSO 6 -->
+    <container id="Passo6">
+        <div class="blur"></div>
+        <div class="CardP1" style="bottom: 25vw;">
+            <div class="baseP1" style="height: 35vw;">
+
+                <img src="/ambulante/InicialB/assets/img/coquinho.svg" class="imgCoquinhoP1" id="FecharTutorial">
+
+                <p style="font-size: 3vw;">
+                    Olha que legal, se você tiver um clube no carrinho e algum membro do clube fizer um pedido direto do cardápio do clube é assim que ira aparecer para você, com essa coroa bonitinha em cima 
+                </p>    
+                <div class="DownT">
+                    <img src="/ambulante/InicialB/assets/img/pontos.svg" class="pontos">
+                    <img src="/ambulante/InicialB/assets/img/setaT.png" class="imgSeta" id="setaP6">
+                </div>
+            </div>
+        </div>  
+    </container>
+
+    <div id="cardClubeTutorial">
+        <div class="card">
+                <div class="ft">
+                    <h1>K</h1>
+                    <img src="/ambulante/comanda/assets/img/coroaComanda.svg" class="coroaComanda">
+                </div>
+
+            <h4>Horario: <strong>14:30</strong></h4>
+            <h4>Pedido</h4>
+            <ul class="detalhes">
+                <li>Pastel Carne</li>
+                <li>Pastel Queijo</li>
+                <li>Coca-Cola</li>
+                <li>Pepsi</li>
+            </ul>
+
+            <img src="/ambulante/comanda/assets/img/setaComanda.svg" class="setaComanda" id="setaComanda2">
+
+            <div class="modalComanda" id="ModalComanda2">
+                <div class="CardModal">
+                    <h1 class="nomeModal">Whindershon</h1>
+
+                    <h2>Data: <strong>02/05/2045</strong></h2>
+                    <h2>Horário: <strong>15:30</strong></h2>
+
+                    <h1 class="TTLpedido">Pedido</h1>
+
+                    <table>
+                        <tr>
+                            <th style="color: #515151; border: solid 0.2vw; border-left: none; border-top: none;">Produto</th>
+                            <th style="color: #515151; border-bottom: solid 0.2vw;">Qtd</th>
+                            <th style="color: #515151; border: solid 0.2vw; border-right: none; border-top: none;">Valor</th>
+                        </tr>
+                        <tr>
+                            <td>Pastel carne</td>
+                            <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">1x</td>
+                            <td>R$ 15,80</td>
+                        </tr>
+                        <tr>
+                            <td>Pastel queijo</td>
+                            <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">1x</td>
+                            <td>R$ 15,80</td>
+                        </tr>
+                        <tr>
+                            <td>Coca-cola</td>
+                            <td style="border: solid 0.2vw; border-top: none; border-bottom: none;">2x</td>
+                            <td>R$ 25,80</td>
+                        </tr>
+                    </table>
+
+                    <h2>Valor total: <strong>R$ 82,50</strong></h2>
+                    <h2>Forma Pagamento: <strong>Cartão de credito</strong></h2>
+                    <div style="display: flex; justify-content: space-between; margin-top: 4vw;">
+                        <button class="btnModal" id="btnfechar2">Cancelar</button>
+
+                        <button class="btnModal" id="btnEntregar">Entregar</button>
+                    </div>
+                    <img src="/ambulante/comanda/assets/img/corteComanda.svg" class="imgCorte">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

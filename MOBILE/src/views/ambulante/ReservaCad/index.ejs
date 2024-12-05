@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <link rel="stylesheet" href="/ambulante/ReservaCad/assets/style.css">
+    <title>Reservas</title>
+</head>
+
+<body>
+    
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/inicio.png">Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png"
+                alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png"
+                    alt="">Comanda</a>
+                    <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png"
+                    alt="">Perfil</a>
+                </nav>
+    </div>
+    
+    <section class="tela">
+        <div class="ajusteDias" id="dates">
+            <div class="calendario">
+                <div class="dias"></div>
+            </div>
+        </div>
+        
+        <div class="linha"><hr></div>
+        <div class="ajuste">
+            <p class="parag">Selecione um carrinho</p>
+            <select name="carrinhos" id="sltBarraca">
+                <option value="default" selected.disable>Selecione um Carrinho</option>
+                <% carrinho.forEach(carrinho => { %>
+                    <option value="<%= carrinho.cd_carrinho %>"><%= carrinho.nm_carrinho %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="linha"><hr></div>
+
+        <container class="ajusteReservas">
+            <section class="reservas">
+            </section>
+        </container>
+        
+        <script src="ambulante/ReservaCad/assets/script.js"></script>
+        
+        <container id="FundoModal" style="display: none;">
+            <!-- <section class="modal">
+                <div class="ajusteHeader">
+                    <div>
+                        <div class="img">
+                            <img src="ambulante/ReservaCad/assets/img/Cadeira.png" class="cad">
+                        </div>
+                        <h3>Reserva Ativa</h3>
+                        <span class="fechar">&times;</span>
+                    </div>
+                </div>
+                <div class="ajusteInfo">
+                    <div class="tamanhoR">
+                        <p class="NMTTL">Nome do reservante:</p>
+                        <p class="PRB"></p>
+                    </div>
+                </div>
+                <p class="hr"><hr></p>
+                <div class="ajusteInfoGeral">
+                    <div class="AlinhamentoR">
+                        <div class="tamanhoR">
+                            <p class="PRT">Descrição Reserva:</p>
+                            <p class="DT"></p>
+                        </div>
+                    </div>
+                    <div class="Alinhamento">
+                        <div class="tamanho">
+                            <p class="PR">Horário da reserva:</p>
+                            <p class="PRB"></p>
+                        </div>
+                    </div>
+                    <div class="Alinhamento">
+                        <div class="tamanho">
+                            <p class="PR">Quantidade de pessoas:</p>
+                            <p class="PRB"></p>
+                        </div>
+                    </div>
+                    <div class="Alinhamento">
+                        <div class="tamanho">
+                            <p class="PR">Valor da reserva:</p>
+                            <p class="PRB"></p>
+                        </div>
+                    </div>
+                    <div class="AlinhamentoF">
+                        <div class="tamanho">
+                            <p class="PR">Conjunto reservados:</p>
+                            <p class="PRB"></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="hr"><hr></p>
+                <div class="btns">
+                    <div class="cancelar">Cancelar</div>
+                    <div class="concluida">Concluída</div>
+                </div>  -->
+            </section>
+        </container>
+    </section>
+
+        <container id="modalCancelado">
+            <section class="modal">
+                <p class="fecharC">X</p>
+                <p>Essa reserva foi cancelada pelo proprio banhista, a vaga dele foi liberada automaticamente</p>
+            </section>
+        </container>
+        
+        <script src="ambulante/ReservaCad/assets/script.js"></script>
+</body>
+
+</html>

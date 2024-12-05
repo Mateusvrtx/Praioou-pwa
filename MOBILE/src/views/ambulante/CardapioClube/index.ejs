@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/CardapioClube/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/CardapioClube/assets/style.css">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <title>Cardápio do clube</title>
+</head>
+<body>
+    <header class="navSup">
+            <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+        </header>
+    
+        <img src="/ambulante/padrao/img/logo.svg" class="logo">
+    
+        <div class="corpo">
+            <nav class="navbar">
+                <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/HomeClick.png" >Inicio</a>
+                <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+                <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+                <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+                <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+            </nav>
+        </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || window.location.pathname.split('/').pop(); // Captura o último segmento da URL
+
+            // Adiciona o id à URL do link de voltar
+            const voltarLink = document.getElementById('voltar');
+            voltarLink.onclick =  function() {
+                window.location.href = `/EditClube/${id}`;
+            } 
+        }
+    </script>
+
+    <div class="container">
+        <div class="texto">
+            <h1>Clube do Robertinho</h1>
+            <h4>Cardapio do Clube</h4>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <div class="container-cardapio">
+            <% produtos.forEach(produto => {%> 
+                <div class="caixa-comida">
+                    <img src="/uploads/<%=produto.nm_imgProduto%>" alt="">
+                    <h1 class="nome-comida"><%=produto.nm_produto%></h1>
+                    <p class="pontos"> <strong class="qtd-pontos"><%= produto.vl_produto * 10 %></strong>  Pontos</p>
+                    <p class="valor">Valor original R$ <%= produto.vl_produto %></p>
+                </div>
+            <%})%>
+        </div>
+        <div class="btn-edit">
+            <a href="/cardapio-clube-edit/<%=id%>"><button>Editar Cardápio</button></a>
+        </div>
+    </div>
+</body>
+</html>

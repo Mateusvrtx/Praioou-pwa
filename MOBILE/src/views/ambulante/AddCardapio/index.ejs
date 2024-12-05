@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/AddCardapio/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/AddCardapio/assets/style.css">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <title>Comanda</title>
+</head>
+<body>
+    
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/inicio.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>
+
+    <div class="ttl">
+        <div>
+            <h1><%= carrinho.nm_carrinho %></h1>
+            <h3>Cardapio</h3>
+        </div>        
+    </div>
+
+    <section class="comandas">
+        <container class="estrutura">
+            <h3 style="margin: 4vw 0 -1vw 0; font-size: 5vw; font-weight: 600;">Seus Produtos</h3>
+            <hr>
+
+            <a href="/AddProduto/<%= carrinho.cd_carrinho %>"><button id="btnAddP">Adicionar Produto +</button></a>
+            <div class="cards">
+                <% produtos.forEach(produto => {  
+                    let img = produto.nm_imgProduto
+                    if (img === null) {
+                        img = 'indisponivel.png'
+                    }%>
+                    <div class="cardP">
+                        <img src="/uploads/<%=img%>" alt="">
+                        <div class="detailsP">
+                            <div class="P1">
+                                <h2><%= produto.nm_produto %></h2>
+                                <p>Tempo de Preparo: <strong><%= produto.hr_tempo_preparo %>min</strong></p>
+                                <p>Categoria: <strong><%= produto.ds_categoria %></strong></p>
+                            </div>
+                            <div class="P2">
+                                <h2>R$ <%= produto.vl_produto %></h2>
+                                <button id="btnEditarP"> Editar </button>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+            <button id="btnSalvar">Salvar Alterações</button>
+        </container>
+    </section>
+</body>
+</html>

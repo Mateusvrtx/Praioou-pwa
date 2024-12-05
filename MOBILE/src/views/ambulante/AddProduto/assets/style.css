@@ -1,0 +1,175 @@
+section {
+    width: 100%;
+    position: relative;
+    top: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+.geral {
+    width: 90%;
+}
+
+#Form-AddProduto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.AddImg {
+    width: 100%;
+    height: 45vw;
+    background-color:  #ffffff;
+    border-radius: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0.6vw 2vw 0.2vw;
+}
+
+.AddImg h3 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 400;
+    position: relative;
+    bottom: -8vw;
+}
+
+.Add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.Add h2 {
+    margin: 0;
+    font-size: 4vw;
+    color: #848484;
+    font-weight: 600;
+}
+
+.Add img {
+    width: 20vw;
+}
+
+.inpts {
+    width: 96%;
+    height: 6vw;
+    margin-top: 1vw;
+    font-size: 4vw;
+    padding: 2vw;
+    border: none;
+    border-radius: 2vw;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0.6vw 2vw 0.2vw;
+}
+
+textarea {
+    width: 96%;
+    height: 30vw;
+    margin-top: 1vw;
+    font-size: 4vw;
+    border: none;
+    border-radius: 2vw;
+    padding: 2vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 0vw 0.5vw 2vw 0.6vw;
+    resize: none;
+    outline: none;
+}
+
+label {
+    font-size: 4.5vw;
+    margin-bottom: 2vw;
+}
+
+.inpts2 {
+    width: 40vw;
+    height: 7vw;
+    border: none;
+    border-radius: 1.3vw;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0vw 0.6vw 2vw 0.2vw;
+    margin-top: 1vw;
+    font-size: 6vw;
+}
+
+.preco  {
+    position: relative;
+    margin: 0;
+    width: 0;
+    bottom: 0;
+    font-size: 6vw;
+    font-weight: 300;
+}
+
+.btn {
+    width: 98%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 25vw;
+}
+
+#btnAdd {
+    width: 43vw;
+    height: 10vw;
+    border: none;
+    border-radius: 2vw;
+    padding: 2vw;
+    font-size: 4vw;
+    color: #ffffff;
+    background-color: #00404A;
+    margin-top: 10vw;
+}
+
+.inptsDown {
+    display: flex;
+    flex-direction: column;
+    width: 46.5%;
+} 
+
+.inptsDown h2 {
+    font-size: 3.5vw;
+    margin: 0;
+    font-weight: 500;
+}
+
+.Down {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#BodyModalConf{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    backdrop-filter: blur(0.5vw);
+    z-index: 5;
+    top: 0;
+}
+
+.ModalConfi{
+    width: 90%;
+    height: 50vw;
+    border-radius: 4vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+    text-align: center;
+    position: relative;
+}
+
+.ModalConfi img{
+    width: 15vw;
+}

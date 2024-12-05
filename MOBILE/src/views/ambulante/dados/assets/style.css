@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #eaf6ff;
+  background-image: url("./img/BKGD_config.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.topo{
+  width: 90%;
+  margin-bottom: 18vw;
+  display: flex;
+  align-items: center;
+  height: 20vw;
+}
+
+#seta{
+  width: 8vw;
+  margin-right: 25vw;
+}
+
+#logo{
+  width: 25vw;
+}
+
+.carrinhos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vw;
+  position: relative;
+}
+
+.base {
+  width: 95%;
+  background-color: rgba(10, 147, 150, 0.3);
+  border-radius: 5vw;
+  height: 33vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  transition: transform 0.5s ease;
+  margin: 0 8vw 0 9vw;
+}
+
+.setaD img, .setaE img {
+  width: 8vw;
+}
+
+.setaE, .setaD {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.setaE {
+  left: 0vw;
+}
+
+.setaD {
+  right: 0vw;
+}
+
+.cardAdd, .cardCarrinho {
+  width: 25vw;
+  height: 30vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3vw;
+  flex-direction: column;
+  gap: 3vw;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0.6vw 2vw 0.2vw;
+}
+
+.cardAdd h1, .cardCarrinho h1 {
+  width: 95%;
+  font-size: 3.5vw;
+  text-align: center;
+  margin: 0;
+}
+
+.cardAdd img {
+  width: 12vw;
+}
+
+.cardCarrinho img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.cards input[type="radio"] {
+  display: none; /* Esconde o botão de rádio */
+}
+
+input[type="radio"]:checked + label.cardCarrinho {
+  background-color: #0a9396;
+  color: #fff;
+}
+
+.grafico{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons{
+  margin-bottom: 2vw;
+  margin-top: 10vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.buttons2{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.button{
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  width: 20vw;
+  height: 7vw;
+  background-color: #00404A;
+  border-radius: 5vw;
+  font-weight: 800;
+  align-items: center;
+  font-size: 3vw;
+}
+
+.btn{
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  width: 25vw;
+  height: 6vw;
+  background-color: #00404A;
+  border-radius: 5vw;
+  font-weight: 800;
+  align-items: center;
+  font-size: 2.5vw;
+}
+
+.buttonH{
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  width: 14vw;
+  height: 6vw;
+  background-color: #00404A;
+  border-radius: 5vw;
+  font-weight: 800;
+  align-items: center;
+  font-size: 2.2vw;
+}
+
+#grafico_img{
+  width: 99vw;
+}
+
+.paragrafo{
+  width: 90%;
+  font-weight: 700;
+  color: gray;
+}
+
+.radioB{
+  display: flex;
+  width: 85%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 10vw;
+  cursor: pointer;
+  font-size: 4vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 800;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 7vw; 
+  margin-bottom: 2.5vw;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 5vw; 
+  width: 5vw;  
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.5vw solid #00404A; 
+  transition: all 0.3s ease;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #f0f0f0; 
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #00404A; 
+  border-color: #00404A;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3vw; 
+  height: 3vw; 
+  background-image: url('https://img.icons8.com/ios-filled/50/FFFFFF/checkmark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block; 
+}
+
+.container label {
+  margin-left: 2vw;
+  font-size: 2vw;   
+}
+
+/* Bia - gráfico */
+.grafico_container {
+  width: 100%;
+  height: 57vw;
+  background-color: white;
+  padding: 1vw;
+  justify-content: center;
+  display: flex;
+  border-radius: 3vw;
+  align-items: center;
+}
+
+.buttons input[name="opcoes"] {
+  display: none;
+}
+
+.buttons input[name="opcoes"]+ label {
+  background-color: #00404A;
+    color: white;
+    padding: 1vw 3vw;
+    border-radius: 5vw;
+}
+
+.buttons input[name="opcoes"]:checked + label{
+  background-color: #0a9396;
+}
+
+.buttons2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons2 input[type="radio"] {
+  display: none; 
+}
+
+.buttons2 label {
+  background-color: #00404A;
+  color: white;
+  padding: 1.8vw;
+  border-radius: 4vw;
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: 20vw;
+  text-align: center;
+}
+
+.buttons2 input[type="radio"]:checked + label {
+  background-color: #0a9396;
+}

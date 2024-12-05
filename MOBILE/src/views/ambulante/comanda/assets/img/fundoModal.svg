@@ -1,0 +1,46 @@
+<svg width="341" height="448" viewBox="0 0 341 448" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4_1127)">
+<path d="M0 17C0 7.61115 7.61116 0 17 0H324C333.389 0 341 7.61116 341 17V448H0V17Z" fill="url(#paint0_linear_4_1127)"/>
+<g filter="url(#filter0_d_4_1127)">
+<path d="M8.9177 447.539L18.5459 430.635H-0.710469L8.9177 447.539Z" fill="white"/>
+<path d="M25.8589 447.539L35.487 430.635H16.2307L25.8589 447.539Z" fill="white"/>
+<path d="M44.9177 447.539L54.5459 430.635H35.2895L44.9177 447.539Z" fill="white"/>
+<path d="M62.9177 447.539L72.5459 430.635H53.2895L62.9177 447.539Z" fill="white"/>
+<path d="M80.9177 447.539L90.5459 430.635H71.2895L80.9177 447.539Z" fill="white"/>
+<path d="M97.8589 447.539L107.487 430.635H88.2307L97.8589 447.539Z" fill="white"/>
+<path d="M116.918 447.539L126.546 430.635H107.29L116.918 447.539Z" fill="white"/>
+<path d="M134.918 447.539L144.546 430.635H125.29L134.918 447.539Z" fill="white"/>
+<path d="M152.918 447.539L162.546 430.635H143.29L152.918 447.539Z" fill="white"/>
+<path d="M169.859 447.539L179.487 430.635H160.231L169.859 447.539Z" fill="white"/>
+<path d="M188.918 447.539L198.546 430.635H179.29L188.918 447.539Z" fill="white"/>
+<path d="M206.918 447.539L216.546 430.635H197.29L206.918 447.539Z" fill="white"/>
+<path d="M223.859 447.539L233.487 430.635H214.231L223.859 447.539Z" fill="white"/>
+<path d="M240.8 447.539L250.428 430.635H231.172L240.8 447.539Z" fill="white"/>
+<path d="M259.859 447.539L269.487 430.635H250.231L259.859 447.539Z" fill="white"/>
+<path d="M277.859 447.539L287.487 430.635H268.231L277.859 447.539Z" fill="white"/>
+<path d="M295.859 447.539L305.487 430.635H286.231L295.859 447.539Z" fill="white"/>
+<path d="M312.8 447.539L322.428 430.635H303.172L312.8 447.539Z" fill="white"/>
+<path d="M331.859 447.539L341.487 430.635H322.231L331.859 447.539Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_4_1127" x="-4.71045" y="430.635" width="350.198" height="24.9042" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_1127"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_1127" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_4_1127" x1="170.5" y1="448" x2="170.5" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="#999999" stop-opacity="0"/>
+<stop offset="0.0322517" stop-color="white" stop-opacity="0"/>
+<stop offset="0.0351085" stop-color="white"/>
+</linearGradient>
+<clipPath id="clip0_4_1127">
+<path d="M0 17C0 7.61115 7.61116 0 17 0H324C333.389 0 341 7.61116 341 17V448H0V17Z" fill="white"/>
+</clipPath>
+</defs>
+</svg>

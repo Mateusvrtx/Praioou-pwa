@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/banhista/notificacao/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/banhista/notificacao/assets/style.css">
+    <title>Notificações</title>
+</head>
+<body>
+
+    <img src="/banhista/notificacao/assets/img/logo.png" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/cardapio/assets/img/HomeClick.png" >Inicio</a>
+            <a href="#" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png" alt="">Reserva</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png" alt="">Sacola</a>
+            <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png" alt="">Perfil</a>
+          </nav>
+    </div>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/ambulante/planos/assets/img/voltar.png" id="voltar"></a>
+        <a href=""><img class="Clube" src="/banhista/cupons/assets/img/coroa.png" alt=""></a>
+    </header>
+    
+    <div class="caixa">
+        <div class="fundo">
+        <div class="titulo"><p>Suas Notificacoes</p></div>
+
+        <div class="notificacoes">
+            <div class="qtd_notificacao">
+                Notificacoes (4)
+            </div>
+            <button class="ler-tudo">
+                Ler Tudo
+            </button>
+        </div>
+
+        <% ntfPedido.forEach(pedido => { %>
+            <div class="containers">
+                <div class="container">
+                    <div class="img">
+                        <img src="/banhista/notificacao/assets/img/pedido-feito.png" width="36vw" alt="">
+                    </div>
+                    <div class="d">
+                        <p class="titulo-principal"><%= pedido.ttlPedido %></p>
+                        <p class="titulo-secundario"><%= pedido.descricaoPedido %></p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+
+        <% ntfCupom.forEach(cupom => { %>
+            <div class="containers">
+                <div class="container">
+                    <div class="img">
+                        <img src="/banhista/notificacao/assets/img/cupom-novo.png" width="36vw" alt="">
+                    </div>
+                    <div class="d">
+                        <p class="titulo-principal"><%= cupom.ttlCupom %></p>
+                        <p class="titulo-secundario"><%= cupom.descricaoCupom %></p>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+
+
+        <!--CUPONS COM OS NOVOS TEXTOS E IMAGENS, ATUALIZAR O TEXTO QUE ELES RECEBEM NO BANCO DE DADOS -->
+
+        <!-- <div class="containers">
+            <div class="container">
+                <div class="img">
+                    <img src="/banhista/notificacao/assets/img/reserva-feita.png" width="36vw" alt="">
+                </div>
+                <div class="d">
+                    <p class="titulo-principal">Nova Reserva Feita</p>
+                    <p class="titulo-secundario">Uma nova reserva foi feita, você pode vê-la na sua aba de reservas, caso necessário cancelar faça isso com pelo menos 2 horas de antecedencia</p>
+                </div>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container">
+                <div class="img">
+                    <img src="/banhista/notificacao/assets/img/pontos.png" width="36vw" alt="">
+                </div>
+                <div class="d">
+                    <p class="titulo-principal">Novos Pontos</p>
+                    <p class="titulo-secundario">Você recebeu novos pontos no Clube do Roberto, troque por recompensar. Veja todas as recompensas livres no cardapio do Clube</p>
+                </div>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container">
+                <div class="img">
+                    <img src="/banhista/notificacao/assets/img/cancel.png" width="36vw" alt="">
+                </div>
+                <div class="d">
+                    <p class="titulo-principal">Reserva cancelada</p>
+                    <p class="titulo-secundario">Sua reserva foi cancelada com sucesso, para que você não perca seu dinheiro, um cupom de desconto sera adicionado na sua aba cupons em breve</p>
+                </div>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container">
+                <div class="img">
+                    <img src="/banhista/notificacao/assets/img/pedido-cancel.png" width="36vw" alt="">
+                </div>
+                <div class="d">
+                    <p class="titulo-principal">Pedido Cancelado</p>
+                    <p class="titulo-secundario">Seu pedido foi cancelado, sentimos muito por isso. Clique em saber mais para ver o motivo pelo qual seu pedido foi cancelado</p>
+                </div>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="container">
+                <div class="img">
+                    <img src="/banhista/notificacao/assets/img/pedido-pronto.png" width="36vw" alt="">
+                </div>
+                <div class="d">
+                    <p class="titulo-principal">Pedido Pronto</p>
+                    <p class="titulo-secundario">Seu pedido foi marcado como pronto, em breve você ira recebe-lo, não esqueça de pagar a sua sacola caso não vá consumir mais nada</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    </div>
+</body>
+</html>

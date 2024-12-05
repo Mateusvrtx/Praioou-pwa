@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-image: url(img/fundooo.png);
+    background-color: #000000;
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+body.dark{
+    background-image: url(img/Group\ 138.svg);
+    color: rgb(255, 255, 255);
+
+    .editardad{
+        color: #30B9BC;
+        font-weight: 500;
+    }
+    .Topbox{
+        background-color: #3A3A3A;
+        border: 2px solid #fff;
+    }
+    .Sidebox{
+        background-color: #3A3A3A;
+        border: 2px solid #fff;
+    } 
+    .Lowbox{
+        background-color: #3A3A3A;
+        border: 2px solid #fff;
+    }
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    width: 22vw;
+    left: 50%;
+    top: 5vw;
+    transform: translate(-50%);
+}
+
+.corpo{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 4;
+    bottom: 3vw;
+    width: 98%;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 5vw;
+    justify-content: space-around;
+    padding: 2vw 0;
+    left: 1vw;
+    border: solid 1px #CCCCCC;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+  
+.navbar a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    font-size: 4vw;
+}
+
+
+.navbar .active img{
+    width: 7vw;
+}
+
+#voltar {
+    position: absolute;
+    z-index: 2;
+    left: 3vw;
+    top: 3vw;
+    width: 7vw;
+}
+
+.componentesIni{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 35vw;
+    gap: 4vw;
+    flex-direction: row;
+
+}
+
+.imgPerfil{
+    margin: 0%;
+    width: 28vw;
+    height: 28vw;
+    border-radius: 100%;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+}
+
+.editardad{
+    color: #0A9396;
+}
+
+.CaixaPrincipal{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10vw;
+    margin-top: 4vw;
+}
+
+.IdenticImage{
+    width: 15vw;
+}
+
+.Topbox, .Sidebox, .Lowbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 30vw;
+    gap: 3vw;
+    background-color: #ffffff;
+    border: solid 1.5px #00404A;
+    border-radius: 2vw;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Topbox, .Sidebox, .Lowbox, h4{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #00404A;
+}
+
+.positionDuo{
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
+}
+
+.space{
+    margin-top: 10vw;
+}
+
+.fooyrt{
+    margin-bottom: 25vw;
+}
+
+/*Modal Ana*/
+

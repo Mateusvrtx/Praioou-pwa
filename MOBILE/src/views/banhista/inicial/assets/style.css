@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: #E9F6FF;
+    background-image: url(img/Teste1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    width: 22vw;
+    left: 50%;
+    top: 5vw;
+    transform: translate(-50%);
+}
+
+.corpo{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 4;
+    bottom: 3vw;
+    width: 98%;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 5vw;
+    justify-content: space-around;
+    padding: 2vw 0;
+    left: 1vw;
+    border: solid 1px #CCCCCC;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+  
+.navbar a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    font-size: 4vw;
+}
+
+
+.navbar .active img{
+    width: 7vw;
+}
+
+#voltar {
+    position: absolute;
+    z-index: 2;
+    left: 3vw;
+    top: 3vw;
+    width: 7vw;
+}
+
+
+/* carrossel */
+.slider{
+    width: 90vw;
+    max-width: 100vw;
+    height: 40vw;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30vw;
+    margin-bottom: 8vw;
+    border-radius: 2vw;
+}
+
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list img{
+    width: 90vw;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    opacity: 0;
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    opacity: 70%;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.card1{
+    display: flex;
+    width: 28vw;
+    height: 30vw;
+    border-radius: 2vw;
+    align-items: center;
+    flex-direction: column;
+    background-color:#21B4BC;
+}
+
+.card1 img{
+    width: 22vw;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5vw;
+}
+
+.card1 #text{
+    margin-top: 0.1vw;
+    font-size: 5vw;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card1{
+    margin-top: -1vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 28vw;
+    height: 30vw;
+    border-radius: 2vw;
+    align-items: center;
+    background-color: #008B92;
+}
+
+.card2 img{
+    width: 18vw;
+    display: flex;
+    align-items: center;
+    margin-top: 4vw;
+}
+
+.card2 #text{
+    margin-top: 1.5vw;
+    color: #fff;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.card3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 28vw;
+    height: 30vw;
+    border-radius: 2vw;
+    background-color: #016267;
+}
+
+.card3 img{
+    width: 22vw;
+    display: flex;
+    align-items: center;
+    margin-top: 4vw;
+}
+
+.card3 #text{
+    margin-top: 1.7vw;
+    color: #fff;
+}
+
+#text{
+    margin-top: -2vw;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+/* Teste Carrossel */
+.slider2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5vw;
+    padding: 12px 0;
+}
+
+.expec {
+    position: absolute;
+    top: -5vw;
+    z-index: 2;
+    margin-bottom: 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.num {
+    font-size: 1.5rem;
+    margin-top: 7vw;
+    color: #00404A;
+    font-weight: bold;
+    margin-right: 9vw;
+}
+
+.slider2 .list2 {
+    display: flex;
+    transition: transform 1s ease;
+    width: 407%;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    left: -3vw;
+    gap: 3vw;
+    margin-top: 10vw;
+    padding: 3px 0;
+}
+
+.slider2 .list2 img {
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.766) 0px 3px 8px;
+}
+
+
+
+.slider2 .buttons2 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider2 .buttons2 button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: #023047;
+    border: 2px solid #023047;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.slider2 .buttons2 button:hover {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.slider2 .dots2 {
+    color: #00000000;
+    display: flex;
+    z-index: 2;
+    margin-left: 28vw;
+    justify-content: center;
+    position: absolute;
+    bottom: 12vw;
+    width: 100%;
+}
+
+.slider2 .dots2 li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color:rgba(10, 147, 150, 0.45);
+    margin: 0 5px;
+    border-radius: 50%;
+    opacity: 70%;
+    transition: 0.5s;
+}
+
+.slider2 .dots2 li.active2 {
+    width: 10px;
+    height: 10px;
+    background-color: #0A9396;
+}
+
+
+.tenativa{
+    width: 30vw;
+    margin-top: -0.5vw;
+}
+
+
+/* TESTE SEGUNDO CARROSSEL */
+
+.slider3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1vw;
+    padding: 12px 0;
+    margin-bottom: 20vw;
+}
+
+.expec2 {
+    position: absolute;
+    top: -5vw;
+    z-index: 2;
+    margin-bottom: 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.num2 {
+    font-size: 1.5rem;
+    margin-top: 7vw;
+    color: #00404A;
+    font-weight: bold;
+    margin-right: 9vw;
+}
+
+.slider3 .list3 {
+    display: flex;
+    transition: transform 1s ease;
+    width: 407%;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    left: -3vw;
+    gap: 3vw;
+    margin-top: 10vw;
+    padding: 3px 0;
+}
+
+.slider3 .list3 img {
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.766) 0px 3px 8px;
+}
+
+.slider3 .buttons3 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider3 .buttons3 button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: #023047;
+    border: 2px solid #023047;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.slider3 .buttons3 button:hover {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.slider3 .dots3 {
+    color: #38000000;
+    display: flex;
+    z-index: 2;
+    margin-left: 28vw;
+    justify-content: center;
+    position: absolute;
+    bottom: 12vw;
+    width: 100%;
+}
+
+.slider3 .dots3 li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color:rgba(10, 147, 150, 0.45);
+    margin: 0 5px;
+    border-radius: 50%;
+    opacity: 70%;
+    transition: 0.5s;
+}
+
+.slider3 .dots3 li.active3 {
+    width: 10px;
+    height: 10px;
+    background-color: #0A9396;
+}
+
+
+.tenativa2{
+    width: 30vw;
+    margin-top: -0.5vw;
+}

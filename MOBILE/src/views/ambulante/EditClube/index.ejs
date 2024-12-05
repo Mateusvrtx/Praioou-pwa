@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/ambulante/AddClube/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/ambulante/padrao/style.css">
+    <link rel="stylesheet" href="/ambulante/EditClube/assets/style.css">
+    <script src="/ambulante/EditClube/assets/script.js" defer></script>
+    <title>Adicionar Clube</title>
+</head>
+<body>
+
+    <header class="navSup">
+        <a onclick="window.location.href='/CluberJSON/ClubeB'"><img src="/ambulante/padrao/img/voltar.png" id="voltar"></a>
+    </header>
+
+    <img src="/ambulante/padrao/img/logo.svg" class="logo">
+
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicialB" class="active" id="NavInicio"><img src="/ambulante/padrao/img/HomeClick.png" >Inicio</a>
+            <a href="/dados" class="active" id="NavReserva"> <img src="/ambulante/padrao/img/dados.png" alt="">Dados</a>
+            <a href="/CluberJSON/ClubeB" class="active" id="NavPedido"> <img src="/ambulante/padrao/img/clube.png" alt="">Clube</a>
+            <a href="/comanda" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/comanda.png" alt="">Comanda</a>
+            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/ambulante/padrao/img/perfil.png" alt="">Perfil</a>
+        </nav>
+    </div>
+
+    <section>
+        <container class="geral">
+            <input type="file" id="imgClube" required="required" style="display: none;">
+            <label for="imgClube" class="AddImg" id="labelImgClube">
+                <div class="Add" id="labelContent">
+                    <img src="/ambulante/AddCarrinho/assets/img/AddImg.png" id="defaultImg">
+                    <h2>ADICIONE UMA IMAGEM</h2>
+                </div>
+                <h3 id="verifique">*Verifique as fotos antes de enviar</h3>
+            </label>
+
+            <form method="post" id="Form-AddClube">
+                <div>
+                    <label>Nome do clube</label>
+                    <input 
+                        type="text" 
+                        id="nmClube" 
+                        class="inpts" 
+                        placeholder="<%= clube.nm_clube %>"
+                        value="<%= clube.nm_clube %>" 
+                        required 
+                    >
+                </div>
+                
+                <div>
+                    <h2>Carrinho Pertencente <img src="/ambulante/AddCarrinho/assets/img/Duvida.svg" style="width: 4.5vw; height: 4.5vw;" id="DuvidaVl"></h2>
+                    <select class="inpts2" id="idCarrinho" required>
+                        <% carrinhos.forEach(carrinho => { %>
+                            <option value="<%= carrinho.cd_carrinho %>" <%= carrinho.cd_carrinho === clube.cd_carrinho ? 'selected' : '' %>><%= carrinho.nm_carrinho %></option>
+                        <% }) %>
+                    </select>
+                </div>
+            
+                <div>
+                    <label>Valor de entrada<img src="/ambulante/AddCarrinho/assets/img/Duvida.svg" style="width: 4.5vw; height: 4.5vw;" id="DuvidaVl"></label>
+                    <div style="display: flex; align-items: center; width: 40vw;">
+                        <h1 class="preco">R$</h1>
+                        <input 
+                            type="number" 
+                            class="inpts2" 
+                            style="padding-left: 9vw;" 
+                            id="vlEntrada"
+                            placeholder="<%= clube.vl_entrada %>"
+                            value="<%= clube.vl_entrada %>"  
+                            required
+                        > 
+                    </div>
+                </div>
+            
+                <div>
+                    <label>Outras vantagens <img src="/ambulante/AddCarrinho/assets/img/Duvida.svg" style="width: 4.5vw; height: 4.5vw;" id="DuvidaVl"></label>
+                    <textarea placeholder="" id="dsVantagens" required><%= clube.ds_diferencial %></textarea>  <!-- Adicionando o valor atual e tornando o campo obrigatório -->
+                </div>
+            
+                <div>
+                    <h2 style="font-size: 5vw; margin-bottom: 2vw;">Cardápio</h2>
+                    <a href="/cardapio-clube/<%=clube.cd_clube%>"  style="text-decoration: none;">
+                        <div class="cardapio">
+                            <img src="/ambulante/EditClube/assets/img/faca.svg" alt="">
+                            <div>
+                                <h3>Cardapio do Clube</h3>
+                                <h4><strong><%=qttProdutos%></strong> itens</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="btn">
+                    <button type="submit" id="btnAdd">Salvar Alterações</button>
+                </div>
+            </form>
+
+        </container>
+    </section>
+
+    <section id="BodyModalConf">
+        <div class="blur"></div>
+        <div class="ModalConfi">
+            <h1>Clube editado com sucesso!</h1>
+            <img src="/ambulante/AddProduto/assets/img/verificado2.png">
+        </div>
+    </section>
+
+</body>
+</html>

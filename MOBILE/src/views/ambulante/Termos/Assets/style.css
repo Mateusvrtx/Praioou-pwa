@@ -1,0 +1,49 @@
+body {
+    background-color: #E8B05B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+.Branco {
+    background-color: #fff;
+    width: 92%;
+    height: 82vh;
+    border-radius: 2vw;
+    padding: 2vw;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2vh;
+    color: #00404A;
+    margin: 1vw 0vw 4vw 0vw;
+    text-align: center;
+}
+
+p {
+    width: 92%;
+    padding: 0vw 0vw 3vw 1vw;
+    margin: 0;
+}
+
+.txt {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 75vh;
+}
+
+::-webkit-scrollbar {
+    width: 3vw;
+    border-radius: 2vw;
+    border: .1vw solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 3vw;
+    border-radius: 2vw;
+    background-color: #00404A;
+}

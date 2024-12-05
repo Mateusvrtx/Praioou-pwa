@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/banhista/cardapio/assets/img/iconWeb.svg">
+    <link rel="stylesheet" href="/banhista/cardapio/assets/style.css">
+    <script src="/banhista/cardapio/assets/script.js" defer></script>
+    <link rel="stylesheet" href="/banhista/padrao/style.css">
+    <title>Cardápio</title>
+</head>
+
+<body>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/banhista/padrao/img/voltar.svg" id="voltar"></a>
+    </header>
+
+    <img src="/banhista/padrao/img/logo.svg" class="logo">
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio" style="color: black;"><img src="/banhista/padrao/img/inicio.png" >Inicio</a>
+            <a href="/suasReservas" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png" alt="">Reserva</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png" alt="">Sacola</a>
+            <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png" alt="">Perfil</a>
+          </nav>
+    </div>
+
+    <section>
+        <h2 class="nmBarraca"><%=carrinho.nm_carrinho%></h2>
+        <h4 class="cardapio">Cardápio</h4>
+    
+        <container class="geral">
+            <div class="btns">
+                <a style="text-decoration: none;"><button id="btnFiltroSalgado">Salgado</button></a>
+                <a style="text-decoration: none;"><button id="btnFiltroDoce">Doce</button></a>
+                <a style="text-decoration: none;"><button id="btnFiltroBebida">Bebida</button></a>
+            </div>
+
+            <div class="pttl">
+                <div class="ttl">
+                    <h1>Salgados</h1>
+                    <div class="right">
+                        <div name="filtro" id="filtro">
+                            <p>Filtrar</p>
+                        </div>
+                        <img src="/banhista/cardapio/assets/img/grade.png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="produtos"></div>
+        </container>
+    </section>
+
+    <div id="resultado"></div>
+    
+    <dialog id="modalProduto">
+        <header class="navSup">
+            <a><img src="/banhista/padrao/img/voltar.svg" id="fecharModal"></a>
+        </header>
+        <img src="/banhista/padrao/img/logo.svg" class="logo">
+        
+        <div class="geralModal">
+            <div class="imgProdutoModal">
+                
+            </div>
+            <img class='frente' id='imagem' onclick='trocarImagem()' src='/banhista/cardapio/assets/img/coracao.svg'>
+            <div class="datailsModal">
+                <div class="NmPc">
+                    <div class="nomes">
+                        <h2 id="modalNome"></h2>
+                        <p id="modalPreco"></p>
+                    </div>
+                    <div class="dsModal">
+                        <p id="modalDescricao"></p>
+                        <p class="tmpEst">Tempo estimado:    <strong id="tempoEspera"></strong>min</p>
+                    </div>
+                    <div>
+                        <textarea name="comentario" id="comentario" cols="30" rows="7" placeholder="Adicionar observação"></textarea>
+                    </div>
+                    <div class="qttModal">
+                        <label for="quantidade">Quantidade:</label>
+                        <div class="qtt">
+                            <button id="diminuirQuantidade"><img src="/banhista/cardapio/assets/img/menos.svg" class="imgSinalMenos"></button>
+                            <input type="number" id="quantidade" value="1" min="1">
+                            <button id="aumentarQuantidade"><img src="/banhista/cardapio/assets/img/mais.svg" class="imgSinalMais"></button>
+                        </div>
+                    </div>
+                    <div class="addSacola">
+                        <button id="adicionarSacola">ADICIONAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <div id="notificacao">
+        <img src="/banhista/cardapio/assets/img/ItemAdd.png">
+        <p>Produto Adicionado com sucesso</p>
+    </div>
+
+    <section id="modalBk" class="no-scroll ">
+        <div class="modal">
+            <div class="ajusteModal">
+                <h1>Filtrar por</h1>
+
+                <h3>Valor</h3>
+
+                <div class="justifyValues">
+                    <p>10</p>
+                    <input type="text" id="display" value="10" readonly>
+                    <p>250</p>
+                </div>
+                <div class="Pontos">
+                    <div class="ponto"></div>
+                    <div class="ponto"></div>
+                </div>
+
+                <div class="range-container">
+
+                    <input type="range" id="myRange" name="vlcardapio" value="10" min="10" max="250"
+                        oninput="display.value=value" onchange="display.value=value">
+                </div>
+
+                <h3>Tempo de espera</h3>
+                <div class="radio">
+                    <label class="Radios">
+                        <input type="radio" name="tempo" class="inputR" value="10"> 
+                        <span class="btnR">10 min</span>
+                    </label>
+                    <label class="Radios">
+                        <input type="radio" name="tempo" class="inputR" value="15">
+                        <span class="btnR">15 min</span>
+                    </label>
+                    <label class="Radios">
+                        <input type="radio" name="tempo" class="inputR" value="20">
+                        <span class="btnR">20 min</span>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label class="Radios">
+                        <input type="radio" name="tempo" class="inputR" value="25">
+                        <span class="btnR">25 min</span>
+                    </label>
+                    <label class="Radios">
+                        <input type="radio" name="tempo" class="inputR" value="30">
+                        <span class="btnR">30 min</span>
+                    </label>
+                </div>
+
+
+                <div class="btns">
+
+                    <div id="btnL">Limpar Filtros</div>
+                    <div id="btnF">Aplicar filtros</div>
+
+                </div>
+            </div>
+    </section>
+</body>
+</html>
