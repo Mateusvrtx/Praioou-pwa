@@ -31,41 +31,48 @@
 
         <div class="notificacoes">
             <div class="qtd_notificacao">
-                Notificacoes (4)
+                Notificacoes (3)
             </div>
             <button class="ler-tudo">
                 Ler Tudo
             </button>
         </div>
 
-        <% ntfPedido.forEach(pedido => { %>
             <div class="containers">
                 <div class="container">
                     <div class="img">
                         <img src="/banhista/notificacao/assets/img/pedido-feito.png" width="36vw" alt="">
                     </div>
                     <div class="d">
-                        <p class="titulo-principal"><%= pedido.ttlPedido %></p>
-                        <p class="titulo-secundario"><%= pedido.descricaoPedido %></p>
+                        <p class="titulo-principal">Novo Pedido Feito</p>
+                        <p class="titulo-secundario">Seu pedido foi efetuado, em breve você vai recebe-lo, fique de olho nas suas notificações</p>
                     </div>
                 </div>
             </div>
-        <% }) %>
 
-        <% ntfCupom.forEach(cupom => { %>
             <div class="containers">
                 <div class="container">
                     <div class="img">
                         <img src="/banhista/notificacao/assets/img/cupom-novo.png" width="36vw" alt="">
                     </div>
                     <div class="d">
-                        <p class="titulo-principal"><%= cupom.ttlCupom %></p>
-                        <p class="titulo-secundario"><%= cupom.descricaoCupom %></p>
+                        <p class="titulo-principal">Novo Cupom</p>
+                        <p class="titulo-secundario">Um novo cupom foi adicionado na sua aba de cupons, confira as condições do cupom antes de usa-lo</p>
                     </div>
                 </div>
             </div>
-        <% }); %>
 
+            <div class="containers">
+                <div class="container">
+                    <div class="img">
+                        <img src="/banhista/notificacao/assets/img/cupom-novo.png" width="36vw" alt="">
+                    </div>
+                    <div class="d">
+                        <p class="titulo-principal">Novo Cupom</p>
+                        <p class="titulo-secundario">Um novo cupom foi adicionado na sua aba de cupons, confira as condições do cupom antes de usa-lo</p>
+                    </div>
+                </div>
+            </div>
 
         <!--CUPONS COM OS NOVOS TEXTOS E IMAGENS, ATUALIZAR O TEXTO QUE ELES RECEBEM NO BANCO DE DADOS -->
 

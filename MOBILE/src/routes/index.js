@@ -56,39 +56,31 @@ router.get('/denuncia', async (req, resp) => { return resp.render('sac/denuncia/
 
 // BANHISTA
 router.get('/CadBanhista', async (req, resp) => { return resp.render('banhista/CadBanhista/index.ejs'); });
-router.get('/cardapio/:id', auth.verificarAutenticacao, async (req, resp) => { 
-
-    const IdCarrinho = req.params.id;
-
-    const carrinho = await ModelCarrinho.findOne({where: {cd_carrinho: IdCarrinho}})
-
-    return resp.render('banhista/cardapio/index.ejs',{carrinho:carrinho}); 
-});
+router.get('/cardapio', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/cardapio/index.ejs'); });
 router.get('/inicial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/inicial/index.ejs'); });
-router.get('/carrinho', auth.verificarAutenticacao, carrinho.todasBarracas);
-router.get('/reserva/:id', auth.verificarAutenticacao, carrinho.perfilBarraca);
+router.get('/carrinho', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/carrinho/index.ejs'); });
+router.get('/reserva', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/reserva/index.ejs'); });
 router.get('/trocar-conta', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/TrocarConta/index.ejs'); })
 router.get('/editar-dados', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/EditarDados/index.ejs'); })
-router.get('/config-perfil', auth.verificarAutenticacao,  perfil.CarregarConfigC)
+router.get('/config-perfil', auth.verificarAutenticacao,  async (req, resp) => { return resp.render('banhista/perfilConfig/index.ejs'); })
 router.get('/semreserva', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/SacolaSemReserva/index.ejs'); })
 router.get('/carrinhosemreserva', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/CarrinhoSemReserva/index.ejs'); })
-router.get('/carrinho', auth.verificarAutenticacao, carrinho.todasBarracas);
-router.get('/clube/:id', auth.verificarAutenticacao, CarregarPontosClube);
+router.get('/clubePontos', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/clube/index.ejs'); });
 router.get('/reserva', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/reserva/index.ejs'); });
-router.get('/sacola', auth.verificarAutenticacao, sacola.MostraItensSacola);
+router.get('/sacola', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/sacola/index.ejs'); });
 router.get('/produtos/:id', auth.verificarAutenticacao, findAllProdutos);
-router.get('/clube-entrar/:id', auth.verificarAutenticacao, CarregarEntrarClube)
-router.get('/clubeInicial/:id', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/TelaClube/index.ejs'); })
-router.get('/TodosClubes', auth.verificarAutenticacao, CarregarTodosOsClubes)
-router.get('/perfil', auth.verificarAutenticacao, imgPerfil, perfil.CarregarPerfil);
-router.get('/cupons', auth.verificarAutenticacao, cupom.meusCupons);
-router.get('/historico', auth.verificarAutenticacao, CarregarHistorico)
-router.get('/notificacao', auth.verificarAutenticacao,CarregarNotificacoes);
+router.get('/clube-entrar', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/ClubeEntrar/index.ejs'); })
+router.get('/clubeInicial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/TelaClube/index.ejs'); })
+router.get('/TodosClubes', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/TodosClubes/index.ejs'); })
+router.get('/perfil', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/perfill/index.ejs'); });
+router.get('/cupons', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/cupons/index.ejs'); });
+router.get('/historico', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/historico/index.ejs'); })
+router.get('/notificacao', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/notificacao/index.ejs'); });
 router.get('/seus-clubes', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/SeusClubes/index.ejs'); })
 router.get('/mapa', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/mapa/index.ejs'); })
-router.get('/reservando/:id', auth.verificarAutenticacao, CarregarHorarios)
-router.get('/reservaPaga/:id', ReservaPaga)
-router.get('/suasReservas', auth.verificarAutenticacao, CarregarReservas)
+router.get('/reservando', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/reservando/index.ejs'); })
+router.get('/reservaPaga', async (req, resp) => { return resp.render('banhista/reservaPaga/index.ejs'); })
+router.get('/suasReservas', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/suasReservas/index.ejs'); })
 router.get('/DetalhesCardapio', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/CardapioEscolhaClube/index.ejs'); })
 router.get('/EscolhidoClube', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/CardapioEscolhaClube/index.ejs'); });
 router.get('/ProdutoEscolhidoClube', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/ProdutoCarrinhoClube/index.ejs'); });
@@ -175,7 +167,7 @@ router.post('/EditarCarrinho/:id', EditarCarrinho)
 router.delete('/imgPerfilB', ExcluirImagemB);
 
 // Rotas GET para o pagamento
-router.get('/compracerta/:id', AdiconarHistorico);
+router.get('/compracerta', async (req, resp) => { return resp.render('banhista/compracerta/index.ejs'); });
 router.get('/compraerrada', pagamento.renderCompraErrada);
 
 module.exports = router;

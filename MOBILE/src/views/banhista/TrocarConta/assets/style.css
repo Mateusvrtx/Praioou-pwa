@@ -187,7 +187,8 @@ body{
     flex-direction: row;
     align-items: center;
     margin-left: 4.5vw;
-    gap: 14vw;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .adicionar{

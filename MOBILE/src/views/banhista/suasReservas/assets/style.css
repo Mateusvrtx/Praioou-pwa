@@ -84,7 +84,9 @@ h3 {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0vw 0.1vw 1vw 0.1vw;
   border-radius: 2vw;
-  /* height: 18vh; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .imgReserva {
@@ -99,6 +101,7 @@ h3 {
   display: flex;
   align-items: center;
   padding: 2vw;
+  width: 96%;
 }
 
 h5 {

@@ -42,85 +42,75 @@
                 <button class="filtro" id="filtro">Filtrar <img src="/banhista/historico/assets/img/filtro.png" alt=""></button>
             </div>
         </div>
-
-        <% if (DetalhesPedido.length > 0) { %>
-            <% DetalhesPedido.forEach((pedido, index) => { %>
-        <div id="recibo-<%= index %>" class="recibo" onclick="toggleRecibo(<%= index %>)">
+    
+        <!-- Recibo 1 -->
+        <div id="recibo-1" class="recibo" onclick="toggleRecibo(1)">
             <div class="titulo-recibo">
                 <p class="nome-barraca">Barraca Flor do Mar</p>
-                <p class="data-recibo"><%= new Date(pedido.DataPedido).toLocaleDateString('pt-BR') %></p>
+                <p class="data-recibo">07/12/2024</p>
             </div>
             <div class="detalhes-recibo">
                 <div class="subTotal">
                     <div class="detalhes">
                         <p>SubTotal</p>
-                        <p><%= pedido.ValorTotalPedido.toFixed(2) %></p>
+                        <p>R$45,00</p>
                     </div>
                 </div>
                 <div class="total">
                     <div class="detalhess">
                         <p>Total</p>
-                        <p><%= pedido.ValorTotalPedido.toFixed(2) %></p>
+                        <p>R$45,00</p>
                     </div>
                 </div>
                 <div class="forma-pagamento">
                     <div class="detalhess">
                         <p>Forma de Pagamento</p>
-                        <p>Cartão Debito</p>
+                        <p>Cartão Débito</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="recibo-aberto-<%= index %>" class="recibo-aberto" style="display: none;" onclick="toggleRecibo(<%= index %>)">
+    
+        <!-- Recibo 1 Aberto -->
+        <div id="recibo-aberto-1" class="recibo-aberto" style="display: none;" onclick="toggleRecibo(1)">
             <div class="titulo-recibo">
                 <p class="nome-barraca">Barraca Flor do Mar</p>
-                <p class="data-recibo"><%= new Date(pedido.DataPedido).toLocaleDateString('pt-BR') %></p>
+                <p class="data-recibo">07/12/2024</p>
             </div>
             <div class="detalhes-recibo">
                 <div class="lista-itens">
-                <% pedido.Produtos.forEach(produto => { %>
                     <div class="itens">
-                        <p class="item"><%= produto.nome %> x<%= produto.Quantidade %></p>
-                        <p class="preco">R$ <%= produto.ValorProduto.toFixed(2) %></p>
+                        <p class="item">Pastel de carne x3</p>
+                        <p class="preco">R$ 15,00</p>
                     </div>
-                <% }) %>
                 </div>
                 <div class="total">
                     <div class="detalhess">
                         <p>Total</p>
-                        <p><%= pedido.ValorTotalPedido.toFixed(2) %></p>
+                        <p>R$45,00</p>
                     </div>
                 </div>
                 <div class="forma-pagamento">
                     <div class="detalhess">
                         <p>Forma de Pagamento</p>
-                        <p>Cartão Debito</p>
+                        <p>Cartão Débito</p>
                     </div>
                 </div>
             </div>
         </div>
-        <% }) %>
-        <% } else { %>
-            <p>Nenhum pedido encontrado.</p>
-        <% } %>
+    
     </div>
-
-    <section id="modalBk" class="no-scroll ">
+    
+    <section id="modalBk" class="no-scroll">
         <div class="modal">
             <div class="ajusteModal">
                 <h1>Filtrar por</h1>
-
                 <h3>Data</h3>
-
                 <div class="dt-container">
-
                     <input type="date" name="data" id="dt">
-
                 </div>
-
+    
                 <h3>Forma de pagamento</h3>
-
                 <div class="radio">
                     <label class="Radios">
                         <input type="radio" name="pag" class="inputR" value="din">
@@ -135,9 +125,8 @@
                         <span class="btnR">Pix</span>
                     </label>
                 </div>
-
+    
                 <h3>Valor gasto</h3>
-
                 <div class="justifyValues">
                     <p>R$10</p>
                     <input type="text" id="display" value="0" readonly>
@@ -147,23 +136,17 @@
                     <div class="ponto"></div>
                     <div class="ponto"></div>
                 </div>
-
+    
                 <div class="range-container">
-
-                    <input type="range" id="myRange" name="vlg" value="10" min="10" max="250"
-                        oninput="display.value=value" onchange="display.value=value">
-
+                    <input type="range" id="myRange" name="vlg" value="10" min="10" max="250" oninput="display.value=value" onchange="display.value=value">
                 </div>
-
+    
                 <div class="btns">
-
                     <div id="btnL">Limpar Filtros</div>
                     <div id="btnF">Aplicar filtros</div>
-
                 </div>
             </div>
-    </section>
-
-
+        </div>
+    </section>    
 </body> 
 </html>

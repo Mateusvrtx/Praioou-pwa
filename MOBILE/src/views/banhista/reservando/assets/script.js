@@ -85,45 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (sucesso) sucesso.style.display = 'flex';
             }
     
-            const dtReserva = document.querySelector('input[name="dia"]:checked')?.value;
-            const hrReserva = document.querySelector('input[name="horaEscolhida"]:checked')?.getAttribute('value-horario');
-            const dsReserva = 'Ativa';
-            const hrLembrete = null;
-            const id = urlParams.get('id') || window.location.pathname.split('/').pop();
-    
-            let nmReservante = '';
-            const reservaParaMim = document.getElementById('paraMim').checked;
-            const nomeRespInput = document.getElementById('nomeResp');
-            
-            if (reservaParaMim) {
-                nmReservante = 'Usuário Logado';
-            } else {
-                nmReservante = nomeRespInput.value || 'Outro responsável';
-            }
-    
-            const dadosForm = {
-                dtReserva,
-                hrReserva,
-                dsReserva,
-                hrLembrete,
-                nmReservante,
-                id
-            };
-            
-            const response = await fetch('/reservar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(dadosForm)
-            });
-    
-            if (response.ok) {
-                const responseData = await response.json();
-                window.location.href = responseData.redirectUrl;
-            } else {
-                console.error('Erro ao enviar a reserva:', response.statusText);
-            }
+            window.location.href = '/reservaPaga'
         }
     });
     

@@ -28,16 +28,16 @@
     </div>
 
     <section>
-        <h2 class="nmBarraca"><%=carrinho.nm_carrinho%></h2>
-        <h4 class="cardapio">Cardápio</h4>
+        <h2 class="nmBarraca">Flor do Verão</h2>
+        <h4 class="cardápio">Cardápio</h4>
     
-        <container class="geral">
+        <div class="geral">
             <div class="btns">
                 <a style="text-decoration: none;"><button id="btnFiltroSalgado">Salgado</button></a>
                 <a style="text-decoration: none;"><button id="btnFiltroDoce">Doce</button></a>
                 <a style="text-decoration: none;"><button id="btnFiltroBebida">Bebida</button></a>
             </div>
-
+    
             <div class="pttl">
                 <div class="ttl">
                     <h1>Salgados</h1>
@@ -45,37 +45,49 @@
                         <div name="filtro" id="filtro">
                             <p>Filtrar</p>
                         </div>
-                        <img src="/banhista/cardapio/assets/img/grade.png">
+                        <img src="/banhista/cardapio/assets/img/grade.png" alt="Ícone de grade">
                     </div>
                 </div>
             </div>
-
-            <div id="produtos"></div>
-        </container>
+    
+            <div id="produtos">
+                <div class="produto">
+                    <img src="/uploads/pasteldecarne.jpg" class="imgProduto" alt="Imagem do Pastel">
+                    <div class="details">
+                        <h2>Pastel de Carne <img id="coracao" src="/banhista/cardapio/assets/img/coracao.svg" alt="Favoritar"></h2>
+                        <p class="dsProduto">Delicioso pastel recheado com carne moída e temperos especiais.</p>
+                        <div class="next">
+                            <p class="valor"><strong>Valor:</strong> R$ 5,00</p>
+                            <img class="seta" src="/banhista/cardapio/assets/img/next.svg" alt="Mais detalhes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
+    
     <div id="resultado"></div>
     
     <dialog id="modalProduto">
         <header class="navSup">
-            <a><img src="/banhista/padrao/img/voltar.svg" id="fecharModal"></a>
+            <a><img src="/banhista/padrao/img/voltar.svg" id="fecharModal" alt="Voltar"></a>
         </header>
-        <img src="/banhista/padrao/img/logo.svg" class="logo">
-        
+        <img src="/banhista/padrao/img/logo.svg" class="logo" alt="Logo">
+    
         <div class="geralModal">
             <div class="imgProdutoModal">
-                
+                <img src="/uploads/pasteldecarne.jpg" alt="Imagem do Pastel">
             </div>
-            <img class='frente' id='imagem' onclick='trocarImagem()' src='/banhista/cardapio/assets/img/coracao.svg'>
+            <img class="frente" id="imagem" onclick="trocarImagem()" src="/banhista/cardapio/assets/img/coracao.svg" alt="Favoritar">
             <div class="datailsModal">
                 <div class="NmPc">
                     <div class="nomes">
-                        <h2 id="modalNome"></h2>
-                        <p id="modalPreco"></p>
+                        <h2 id="modalNome">Pastel de Carne</h2>
+                        <p id="modalPreco">R$ 5,00</p>
                     </div>
                     <div class="dsModal">
-                        <p id="modalDescricao"></p>
-                        <p class="tmpEst">Tempo estimado:    <strong id="tempoEspera"></strong>min</p>
+                        <p id="modalDescricao">Recheado com carne moída e temperos que garantem um sabor incrível.</p>
+                        <p class="tmpEst">Tempo estimado: <strong id="tempoEspera">10</strong> min</p>
                     </div>
                     <div>
                         <textarea name="comentario" id="comentario" cols="30" rows="7" placeholder="Adicionar observação"></textarea>
@@ -83,9 +95,13 @@
                     <div class="qttModal">
                         <label for="quantidade">Quantidade:</label>
                         <div class="qtt">
-                            <button id="diminuirQuantidade"><img src="/banhista/cardapio/assets/img/menos.svg" class="imgSinalMenos"></button>
+                            <button id="diminuirQuantidade">
+                                <img src="/banhista/cardapio/assets/img/menos.svg" class="imgSinalMenos" alt="Diminuir">
+                            </button>
                             <input type="number" id="quantidade" value="1" min="1">
-                            <button id="aumentarQuantidade"><img src="/banhista/cardapio/assets/img/mais.svg" class="imgSinalMais"></button>
+                            <button id="aumentarQuantidade">
+                                <img src="/banhista/cardapio/assets/img/mais.svg" class="imgSinalMais" alt="Aumentar">
+                            </button>
                         </div>
                     </div>
                     <div class="addSacola">
@@ -95,7 +111,7 @@
             </div>
         </div>
     </dialog>
-
+    
     <div id="notificacao">
         <img src="/banhista/cardapio/assets/img/ItemAdd.png">
         <p>Produto Adicionado com sucesso</p>

@@ -139,22 +139,7 @@ if (btnClube.value == 0) {
 }
 
 btnClube.addEventListener('click', async function() {
-    const response = await fetch(`/VerificarClube/${id}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      });
-
-      if(response.status === 201) {
-        const result = await response.json()
-        const id = result.id
-        window.location.href = '/clubeInicial'
-      } else if(response.status === 202) {
-        const result = await response.json()
-        const id = result.id
-        window.location.href = `/clube-entrar/${id}`
-      }
+    window.location.href = `/clube-entrar`
 })
 
 

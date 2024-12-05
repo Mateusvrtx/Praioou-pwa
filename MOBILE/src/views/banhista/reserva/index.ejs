@@ -30,7 +30,7 @@
 
     <section class="imagem">
         <div class="barraca">
-            <img src="/uploads/<%= primeiraFoto %>" alt="">
+            <img src="/uploads/Carrinho(1).webp" alt="">
         </div>
         <div class="selo">
             <a href="/clubeInicial"><img src="/banhista/reserva/assets/img/coroa.png" alt=""></a>
@@ -39,8 +39,8 @@
 
     <aside class="line">
         <div class="reserva">
-            <h2><%= carrinho.nm_carrinho %></h2>
-            <a href="/reservando/<%= IDcarrinho %>"><button class="hora">Reservar</button></a>
+            <h2>Flor do Verão</h2>
+            <a href="/reservando"><button class="hora">Reservar</button></a>
         </div>
         <div class="info">
             <div class="valor">
@@ -53,11 +53,11 @@
     </aside>
 
     <section class="descri">
-        <h3><%= carrinho.ds_localizacao %></h3>
+        <h3>Perto do quisoque do zé</h3>
 
         <div class="btns">
-            <a href="/cardapio/<%= IDcarrinho %>"><button>Cardápio</button></a>
-            <button id="btnClube" class="clube-btn" value="<%= clube %>" >Clube</button>
+            <a href="/cardapio"><button>Cardápio</button></a>
+            <button id="btnClube" class="clube-btn" >Clube</button>
         </div>
     </section>
 
@@ -109,8 +109,8 @@
                 <span class="fechar">&times;</span>
                 <div class="o">
                     <div class="perfil">
-                        <img class="cliente-img" src="/uploads/<%= comentarios.foto %>">
-                        <label for="" class="nome"><%= comentarios.nome %> <%= comentarios.sobreN %></label>
+                        <img class="cliente-img" src="/uploads/ImageDefault.jpg">
+                        <label for="" class="nome"></label>
                     </div>
                     <div class="app">
                         <div class="ratingg">
@@ -140,42 +140,42 @@
                     <button class="btn" type="submit">Enviar Comentário</button>
                 </div>
                 
-                <input type="hidden" name="idCarrinho" value="<%= carrinho.cd_carrinho %>">
+                <input type="hidden" name="idCarrinho">
             </form>
         </div>
     </div>        
     <section id="comentarios">
         <div class="comentario">
-            <% comentarios.forEach(comentario => { %>
                 <div class="estrutura">
                     <div class="comentDatelhes">
                         <div class="cliente">
-                            <img class="cliente-img" src="/uploads/<%= comentario.foto %>" alt="Foto de <%= comentario.nome %>">
+                            <img class="cliente-img" src="/uploads/ImageDefault.jpg">
                             <div class="estrelaa">
-                                <h3><%= comentario.nome %> <%= comentario.sobrenome %></h3>
-                                <h4><%= new Date(comentario.data).toLocaleDateString('pt-BR') %></h4> 
+                                <h3></h3>
+                                <h4></h4> 
                             </div>           
                         </div>
                         <div class="estrela"> 
-                            <% for (let i = 0; i < comentario.estrelas; i++) { %>
                                 <img class="estrela2" src="/banhista/reserva/assets/img/estrela.png" width="15vw">
-                            <% } %>
+                                <img class="estrela2" src="/banhista/reserva/assets/img/estrela.png" width="15vw">
+                                <img class="estrela2" src="/banhista/reserva/assets/img/estrela.png" width="15vw">
+                                <img class="estrela2" src="/banhista/reserva/assets/img/estrela.png" width="15vw">
+                                <img class="estrela2" src="/banhista/reserva/assets/img/estrela.png" width="15vw">
                             <span class="qtEstrela">
-                                <%= comentario.estrelas %>
                             </span>
                         </div> 
                     </div>
     
                     <div class="coment">
-                        <p><%= comentario.comentario %></p>
+                        <p></p>
                     </div>
                     
                     <div class="reacoes">
                             <div class="like-deslike">
-                                <button id="like"> <img src="/banhista/reserva/assets/img/like.svg" alt="Gostei"> <%= comentario.like %></button>
-                                <button id="deslike"> <img src="/banhista/reserva/assets/img/deslike.svg" alt="Não gostei"> <%= comentario.deslike %></button>
+                                <button id="like"> <img src="/banhista/reserva/assets/img/like.svg" alt="Gostei">10</button>
+                                <button id="deslike"> <img src="/banhista/reserva/assets/img/deslike.svg" alt="Não gostei">2</button>
                             </div>
-                            <button class="responder-btn" data-comentario-id="<%= comentario.id %>" data-carrinho-id="<%= carrinho.cd_carrinho %>">Responder</button>   
+                            <button class="responder-btn">Responder</button>   
                     </div>
     
                     <div id="responder-modal" class="modal" style="display: none;">
@@ -192,7 +192,6 @@
                     </div>
 
                 </div>
-            <% }); %>
         </div>
     </section>
 

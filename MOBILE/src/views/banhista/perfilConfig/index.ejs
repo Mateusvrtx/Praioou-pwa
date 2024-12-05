@@ -9,7 +9,7 @@
     <script src="banhista/perfilConfig/assets/script.js"></script>
 </head>
 
-<body data-theme="<%= themePreference %>">
+<body>
     <img src="banhista/perfilConfig/assets/img/logo.png" class="logo">
 
     <div class="corpo">
@@ -28,11 +28,11 @@
     <div class="caixa">
         <div class="profile">
             <div class="img">
-                <img src="/uploads/<%=ftPerfil%>" width="113px" alt="">
+                <img src="/uploads/ImageDefault.jpg" width="113px" alt="">
             </div>
             <div class="minhas-infos">
-                <p class="nome"><%= nome %> <%= SobreNome %></p>
-                <a href="" class="editar-dados">Editar meus dados <img src="banhista/perfilConfig/assets/img/seta-verde.png" alt=""></a>
+                <p class="nome">Mateus Oliveira</p>
+                <a href="/editar-dados" class="editar-dados">Editar meus dados <img src="banhista/perfilConfig/assets/img/seta-verde.png" alt=""></a>
             </div>
         </div>
         <div class="botoes">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="atalhos">
                     <div class="b">
-                        <button class="caixa-atalho"> <img src="banhista/perfilConfig/assets/img/troca.png"  width="50px" alt="">Trocar de conta</button>
+                        <a href="/trocar-conta"><button class="caixa-atalho"> <img src="banhista/perfilConfig/assets/img/troca.png"  width="50px" alt="">Trocar de conta</button></a>
                         <button class="caixa-atalho"> <img src="banhista/perfilConfig/assets/img/deleteUso.png"  width="50px" alt="">Excluir conta</button>
                     </div>
                     <div class="b">

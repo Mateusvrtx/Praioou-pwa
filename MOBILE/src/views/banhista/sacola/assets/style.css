@@ -345,6 +345,10 @@ section {
     animation: abrir 0.5s;
 }
 
+.modal-exclusao {
+    display: none;
+}
+
 .x {
     width: 100%;
     display: flex;

@@ -41,7 +41,7 @@
         <div class="btnsAjusteCupon">
             <div class="QtCupon">
                 <p>Total de cupons:</p>
-                <p style="font-size: 6vw;"> <%= qttCupons %></p>
+                <p style="font-size: 6vw;">2</p>
             </div>
             <div id="btnfiltroCupon">
                 <p>Filtrar</p>
@@ -52,21 +52,33 @@
     </div>
 
     <div class="boxgodgod">
-        <% cupons.forEach(cupom => { %> 
         <div class="box">
             <div class="contentetxt">
-                <h3 style="margin: 0;"><%= cupom.nmCarrinho %></h3>
+                <h3 style="margin: 0;">Flor do verão</h3>
                 <div class="row">
-                    <h2 style="margin: 0;">R$ <%= cupom.preco %></h2>
+                    <h2 style="margin: 0;">R$ 15,00</h2>
                     <h6 style="margin: 0;">*valido somente para consumo</h6>
                 </div>
                 <div class="rowmage">
                     <img src="/banhista/cupons/assets/img/relogio.png" alt="">
-                    <h4 style="margin: 0;">valido até <%= cupom.validade %></h4>
+                    <h4 style="margin: 0;">valido até 18/12/2024</h4>
                 </div>
             </div>
         </div>
-        <%})%>
+
+        <div class="box">
+            <div class="contentetxt">
+                <h3 style="margin: 0;">Flor do verão</h3>
+                <div class="row">
+                    <h2 style="margin: 0;">10%</h2>
+                    <h6 style="margin: 0;">*valido somente para consumo</h6>
+                </div>
+                <div class="rowmage">
+                    <img src="/banhista/cupons/assets/img/relogio.png" alt="">
+                    <h4 style="margin: 0;">valido até 24/12/2024</h4>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Começo do filtro -->

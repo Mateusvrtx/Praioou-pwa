@@ -22,7 +22,7 @@
             <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/padrao/img/Home.png" >Inicio</a>
             <a href="/suasReservas" class="active" id="NavReserva"> <img src="/banhista/padrao/img/Reserva.png" alt="">Reservas</a>
             <a href="" class="active" id="NavPedido"> <img src="/banhista/padrao/img/Pedido.png" alt="">Sacola</a>
-            <a href="/perfilB" class="active" id="NavPerfil"> <img src="/banhista/padrao/img/perfil.png" alt="">Perfil</a>
+            <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/padrao/img/perfil.png" alt="">Perfil</a>
         </nav>
     </div>        
     
@@ -49,12 +49,8 @@
                 <h4 class="h42">Escolha um horário</h4>
                 <div class="horariosDisponiveis">
                     <div class="horariosContainer">
-                        <% horas.forEach(hora => { %>
-                            <input type="radio" name="horaEscolhida" id="<%=hora%>" value-horario="<%=hora%>">
-                            <label for="<%=hora%>"><%= hora %></label>
-                            <% }) %>
                             
-                            <!-- <input type="radio" name="horaEscolhida" id="horario2" value-horario="8:00">
+                            <input type="radio" name="horaEscolhida" id="horario2" value-horario="8:00">
                             <label for="horario2">8:00</label>
                             
                             <input type="radio" name="horaEscolhida" id="horario3" value-horario="9:00">
@@ -67,7 +63,7 @@
                             <label for="horario5">11:00</label>
                             
                             <input type="radio" name="horaEscolhida" id="horario6" value-horario="12:00">
-                            <label for="horario6">12:00</label> -->
+                            <label for="horario6">12:00</label>
                         </div>
                     </div>
                     <h4 class="h42" style="margin-top: 8vw;">Quantidade de pessoas</h4>

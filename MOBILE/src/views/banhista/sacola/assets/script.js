@@ -1,138 +1,91 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM fully loaded and parsed");
-    
-    document.querySelectorAll('.produto').forEach(produto => {
-        const id = produto.id.split('-')[1]; // Obtém o ID do produto
-        console.log(`Processing product with id: ${id}`);
+    const diminuirBtn = document.getElementById('diminuir-1');
+    const aumentarBtn = document.getElementById('aumentar-1');
+    const quantidadeElem = document.getElementById('quantidade-1');
+    const totalElem = document.querySelector('.total h3:nth-child(2)');
+    const modalPagamentoValor = document.querySelector('.vlFinal h1 strong');
 
-        const diminuirBtn = produto.querySelector(`#diminuir-${id}`);
-        const aumentarBtn = produto.querySelector(`#aumentar-${id}`);
-        const quantidadeElem = produto.querySelector(`#quantidade-${id}`);
-        const excluirBtn = produto.querySelector(`#Excluir-${id}`);
-        const removerBtn = produto.querySelector(`#apagar-${id}`);
-        const fecharModalExcluir = produto.querySelector('.FecharModalExcluir');
-        const modalExcluir = produto.querySelector('.ModalExcluir');
+    // Preço unitário do produto
+    const precoUnitario = 15.00;
 
-        console.log({diminuirBtn, aumentarBtn, quantidadeElem, excluirBtn, removerBtn, modalExcluir});
+    // Atualiza o total na interface
+    function atualizarTotal() {
+        const quantidade = parseInt(quantidadeElem.textContent);
+        const total = (quantidade * precoUnitario).toFixed(2).replace('.', ','); // Formata para R$
+        totalElem.textContent = `R$ ${total}`;
+        modalPagamentoValor.textContent = `R$ ${total}`;
+    }
 
-        if (diminuirBtn && aumentarBtn && quantidadeElem && excluirBtn && removerBtn) {
-            diminuirBtn.addEventListener('click', () => {
-                let quantidade = parseInt(quantidadeElem.textContent);
-                if (quantidade > 1) {
-                    quantidade--;
-                    updateQuantidade(id, quantidade);
-                }
-            });
-
-            aumentarBtn.addEventListener('click', () => {
-                let quantidade = parseInt(quantidadeElem.textContent);
-                quantidade++;
-                updateQuantidade(id, quantidade);
-            });
-
-            excluirBtn.addEventListener('click', () => {
-                modalExcluir.showModal();
-            });
-
-            fecharModalExcluir.addEventListener('click', () => {
-                modalExcluir.close();
-            });
-
-            removerBtn.addEventListener('click', () => {
-                removeProduto(id);
-                modalExcluir.close();
-            });
-        } else {
-            console.error('Elemento não encontrado:', {
-                diminuirBtn,
-                aumentarBtn,
-                quantidadeElem,
-                excluirBtn,
-                removerBtn,
-                produto
-            });
+    // Diminuir quantidade
+    diminuirBtn.addEventListener('click', () => {
+        let quantidade = parseInt(quantidadeElem.textContent);
+        if (quantidade > 1) {
+            quantidade--;
+            quantidadeElem.textContent = quantidade;
+            atualizarTotal();
         }
     });
 
-    function updateQuantidade(id, quantidade) {
-        fetch('/update-quantidade', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ id, quantidade })
-        })
-        .then(response => response.text())
-        .then(data => {
-            console.log(data);
-            location.reload();
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-        });
-    }
+    // Aumentar quantidade
+    aumentarBtn.addEventListener('click', () => {
+        let quantidade = parseInt(quantidadeElem.textContent);
+        quantidade++;
+        quantidadeElem.textContent = quantidade;
+        atualizarTotal();
+    });
 
-    function removeProduto(id) {
-        console.log(`Removing product with id: ${id}`);
-        fetch('/remove-produto', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ id })
-        })
-        .then(response => {
-            if (response.ok) {
-                exibirNotificacao('Produto removido da sacola');
-                return response.text();
-            } else {
-                throw new Error('Erro ao remover item da sacola');
-            }
-        })
-        .then(data => {
-            console.log(data);
-            location.reload(); // Recarrega a página para refletir as alterações
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-        });
-    }
+    // Inicializa o total com a quantidade inicial
+    atualizarTotal();
+});
 
-    function exibirNotificacao(mensagem) {
-        console.log(`Displaying notification: ${mensagem}`);
-        const notificacao = document.getElementById('notificacao');
-        notificacao.innerHTML = `<img src="/cardapio/assets/img/ItemAdd.png"><p>${mensagem}</p>`;
-        notificacao.style.display = 'flex';
-        
-        notificacao.style.animation = '';
-        setTimeout(() => {
-            notificacao.style.animation = 'fecharNtf 0.3s linear';
-            notificacao.addEventListener('animationend', () => {
-                notificacao.style.display = 'none';
-            }, { once: true });
-        }, 2000);
+// Abrir o modal de pagamento
+const btnPagamento = document.getElementById('pagamento');
+const ModalPagamento = document.getElementById('ModalPamento');
+const btnFinalizarPedido = document.getElementById('btnFinalizar');
+const formFinalizarPedido = document.getElementById('formFinalizarPedido');
+
+btnPagamento.onclick = function () {
+    ModalPagamento.style.display = 'block';
+};
+
+// Fechar o modal de pagamento
+document.querySelector('.FecharModalPagamento').onclick = function () {
+    ModalPagamento.style.display = 'none';
+};
+
+// Finalizar pedido
+formFinalizarPedido.addEventListener('submit', function (event) {
+    event.preventDefault(); // Previne o envio do formulário padrão
+    const Metodo = document.querySelector('input[name="FormaDePagamento"]:checked');
+    if (Metodo) {
+        alert(`Pedido finalizado com o método de pagamento: ${Metodo.value}`);
+        ModalPagamento.style.display = 'none';
+    } else {
+        alert('Selecione uma forma de pagamento antes de finalizar o pedido.');
     }
 });
 
-const btnPagamento = document.getElementById('pagamento')
+// ========================== Modal de Exclusão ==========================
 
-btnPagamento.onclick = function() {
-    const ModalPagamento = document.getElementById('ModalPamento')
+// Modal de Exclusão
+const excluirBtn = document.getElementById('Excluir'); // Botão para abrir o modal de exclusão
+const modalExcluir = document.getElementById('ModalExcluir');
+const btnFecharModalExcluir = document.querySelector('.FecharModalExcluir');
+const btnExcluir = document.getElementById('apagar-1');
+const produtoElement = document.querySelector('.produto'); // Elemento do produto
 
-    ModalPagamento.style.display = 'block'
-}
+// Mostrar modal de exclusão ao clicar no botão
+excluirBtn.addEventListener('click', () => {
+    modalExcluir.style.display = 'block'; // Exibe o modal
+});
 
-const btnFinalizarPedido = document.getElementById('btnFinalizar')
+// Fechar modal de exclusão
+btnFecharModalExcluir.addEventListener('click', () => {
+    modalExcluir.style.display = 'none'; // Esconde o modal
+});
 
-btnFinalizarPedido.onclick =  async function() {
-
-    const Metodo =  document.querySelector('input[name="FormaDePagamento"]:checked').value;
-
-    const response = await fetch('/FinalizarPedido', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ metodo: Metodo})
-    });
-}
+// Excluir produto
+btnExcluir.addEventListener('click', () => {
+    produtoElement.remove(); // Remove o produto da tela
+    modalExcluir.style.display = 'none'; // Fecha o modal
+});

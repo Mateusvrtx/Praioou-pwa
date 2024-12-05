@@ -36,57 +36,49 @@
                 <h1>Produtos</h1>
             </div>
             <div id="produtos">
-                <% if (itensDetalhados.length > 0) { %>
-                    <% itensDetalhados.forEach(item => { 
-                        let img = item.imgProduto
-                        console.log(img)
-                    if (img === null) {
-                        img = 'indisponivel.png'
-                    }%>
-                        <div class="produto" id="produto-<%= item.id %>">
-                            <img src="/uploads/<%=img%>" class='imgProduto'> 
-                            <div class="details">
-                                <div class="nmsProd">
-                                    <h2><%= item.nome %></h2>
-                                    <p>Preço: R$ <%= item.valor.toFixed(2) %></p>
-                                </div>
-                                <div>
-                                    <div class="qtt">
-                                        <button class="diminuirQuantidade" id="diminuir-<%= item.id %>"><img src="/banhista/sacola/assets/img/menos.svg" class="imgSinalMenos"></button>
-                                        <p class="quantidade" id="quantidade-<%= item.id %>"><%= item.quantidade %></p>
-                                        <button class="aumentarQuantidade" id="aumentar-<%= item.id %>"><img src="/banhista/sacola/assets/img/mais.svg" class="imgSinalMais"></button>
+                <div class="produto">
+                    <img src="/uploads/pasteldecarne.jpg" class='imgProduto'> 
+                    <div class="details">
+                        <div class="nmsProd">
+                            <h2>Pastel de carne</h2>
+                            <p>Preço: R$15,00</p>
+                        </div>
+                        <div>
+                            <div class="qtt">
+                                <button class="diminuirQuantidade" id="diminuir-1"><img src="/banhista/sacola/assets/img/menos.svg" class="imgSinalMenos"></button>
+                                <p class="quantidade" id="quantidade-1">1</p>
+                                <button class="aumentarQuantidade" id="aumentar-1"><img src="/banhista/sacola/assets/img/mais.svg" class="imgSinalMais"></button>
+                            </div>
+                            <div class="apagar" id="Excluir">
+                                <img src="/banhista/sacola/assets/img/lixeira.png" class="imgLixeira">
+                            </div>
+                            <div id="ModalExcluir" class="modal-exclusao">
+                                <div class="blur"></div>
+                                <div class="Excluir">
+                                    <div class="x">
+                                        <img src="/banhista/sacola/assets/img/x.png" class="FecharModalExcluir" />
                                     </div>
-                                    <div class="apagar" id="Excluir-<%= item.id %>">
-                                        <img src="/banhista/sacola/assets/img/lixeira.png" class="imgLixeira">
+                                    <h3>Certeza que deseja excluir esse produto?</h3>
+                                    <div class="imgExcluir">
+                                        <img src="/banhista/sacola/assets/img/imgExcluir.png" />
                                     </div>
-                                    <dialog class="ModalExcluir">
-                                        <div class="blur"></div>
-                                        <div class="Excluir">
-                                            <div class="x"><img src="/banhista/sacola/assets/img/x.png" class="FecharModalExcluir"></div>
-                                            <h3>Certeza que deseja excluir esse produto?</h3>
-                                            <div class="imgExcluir"><img src="/banhista/sacola/assets/img/imgExcluir.png"></div>
-                                            <p>*Essa ação não poderá ser desfeita</p>
-                                            <div class="divBtnExcluirModal">
-                                                <button id="apagar-<%= item.id %>">Excluir</button>
-                                            </div>
-                                        </div>
-                                    </dialog>
+                                    <p>*Essa ação não poderá ser desfeita</p>
+                                    <div class="divBtnExcluirModal">
+                                        <button id="apagar-1">Excluir</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    <% }) %>
-                <% } else { %>
-                    <p>Sua sacola está vazia.</p>
-                <% } %>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <% if (itensDetalhados.length > 0) { %>
         <div class="resumo">
             <div class="total">
                 <h3>Total</h3>
-                <h3>R$ <%= valorTotal.toFixed(2) %></h3>
+                <h3>R$ 15,00</h3>
             </div>
             <div>
 
@@ -98,21 +90,18 @@
                 <div id="FormadePagamento">
 
                     <div class="vlFinal">
-                        <h1>Valor: <strong>R$ <%= valorTotal.toFixed(2) %></strong></h1>
+                        <h1>Valor: <strong>R$ 15,00</strong></h1>
                     </div>
 
                     <label for="FormaDePagamento1" class="metodo"><p><img src="/banhista/sacola/assets/img/dinheiro.svg">  Dinheiro</p><input id="FormaDePagamento1" type="radio" name="FormaDePagamento" value="Dinheiro"></label>
                     <label for="FormaDePagamento2" class="metodo"><p><img src="/banhista/sacola/assets/img/cartao.svg">  Cartão</p><input id="FormaDePagamento2" type="radio" name="FormaDePagamento" value="Cartão"></label>
                     <label for="FormaDePagamento3" class="metodo"><p><img src="/banhista/sacola/assets/img/pix.svg">  Pix</p><input id="FormaDePagamento3" type="radio" name="FormaDePagamento" value="Pix"></label>
 
-                    <form action="/FinalizarPedido" method="POST">
-                        <button id="btnFinalizar" type="submit">Finalizar Pedido</button>
-                    </form>
+                    <a href="/compracerta"><button id="btnFinalizar">Finalizar Pedido</button></a>
                 </div>
             </div>
             </div>
         </div>
-    <% } %>
 
     <div id="notificacao">
         <img src="/banhista/cardapio/assets/img/ItemAdd.png">
