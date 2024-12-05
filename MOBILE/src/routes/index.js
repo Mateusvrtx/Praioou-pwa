@@ -55,7 +55,7 @@ router.get('/duvidas', async (req, resp) => { return resp.render('sac/duvidas/in
 router.get('/denuncia', async (req, resp) => { return resp.render('sac/denuncia/index.ejs'); });
 
 // BANHISTA
-router.get('/CadBanhista', async (req, resp) => { return resp.render('BANHISTA/CadBanhista/index.ejs'); });
+router.get('/CadBanhista', async (req, resp) => { return resp.render('banhista/CadBanhista/index.ejs'); });
 router.get('/cardapio/:id', auth.verificarAutenticacao, async (req, resp) => { 
 
     const IdCarrinho = req.params.id;
@@ -64,7 +64,7 @@ router.get('/cardapio/:id', auth.verificarAutenticacao, async (req, resp) => {
 
     return resp.render('banhista/cardapio/index.ejs',{carrinho:carrinho}); 
 });
-router.get('/inicial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('BANHISTA/inicial/index.ejs'); });
+router.get('/inicial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/inicial/index.ejs'); });
 router.get('/carrinho', auth.verificarAutenticacao, carrinho.todasBarracas);
 router.get('/reserva/:id', auth.verificarAutenticacao, carrinho.perfilBarraca);
 router.get('/trocar-conta', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/TrocarConta/index.ejs'); })

@@ -12,31 +12,31 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Define ícones personalizados
 var userGeoLocalizacao = L.icon({
-    iconUrl: '/banhista/mapa/assets/img/localizacaoUsuario.png',
+    iconUrl: 'banhista/mapa/assets/img/localizacaoUsuario.png',
     iconSize: [60, 60],
     iconAnchor: [30, 60]
 });
 
 var iconeChuveiro = L.icon({
-    iconUrl: '/banhista/mapa/assets/img/chuveirinho.png',
+    iconUrl: 'banhista/mapa/assets/img/chuveirinho.png',
     iconSize: [50, 50],
     iconAnchor: [25, 50]
 });
 
 var iconeBanheiro = L.icon({
-    iconUrl: '/banhista/mapa/assets/img/banheiro2.png',
+    iconUrl: 'banhista/mapa/assets/img/banheiro2.png',
     iconSize: [50, 50],
     iconAnchor: [25, 50]
 });
 
 var iconeChuveiroFocado = L.icon({
-    iconUrl: '/banhista/mapa/assets/img/chuveirinho_focado.png',
+    iconUrl: 'banhista/mapa/assets/img/chuveirinho_focado.png',
     iconSize: [60, 60],
     iconAnchor: [30, 60]
 });
 
 var iconeBanheiroFocado = L.icon({
-    iconUrl: '/banhista/mapa/assets/img/banheiro2_focado.png',
+    iconUrl: 'banhista/mapa/assets/img/banheiro2_focado.png',
     iconSize: [60, 60],
     iconAnchor: [30, 60]
 });
@@ -51,7 +51,7 @@ var Pontos = [
         icon: iconeBanheiro,
         focusedIcon: iconeBanheiroFocado,
         type: "banheiro",
-        image: '/banhista/mapa/assets/img/fotos/banheiro_posto_04.jpg'
+        image: 'banhista/mapa/assets/img/fotos/banheiro_posto_04.jpg'
     },
     {
         index: 2,
@@ -61,7 +61,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_4.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_4.jpg'
     },
     {
         index: 3,
@@ -81,7 +81,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_6.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_6.jpg'
     },
     {
         index: 5,
@@ -91,7 +91,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_7.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_7.jpg'
     },
     {
         index: 6,
@@ -101,7 +101,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_8.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_8.jpg'
     },   
     {
         index: 7,
@@ -111,7 +111,7 @@ var Pontos = [
         icon: iconeBanheiro,
         focusedIcon: iconeBanheiroFocado,
         type: "banheiro",
-        image: '/banhista/mapa/assets/img/fotos/banheiro_02.jpg'
+        image: 'banhista/mapa/assets/img/fotos/banheiro_02.jpg'
     },
     {
         index: 8, 
@@ -121,7 +121,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_9.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_9.jpg'
     },
     {
         index: 9,
@@ -131,7 +131,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_10.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_10.jpg'
     },
     {
         index: 10,
@@ -141,7 +141,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_11.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_11.jpg'
     },
     {
         index: 11,
@@ -151,7 +151,7 @@ var Pontos = [
         icon: iconeBanheiro,
         focusedIcon: iconeBanheiroFocado,
         type: "banheiro",
-        image: '/banhista/mapa/assets/img/fotos/banheiro_posto_04.jpg'
+        image: 'banhista/mapa/assets/img/fotos/banheiro_posto_04.jpg'
     },
     {
         index: 12, 
@@ -161,7 +161,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_12.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_12.jpg'
     },
     {
         index: 13,
@@ -171,7 +171,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_13.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_13.jpg'
     },
     {
         index: 14,
@@ -181,7 +181,7 @@ var Pontos = [
         icon: iconeBanheiro,
         focusedIcon: iconeBanheiroFocado,
         type: "banheiro",
-        image: '/banhista/mapa/assets/img/fotos/banheiro_03.jpg'
+        image: 'banhista/mapa/assets/img/fotos/banheiro_03.jpg'
     }, 
     {
         index: 15,
@@ -191,7 +191,7 @@ var Pontos = [
         icon: iconeBanheiro,
         focusedIcon: iconeBanheiroFocado,
         type: "banheiro",
-        image: '/banhista/mapa/assets/img/fotos/banheiro_02.jpg'
+        image: 'banhista/mapa/assets/img/fotos/banheiro_02.jpg'
     },
     {
         index: 16,
@@ -201,7 +201,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_14.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_14.jpg'
     },
     {
         index: 17,
@@ -211,7 +211,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_15.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_15.jpg'
     },
     {
         index: 18,
@@ -221,7 +221,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_16.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_16.jpg'
     },
     {
         index: 19,
@@ -231,7 +231,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_17.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_17.jpg'
     },
     {
         index: 20,
@@ -241,7 +241,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_18.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_18.jpg'
     },
     {
         index: 21,
@@ -251,7 +251,7 @@ var Pontos = [
         icon: iconeBanheiro,
         focusedIcon: iconeBanheiroFocado,
         type: "banheiro",
-        image: '/banhista/mapa/assets/img/fotos/banheiro_posto_bombeiro.jpg'
+        image: 'banhista/mapa/assets/img/fotos/banheiro_posto_bombeiro.jpg'
     },
     {
         index: 22,
@@ -261,7 +261,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_19.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_19.jpg'
     },
     {
         index: 23,
@@ -271,7 +271,7 @@ var Pontos = [
         icon: iconeChuveiro,
         focusedIcon: iconeChuveiroFocado,
         type: "chuveirinho",
-        image: '/banhista/mapa/assets/img/fotos/chuveirinho_20.jpg'
+        image: 'banhista/mapa/assets/img/fotos/chuveirinho_20.jpg'
     },
 ];
 
@@ -448,7 +448,7 @@ function mostrarListaFiltrada(type) {
         listItem.classList.add('card');
         listItem.dataset.index = ponto.index; // Adiciona o index ao dataset
         listItem.innerHTML = `
-            <img src="${ponto.image || '/banhista/mapa/assets/img/Imagem indisponível.png'}" alt="${ponto.name}">
+            <img src="${ponto.image || 'banhista/mapa/assets/img/Imagem indisponível.png'}" alt="${ponto.name}">
             <div class="card-info">
                 <h2>${ponto.name}</h2>
                 <span>Distância: ${formatarDistancia(calcDistancia(userLat, userLng, ponto.lat, ponto.lng))} m</span>
