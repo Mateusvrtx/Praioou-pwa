@@ -45,6 +45,7 @@
 
             <a href="/inicial"><button id="Entrar">Entrar</button></a>
             <p class="Cadastrar">Não possui conta? <a href="/escolher">Cadastre-se</a></p>
+            <button id="installBtn">Baixar App</button>
         </div>
     </div>
 
@@ -70,9 +71,12 @@
                 <p class="p">Usuário não encontrado!</p>
                 <button id="btnVoltarEmail">Tentar Novamente</button>
                 <p>Não possui uma conta? <a href="/escolher">Clique Aqui</a></p>
+                
             </div>
         </div>
     </dialog>
+    
+
 </body>
 <script>
     if ('serviceWorker' in navigator) {
@@ -84,6 +88,40 @@
                 console.log('Falha ao registrar o Service Worker:', error);
             });
     }
+
+    let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+
+        // Detectando quando o PWA pode ser instalado
+        window.addEventListener('beforeinstallprompt', (event) => {
+            event.preventDefault(); // Impede a instalação automática
+            deferredPrompt = event;
+            installBtn.style.display = 'block'; // Exibe o botão
+
+            // Ao clicar no botão de instalação
+            installBtn.addEventListener('click', () => {
+
+                alert('a')
+                // Mostra o prompt de instalação
+                deferredPrompt.prompt();
+
+                // Espera o usuário responder ao prompt
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Usuário aceitou a instalação');
+                    } else {
+                        console.log('Usuário rejeitou a instalação');
+                    }
+                    deferredPrompt = null;
+                });
+            });
+        });
+
+        // Verifica se o PWA já foi instalado
+        window.addEventListener('appinstalled', (event) => {
+            console.log('PWA foi instalado');
+            installBtn.style.display = 'none'; // Esconde o botão após a instalação
+        });
 </script>
 
 </html>
