@@ -1,8 +1,5 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.b img');
-    const themePreference = document.body.getAttribute('data-theme');
 
     const padrao = [
         'banhista/perfilConfig/assets/img/cadeado.png',
@@ -47,15 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-  if (themePreference === 'dark') {
+    // Verifica a preferência armazenada no localStorage
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (darkMode) {
         document.body.classList.add('dark');
         document.body.classList.remove('light');
-        updateImages (true)
+        updateImages(true);
     } else {
         document.body.classList.add('light');
         document.body.classList.remove('dark');
-        updateImages (false)
-    }});
-
-
-
+        updateImages(false);
+    }
+});
