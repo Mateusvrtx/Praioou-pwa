@@ -12,6 +12,17 @@ body{
     margin: 0;
 }
 
+body.dark{
+    background-color: #282828;
+    background-image: url(img/fundinho.svg);
+
+    .text{
+        color: #FFF;
+    }
+
+    
+}
+
 .logo {
     position: absolute;
     z-index: 2;

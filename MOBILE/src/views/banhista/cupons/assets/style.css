@@ -14,6 +14,24 @@ body {
     margin: 0;
 }
 
+
+body.dark{
+    background-image: url(img/fundinho.svg);
+    background-color: #282828;
+
+    .btnsCupon{
+        background-color: #282828;
+    }
+
+    .texto h1{
+        color: #FFF;
+    }
+
+    .texto h4{
+        color: #FFF;
+    }
+}
+
 .logo {
     position: absolute;
     z-index: 2;

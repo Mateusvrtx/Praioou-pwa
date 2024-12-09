@@ -1,91 +1,112 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const diminuirBtn = document.getElementById('diminuir-1');
-    const aumentarBtn = document.getElementById('aumentar-1');
-    const quantidadeElem = document.getElementById('quantidade-1');
-    const totalElem = document.querySelector('.total h3:nth-child(2)');
-    const modalPagamentoValor = document.querySelector('.vlFinal h1 strong');
+    (function () {
+        // ===================== Parte do Carrinho =====================
+        const diminuirBtn = document.getElementById('diminuir-1');
+        const aumentarBtn = document.getElementById('aumentar-1');
+        const quantidadeElem = document.getElementById('quantidade-1');
+        const totalElem = document.querySelector('.total h3:nth-child(2)');
+        const modalPagamentoValor = document.querySelector('.vlFinal h1 strong');
 
-    // Preço unitário do produto
-    const precoUnitario = 15.00;
+        const precoUnitario = 15.00; // Preço unitário do produto
 
-    // Atualiza o total na interface
-    function atualizarTotal() {
-        const quantidade = parseInt(quantidadeElem.textContent);
-        const total = (quantidade * precoUnitario).toFixed(2).replace('.', ','); // Formata para R$
-        totalElem.textContent = `R$ ${total}`;
-        modalPagamentoValor.textContent = `R$ ${total}`;
-    }
-
-    // Diminuir quantidade
-    diminuirBtn.addEventListener('click', () => {
-        let quantidade = parseInt(quantidadeElem.textContent);
-        if (quantidade > 1) {
-            quantidade--;
-            quantidadeElem.textContent = quantidade;
-            atualizarTotal();
+        // Atualiza o total na interface
+        function atualizarTotal() {
+            if (quantidadeElem && totalElem && modalPagamentoValor) {
+                const quantidade = parseInt(quantidadeElem.textContent) || 0;
+                const total = (quantidade * precoUnitario).toFixed(2).replace('.', ',');
+                totalElem.textContent = `R$ ${total}`;
+                modalPagamentoValor.textContent = `R$ ${total}`;
+            }
         }
-    });
 
-    // Aumentar quantidade
-    aumentarBtn.addEventListener('click', () => {
-        let quantidade = parseInt(quantidadeElem.textContent);
-        quantidade++;
-        quantidadeElem.textContent = quantidade;
-        atualizarTotal();
-    });
+        // Diminuir quantidade
+        diminuirBtn?.addEventListener('click', () => {
+            if (quantidadeElem) {
+                let quantidade = parseInt(quantidadeElem.textContent) || 1;
+                if (quantidade > 1) {
+                    quantidade--;
+                    quantidadeElem.textContent = quantidade;
+                    atualizarTotal();
+                }
+            }
+        });
 
-    // Inicializa o total com a quantidade inicial
-    atualizarTotal();
-});
+        // Aumentar quantidade
+        aumentarBtn?.addEventListener('click', () => {
+            if (quantidadeElem) {
+                let quantidade = parseInt(quantidadeElem.textContent) || 0;
+                quantidade++;
+                quantidadeElem.textContent = quantidade;
+                atualizarTotal();
+            }
+        });
 
-// Abrir o modal de pagamento
-const btnPagamento = document.getElementById('pagamento');
-const ModalPagamento = document.getElementById('ModalPamento');
-const btnFinalizarPedido = document.getElementById('btnFinalizar');
-const formFinalizarPedido = document.getElementById('formFinalizarPedido');
+        atualizarTotal(); // Inicializa o total com a quantidade inicial
 
-btnPagamento.onclick = function () {
-    ModalPagamento.style.display = 'block';
-};
+        // ===================== Modal de Pagamento =====================
+        const btnPagamento = document.getElementById('pagamento');
+        const ModalPagamento = document.getElementById('ModalPamento');
+        const formFinalizarPedido = document.getElementById('formFinalizarPedido');
 
-// Fechar o modal de pagamento
-document.querySelector('.FecharModalPagamento').onclick = function () {
-    ModalPagamento.style.display = 'none';
-};
+        btnPagamento?.addEventListener('click', () => {
+            if (ModalPagamento) {
+                ModalPagamento.style.display = 'block';
+            }
+        });
 
-// Finalizar pedido
-formFinalizarPedido.addEventListener('submit', function (event) {
-    event.preventDefault(); // Previne o envio do formulário padrão
-    const Metodo = document.querySelector('input[name="FormaDePagamento"]:checked');
-    if (Metodo) {
-        alert(`Pedido finalizado com o método de pagamento: ${Metodo.value}`);
-        ModalPagamento.style.display = 'none';
-    } else {
-        alert('Selecione uma forma de pagamento antes de finalizar o pedido.');
-    }
-});
+        document.querySelector('.FecharModalPagamento')?.addEventListener('click', () => {
+            if (ModalPagamento) {
+                ModalPagamento.style.display = 'none';
+            }
+        });
 
-// ========================== Modal de Exclusão ==========================
+        formFinalizarPedido?.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const Metodo = document.querySelector('input[name="FormaDePagamento"]:checked');
+            if (Metodo) {
+                alert(`Pedido finalizado com o método de pagamento: ${Metodo.value}`);
+                ModalPagamento.style.display = 'none';
+            } else {
+                alert('Selecione uma forma de pagamento antes de finalizar o pedido.');
+            }
+        });
 
-// Modal de Exclusão
-const excluirBtn = document.getElementById('Excluir'); // Botão para abrir o modal de exclusão
-const modalExcluir = document.getElementById('ModalExcluir');
-const btnFecharModalExcluir = document.querySelector('.FecharModalExcluir');
-const btnExcluir = document.getElementById('apagar-1');
-const produtoElement = document.querySelector('.produto'); // Elemento do produto
+        // ===================== Modal de Exclusão =====================
+        const excluirBtn = document.getElementById('Excluir');
+        const modalExcluir = document.getElementById('ModalExcluir');
+        const btnFecharModalExcluir = document.querySelector('.FecharModalExcluir');
+        const btnExcluir = document.getElementById('apagar-1');
+        const produtoElement = document.querySelector('.produto');
 
-// Mostrar modal de exclusão ao clicar no botão
-excluirBtn.addEventListener('click', () => {
-    modalExcluir.style.display = 'block'; // Exibe o modal
-});
+        excluirBtn?.addEventListener('click', () => {
+            if (modalExcluir) {
+                modalExcluir.style.display = 'block';
+            }
+        });
 
-// Fechar modal de exclusão
-btnFecharModalExcluir.addEventListener('click', () => {
-    modalExcluir.style.display = 'none'; // Esconde o modal
-});
+        btnFecharModalExcluir?.addEventListener('click', () => {
+            if (modalExcluir) {
+                modalExcluir.style.display = 'none';
+            }
+        });
 
-// Excluir produto
-btnExcluir.addEventListener('click', () => {
-    produtoElement.remove(); // Remove o produto da tela
-    modalExcluir.style.display = 'none'; // Fecha o modal
+        btnExcluir?.addEventListener('click', () => {
+            if (produtoElement) {
+                produtoElement.remove();
+            }
+            if (modalExcluir) {
+                modalExcluir.style.display = 'none';
+            }
+        });
+
+        // ===================== Dark Mode =====================
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        if (darkMode) {
+            document.body.classList.add('dark');
+            document.body.classList.remove('light');
+        } else {
+            document.body.classList.add('light');
+            document.body.classList.remove('dark');
+        }
+    })();
 });

@@ -31,7 +31,7 @@ body.dark{
     filter: invert(38%) sepia(80%) saturate(20%) hue-rotate(150deg) brightness(95%) contrast(85%);
   }
 
-  .lembrete, .cancelarReserva{
+  .lembrete, .cancelarReserva,.modalTempoExtra{
     background-color: #282828;
     color: #FFF;
   }
