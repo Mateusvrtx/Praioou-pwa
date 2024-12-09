@@ -134,7 +134,7 @@ const id = urlParams.get('id') || window.location.pathname.split('/').pop();
 
 const btnClube = document.getElementById('btnClube')
 if (btnClube.value == 0) {
-    btnClube.style.color = '#323232'
+    btnClube.style.color = '#FFF'
     btnClube.style.backgroundColor = '#323232bf'
 }
 
@@ -157,3 +157,22 @@ function trocarImagem(){
     indiceAtual = (indiceAtual + 1) % imagens.length;
     img.src = imagens[indiceAtual];
 }
+
+
+
+// dark mode
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Verifica a preferência armazenada no localStorage
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (darkMode) {
+        document.body.classList.add('dark');
+        document.body.classList.remove('light');
+        updateImages(true);
+    } else {
+        document.body.classList.add('light');
+        document.body.classList.remove('dark');
+        updateImages(false);
+    }
+});

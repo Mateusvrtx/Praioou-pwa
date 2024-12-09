@@ -1,3 +1,79 @@
+body.dark{
+  background-image: url(img/fundinho.svg);
+  background-color: #282828;
+
+  .reservaContainer{
+    background-color: #282828;
+  }
+
+  .ajusteTitle{
+    color: #FFF;
+  }
+
+  h3, h5{
+    color: #FFF;
+  }
+
+  .reservas{
+    background-color: #2f2f2f;
+  }
+
+  .reserva{
+    background-color: #454545;
+    color: #FFF;
+  }
+
+  .span{
+    color: #0A9396;
+  }
+
+  .iconNot{
+    filter: invert(38%) sepia(80%) saturate(20%) hue-rotate(150deg) brightness(95%) contrast(85%);
+  }
+
+  .lembrete, .cancelarReserva{
+    background-color: #282828;
+    color: #FFF;
+  }
+
+  .iconFechar span{
+    filter: invert(1);
+  }
+
+
+  
+
+
+  .label{
+    background-color: #008B92;
+    color: #FFF;
+  }
+
+  .reciboReserva{
+    background-color: #282828;
+    box-shadow: rgba(118, 118, 118, 0.152) 0px 7px 30px 0px;
+  }
+  .descricaoReserva{
+    color: #FFF;
+  }
+
+  .dtReserva{
+    color: #0A9396;
+  }
+
+  .detalhe{
+    color: #FFF;
+  }
+
+  hr{
+    background-color: #CCCCCC;
+  }
+
+  .reservasFuturas{
+    color: #ffffffba;
+  }
+}
+
 .suasReservas {
   position: absolute;
   overflow-x: hidden;
@@ -237,6 +313,14 @@ input[name='opcHora'] {
     /* bottom: 4vw; */
     position: fixed;
     right: 10vw;
+}
+
+.iconFecharr{
+  font-size: 3rem;
+  font-weight: 300;
+  /* bottom: 4vw; */
+  position: fixed;
+  right: 10vw;
 }
 
 .label {

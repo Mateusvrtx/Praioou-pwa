@@ -21,6 +21,7 @@ body {
 body.dark {
   background-image: url(img/Group\ 138.svg);
   color: rgb(255, 255, 255);
+  background-color: #282828;
 
   .caixa-atalho {
     background-color: #3a3a3a;

@@ -5,14 +5,67 @@ body {
   background-repeat: no-repeat;
   background-color: #e9f6ff;
   background-size: 100%;
-  margin-bottom: 25vw;
+}
+
+body.dark{
+  background-image: url(img/fundinho.svg);
+  background-color: #282828;
+
+  .reserva h2{
+    color: #FFF;
+  }
+
+  .valor h3{
+    color: #FFF;
+  }
+
+  .valor h5{
+    color: #d5d5d5;
+  }
+
+  .line{
+    border-bottom: 0.5px solid #bfbfbf;
+  }
+
+  .descri{
+    border-bottom: 0.5px solid #bfbfbf;
+  }
+
+  .descri h3{
+    color: #FFF;
+  }
+
+  .sugtext{
+    color: #FFF;
+  }
+
+  .rating_progress-value .star {
+    color: #008A93;
+  }
+
+  
+
+  
+
 }
 
 * {
   font-family: "Montserrat", sans-serif;
 }
 
-.corpo {
+
+
+
+.logo {
+  position: absolute;
+  z-index: 2;
+  width: 22vw;
+  left: 50%;
+  top: 5vw;
+  transform: translate(-50%);
+}
+
+.corpo{
   padding: 0;
   margin: 0;
 }
@@ -28,7 +81,7 @@ body {
   justify-content: space-around;
   padding: 2vw 0;
   left: 1vw;
-  border: solid 1px #cccccc;
+  border: solid 1px #CCCCCC;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
@@ -43,50 +96,26 @@ body {
   font-size: 4vw;
 }
 
-.navbar .active img {
+
+.navbar .active img{
   width: 7vw;
-}
-
-#NavInicio {
-  color: #008b92;
-}
-
-a {
-  text-decoration: none;
-}
-
-.Clube {
-  width: 10vw;
 }
 
 #voltar {
   position: absolute;
   z-index: 2;
-  left: 0;
-  top: 0;
-  width: 10vw;
-  margin: 2vw;
+  left: 3vw;
+  top: 3vw;
+  width: 7vw;
 }
 
-.logo {
-  position: absolute;
-  z-index: 2;
-  width: 25vw;
-  left: 50%;
-  top: 5vw;
-  transform: translate(-50%);
+.blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
-.navSup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.volta {
-  width: 9vw;
-}
 
 .barraca {
   display: flex;
@@ -191,7 +220,7 @@ a {
   background-color: #fff;
   border-radius: 100%;
   width: 11vw;
-  margin-top: 3vw;
+  margin-top: 4vw;
   height: 11vw;
   margin-right: 2vw;
   display: flex;
@@ -422,7 +451,7 @@ a {
 
 .card {
   background-color: #e5f5ff;
-  width: 30vw;
+  width: 28vw;
   height: 32vw;
   display: flex;
   flex-direction: column;
@@ -441,7 +470,7 @@ a {
 }
 
 :root {
-  --text-color: #00404a;
+  --text-color: #008A93;
 }
 
 .appa {

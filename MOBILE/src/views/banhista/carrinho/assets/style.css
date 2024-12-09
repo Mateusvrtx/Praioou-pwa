@@ -17,6 +17,55 @@ body {
     background-size: 100%;
 }
 
+body.dark {
+    background-image: url(img/fundinho.svg);
+    background-color: #282828;
+    color: rgb(0, 0, 0);
+
+    .texto{
+        color: #fff;
+    }
+
+    .caixa{
+        background-color: #D8D8D8;
+    }
+
+    .modal{
+        background-color: #282828;
+        color: #FFF;
+    }
+
+    input#display {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10vw;
+        font-size: 5vw;
+        font-weight: 600;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-self: center;
+        color: #ffffff;
+        background-color: unset;
+        outline: none;
+    }
+
+    .ajusteModal h3{
+        color: #FFF;
+    }
+
+    .modal p{
+        color: #FFF;
+    }
+
+    #btnL{
+        background-color: #FFF;
+        border: 0.8vw solid #00404A;
+    }
+}
+
 .corpo {
     padding: 0;
     margin: 0;
@@ -102,7 +151,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 22%;
+    margin-top: 25vw;
 }
 
 .texto {

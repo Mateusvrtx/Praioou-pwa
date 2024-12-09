@@ -11,6 +11,53 @@ body{
     background-size: 100%;
 }
 
+body.dark{
+    background-image: url(img/fundinho.svg);
+    background-color: #282828;
+    color: rgb(0, 0, 0);
+
+    .num{
+        color: #008A93;
+    }
+
+    .num2{
+        color: #008A93;
+    }
+
+    .tenativa{
+        color:#FFF;
+    }
+
+    .tenativa2{
+        color: #fff;
+    }
+
+    .slider2 .list2 img{
+        box-shadow: rgba(0, 0, 0, 0.812) 0px 3px 8px;
+    }
+
+    .slider3 .list3 img{
+        box-shadow: rgba(0, 0, 0, 0.812) 0px 3px 8px;
+    }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
+
+    .card1{
+        background-color: #1e8c92;
+    }
+
+    .card2{
+        background-color: #006D72;
+    }
+
+    .card3{
+        background-color: #015054;
+    }
+}
+
 .logo {
     position: absolute;
     z-index: 2;
@@ -213,7 +260,6 @@ a {
 }
 
 .card1{
-    margin-top: -1vw;
     color: #fff;
     text-decoration: none;
 }
