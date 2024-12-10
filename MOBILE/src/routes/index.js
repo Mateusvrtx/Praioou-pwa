@@ -86,6 +86,8 @@ router.get('/EscolhidoClube', auth.verificarAutenticacao, async (req, resp) => {
 router.get('/ProdutoEscolhidoClube', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/ProdutoCarrinhoClube/index.ejs'); });
 router.get('/TutorialB', async (req, resp) => { return resp.render('banhista/TutorialB/index.ejs'); })
 router.get('/favoritos', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/Favoritos/index.ejs'); });
+router.get('/Privacidade', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/Privacidade/index.ejs'); })
+router.get('/termos', async (req, resp) => { return resp.render('banhista/Termos/index.ejs'); })
 
 
 // AMBULANTE
@@ -115,10 +117,8 @@ router.get('/Recibos', auth.verificarAutenticacao, CarregarCarrinhosRecibos)
 router.get('/CarregarNotificacoes', RenderNotificacoes)
 router.get('/AddClube', auth.verificarAutenticacao, AddClube.CarregarCarrinhosAddClube)
 router.get('/EditClube/:idClube', auth.verificarAutenticacao, CarregarEditClube)
-router.get('/Privacidade', auth.verificarAutenticacao, async (req, resp) => { return resp.render('ambulante/Privacidade/index.ejs'); })
 router.get('/Reservacad', auth.verificarAutenticacao, RenderCarrinhosReserva)
 router.get('/Tutorial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('ambulante/Tutorial/index.ejs'); })
-router.get('/termos', async (req, resp) => { return resp.render('ambulante/Termos/index.ejs'); })
 //////////////////// Rotas POST ////////////////////
 
 // PADRÃO

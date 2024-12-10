@@ -24,8 +24,9 @@ body.dark{
   }
 
   .faq-resposta, .faq-pergunta {
-    color: #fff;
+    color: #282828;
     border: 0.6vw solid #44737a;
+    background-color: #CCCCCC
   }
 
   .navbar{

@@ -265,3 +265,26 @@ body {
   font-weight: bold;
 }
 
+
+#installBtn {
+  border: none;
+  width: 50vw;
+  height: 12vw;
+  border: none;
+  border-radius: 2vw;
+  font-size: 4.2vw;
+  color: #ffffff;
+  background-color: #00868e;
+  margin-top: 0.5vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.inpts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5vh;
+}
