@@ -11,7 +11,9 @@ body{
 }
 
 body.dark{
-    background-image: url(img/fundoGrande.svg);
+    background-image: url(img/fundinho.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-color: #282828;
 
     .caixa{
@@ -20,6 +22,11 @@ body.dark{
 
     .titulo p{
         color: #FFF;
+    }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
     }
 }
 
