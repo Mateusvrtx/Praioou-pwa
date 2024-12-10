@@ -118,7 +118,7 @@ router.get('/EditClube/:idClube', auth.verificarAutenticacao, CarregarEditClube)
 router.get('/Privacidade', auth.verificarAutenticacao, async (req, resp) => { return resp.render('ambulante/Privacidade/index.ejs'); })
 router.get('/Reservacad', auth.verificarAutenticacao, RenderCarrinhosReserva)
 router.get('/Tutorial', auth.verificarAutenticacao, async (req, resp) => { return resp.render('ambulante/Tutorial/index.ejs'); })
-router.get('/termos', auth.verificarAutenticacao, async (req, resp) => { return resp.render('ambulante/Termos/index.ejs'); })
+router.get('/termos', async (req, resp) => { return resp.render('ambulante/Termos/index.ejs'); })
 //////////////////// Rotas POST ////////////////////
 
 // PADRÃO

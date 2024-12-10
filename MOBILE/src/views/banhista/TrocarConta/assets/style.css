@@ -14,6 +14,20 @@ body{
     margin: 0;
 }
 
+body.dark{
+
+    background-image: url(img/fundinhoo.png);
+    background-color: #9F6C00;
+
+    .conta-conec, .conta-conect, .conta{
+        background-color: #515151;
+    }
+
+    h1, h4, p{
+        color: #ffffff;
+    }
+}
+
 .navbar {
     position: fixed;
     z-index: 4;
@@ -45,9 +59,6 @@ body{
     width: 7vw;
 }
 
-#NavInicio {
-    color: #008B92;
-}
 
 a {
     text-decoration: none;

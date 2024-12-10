@@ -6,6 +6,11 @@ body {
     margin-top: 15vh;
 }
 
+body.dark{
+    background-image: url(img/fundinhoo.png);
+    background-color: #9F6C00;
+}
+
 .Branco {
     background-color: #fff;
     width: 92%;

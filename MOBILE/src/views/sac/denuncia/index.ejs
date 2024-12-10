@@ -21,7 +21,7 @@
         <nav class="navbar">
             <a href="/inicial" class="active" id="NavInicio" style="color: black;"><img src="/banhista/padrao/img/inicio.png" >Inicio</a>
             <a href="/suasReservas" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png" alt="">Reserva</a>
-            <a href="/Sacola" class="active" id="NavPedido" style="color: #008B92;"> <img src="/banhista/padrao/img/sacola_colorida.png" alt="">Sacola</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/padrao/img/sacola.png" alt="">Sacola</a>
             <a href="/perfil" class="active" id="NavPerfil"> <img src="/banhista/cardapio/assets/img/Perfil.png" alt="">Perfil</a>
           </nav>
     </div>
@@ -91,17 +91,8 @@
             
         </div>
     </div>
-
-    <script>
-       
-    document.getElementById('date').addEventListener('input', function (e) {
-        let value = e.target.value.replace(/\D/g, ''); // Remove não-números
-        if (value.length > 2) value = value.replace(/^(\d{2})(\d)/, '$1/$2');
-        if (value.length > 5) value = value.replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
-        e.target.value = value.slice(0, 10); // Limita a 10 caracteres
-    });
-
-    </script>
+    
+    <script src="/sac/denuncia/assets/script.js"></script>
 
 </body>
 

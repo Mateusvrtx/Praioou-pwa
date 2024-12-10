@@ -2,6 +2,36 @@ body {
     background-color: #E7AA4D;
 }
 
+body.dark{
+    background-image: url(img/fundinhoo.png);
+    background-color: #9F6C00;
+
+    .h3{
+        color: #FFF;
+    }
+
+    .card{
+        background-color: #dddddd;
+        color: #000000;
+    }
+
+    .modal{
+        background-color: #282828;
+    }
+
+    .ajusteModal h3{
+        color: #FFF;
+    }
+
+    .ajusteModal h1{
+        color: #FFF;
+    }
+
+    #btnL{
+        background-color: #FFF;
+    }
+}
+
 .imgP {
     display: flex;
     justify-content: center;

@@ -16,6 +16,29 @@ body{
     margin: 0;
 }
 
+body.dark{
+    background-image: url(img/Group\ 138.svg);
+    background-color: #9F6C00;
+    
+    .form input::placeholder, .form textarea::placeholder {
+        color: #fff;
+    }
+
+    .topo h2, .topo p, span{
+        color: #fff;
+    }
+    .form textarea, input{
+        color: #fff;
+        background-color: #515151;
+    }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+      }
+    
+}
+
 .conteudo {
     position: relative;
     z-index: 2;

@@ -23,6 +23,35 @@ body.dark{
     .titulos{
         color: #FFF;
     }
+
+    .btn-filtro{
+        background-color: #00404A;
+    }
+
+    .barraca-favorita {
+        background-color: #414040;
+    }
+
+    .barraca-info{
+        color: #fff;
+    }
+
+    .barraca-info p{
+        color: #bbbbbb;
+    }
+
+    .preco{
+        color: #fff;
+    }
+
+    .btn-filtro { 
+        background-color: #414040; 
+    }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
 }
 
 
@@ -110,7 +139,7 @@ body.dark{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00404A;
+    background-color: #47848d;
     color: #fff;
     padding: 1.5vw;
     font-size: 4vw;
