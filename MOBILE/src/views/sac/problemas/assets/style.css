@@ -9,14 +9,11 @@
     --branco: #fff;
 }
 
-.fundo {
-    background: rgb(10,147,150);
-    background: linear-gradient(rgba(10,147,150,0.3) 0%, rgba(233,246,255,1) 24%);
-    position: fixed;
-    width: 100%;
-    height: -webkit-fill-available;
-    opacity: 0.7;
-    z-index: 1;
+body{
+    background-image: url(img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
 }
 
 .conteudo {

@@ -107,25 +107,17 @@ body.dark {
     width: 7vw;
 }
 
-#NavInicio {
-    color: #008B92;
-}
-
 a {
     text-decoration: none;
     display: flex;
     justify-content: center;
 }
 
-.Clube {
-    width: 10vw;
-}
 
 #voltar {
     position: absolute;
     z-index: 2;
     left: 0;
-    top: 0;
     width: 10vw;
     margin: 2vw;
 }

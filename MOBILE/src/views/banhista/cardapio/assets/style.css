@@ -116,6 +116,11 @@ body.dark{
         border: 0.8vw solid #00404A;
     }
 
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
+
 }
 
 .blur {
@@ -211,7 +216,7 @@ section {
     width: 27vw;
     height: 7vw;
     border: none;
-    background-color: #00404A;
+    background-color: #626363;
     color: #ffffff;
     font-weight: 600;
     font-size: 3.5vw;

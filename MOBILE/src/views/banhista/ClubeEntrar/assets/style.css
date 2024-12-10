@@ -53,10 +53,6 @@ body{
     width: 7vw;
 }
 
-#NavInicio {
-  color: #008B92;  
-}
-
 #voltar {
     position: absolute;
     z-index: 2;
@@ -83,6 +79,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15vw;
 }
 
 .img-barraca{

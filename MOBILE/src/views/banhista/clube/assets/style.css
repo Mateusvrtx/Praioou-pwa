@@ -47,10 +47,6 @@ body {
     width: 7vw;
 }
 
-#NavInicio {
-    color: #008B92;
-}
-
 #voltar {
     position: absolute;
     z-index: 2;
@@ -138,7 +134,7 @@ container {
     height: 9vw;
     border-radius: 2vw;
     font-size: 4.5vw;
-    background-color: #0A9396;
+    background-color: #979797;
     color: #ffffff;
     font-weight: bold;
     margin-top: 4vw;

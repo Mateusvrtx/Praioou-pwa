@@ -44,8 +44,10 @@ body.dark{
   }
 
   
-
-  
+  .navbar{
+    background-color: #555555;
+    border: solid 1px #535353b9;
+}
 
 }
 
@@ -97,9 +99,16 @@ body.dark{
 }
 
 
-.navbar .active img{
+.navbar .active img {
   width: 7vw;
 }
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
 
 #voltar {
   position: absolute;

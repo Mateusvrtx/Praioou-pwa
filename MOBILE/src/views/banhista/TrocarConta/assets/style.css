@@ -14,15 +14,6 @@ body{
     margin: 0;
 }
 
-.logo {
-    position: absolute;
-    z-index: 2;
-    width: 25vw;
-    left: 50%;
-    top: 5vw;
-    transform: translate(-50%);
-}
-
 .navbar {
     position: fixed;
     z-index: 4;
@@ -36,8 +27,8 @@ body{
     left: 1vw;
     border: solid 1px #CCCCCC;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-  }
-  
+}
+
 .navbar a {
     display: flex;
     align-items: center;
@@ -49,28 +40,48 @@ body{
     font-size: 4vw;
 }
 
-.navbar .active img{
+
+.navbar .active img {
     width: 7vw;
 }
 
 #NavInicio {
-  color: #008B92;  
+    color: #008B92;
 }
+
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
 
 #voltar {
     position: absolute;
     z-index: 2;
     left: 0;
-    top: 0;
     width: 10vw;
     margin: 2vw;
 }
 
-.navSup{
+.logo {
+    position: absolute;
+    z-index: 2;
+    width: 25vw;
+    left: 50%;
+    top: 5vw;
+    transform: translate(-50%);
+}
+
+.navSup {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+}
+
+.volta {
+    width: 9vw;
 }
 
 .container{

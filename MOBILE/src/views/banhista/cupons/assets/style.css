@@ -135,42 +135,6 @@ body.dark{
     font-size: 8vw;
 }
 
-.navbar {
-    position: fixed;
-    bottom: 20px;
-    width: 98%;
-    background-color: #ffffff;
-    display: flex;
-    border-radius: 5vw;
-    justify-content: space-around;
-    padding: 10px 0;
-    left: 3.5px;
-    right: 1px;
-    border: solid 1px #D3DFE7;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-}
-
-.navbar a.active {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    color: #015157;
-    ;
-    font-size: 3vw;
-    font-weight: bold;
-}
-
-.navbar .active img {
-    width: 7vw;
-}
-
 .boxgodgod{
     display: flex;
     align-items: center;
