@@ -296,12 +296,16 @@ a {
   justify-content: center;
   width: 55vw;
   padding: 1.5vw;
-  background-color: #00404a;
+  background-color: #848485;
   color: #fff;
   border: none;
   font-size: 4.5vw;
   border-radius: 4vw;
   margin-top: 7vw;
+}
+
+#btn_clube{
+  background-color: #00404a;
 }
 
 .modal {
@@ -642,7 +646,7 @@ a {
 }
 
 .btn {
-  background-color: #00404a;
+  background-color: #949494;
   color: #fff;
   width: 40vw;
   height: 7vw;
