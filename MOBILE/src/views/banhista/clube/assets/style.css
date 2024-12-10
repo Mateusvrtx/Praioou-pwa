@@ -12,6 +12,40 @@ body {
     margin: 0 0 25vw 0;
 }
 
+body.dark{
+    background-image: url(img/fundinho.svg);
+    background-color: #282828;
+
+    .ttl{
+        color: #FFF;
+    }
+
+    container{
+        background-color: #282828;
+        color: #FFF;
+    }
+
+    .pontos h2 {
+        color: #FFF;
+    }
+
+    .pontos h3{
+        color: #008B92;
+    }
+
+    .ajuste img{
+        filter: invert(100%) brightness(200%);
+    }
+
+    .hr{
+        display: none;
+    }
+
+    .tt {
+        color: #FFF;
+    }
+}
+
 .corpo {
     padding: 0;
     margin: 0;
@@ -71,7 +105,7 @@ body {
 }
 
 .ttl {
-    margin: 0 0 4vw 5vw;
+    margin: 5vw 0 4vw 5vw;
 }
 
 .ttl h1 {
@@ -221,6 +255,7 @@ container {
 }
 
 .hr {
+    display: none;
     position: relative;
     transform: rotate(90deg);
     right: 35vw;

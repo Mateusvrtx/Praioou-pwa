@@ -35,6 +35,19 @@ body.dark{
         background-color: #555555;
         border: solid 1px #535353b9;
     }
+
+    .modal{
+        background-color: #282828;
+        color: #FFF;
+    }
+
+    .ajusteModal h3{
+        color: #FFF;
+    }
+
+    #btnL{
+        background-color: #FFF;
+    }
 }
 
 .logo {

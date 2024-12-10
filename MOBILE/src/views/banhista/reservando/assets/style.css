@@ -16,6 +16,11 @@ body {
     height: 100%;
 }
 
+body.dark{
+    background-color: #00404A;
+    background-image: url(img/perigo.png);
+}
+
 .reserva {
     background-color: #E9F6FF;
     width: 100%;

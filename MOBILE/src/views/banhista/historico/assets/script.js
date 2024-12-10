@@ -13,8 +13,13 @@ function toggleRecibo(index) {
   }
 }
 
-// Modal de Filtros
-const modal = document.getElementById('modalBk');
+
+// dark mode
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Verifica a preferência armazenada no localStorage
+  const darkMode = localStorage.getItem('darkMode') === 'true';
+  const modal = document.getElementById('modalBk');
 const openModal = document.getElementById('filtro');
 const closeModal = document.getElementById('btnL');
 
@@ -38,7 +43,7 @@ if (event.target === modal) {
 });
 
 // Atualizar ao carregar a página (exemplo de atualização do slider)
-updateSlider();
+
 
 // Atualiza o estado de filtro ao selecionar a forma de pagamento
 document.querySelectorAll('.Radios input[type="radio"]').forEach(radio => {
@@ -51,4 +56,15 @@ radio.addEventListener('change', function () {
         this.parentElement.classList.add('active');
     }
 });
+});
+
+  if (darkMode) {
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
+      updateImages(true);
+  } else {
+      document.body.classList.add('light');
+      document.body.classList.remove('dark');
+      updateImages(false);
+  }updateSlider();
 });

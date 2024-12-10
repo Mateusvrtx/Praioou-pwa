@@ -11,6 +11,19 @@ body{
     background-size: 100%;
 }
 
+body.dark{
+    background-image: url(img/fundoGrande.svg);
+    background-color: #282828;
+
+    .caixa{
+        background-color: #0d0d0d4e;
+    }
+
+    .titulo p{
+        color: #FFF;
+    }
+}
+
 .logo {
     position: absolute;
     z-index: 2;
@@ -41,7 +54,7 @@ body{
     margin: 2vw;
 }
 
-navbar {
+.navbar {
     position: fixed;
     z-index: 4;
     bottom: 3vw;

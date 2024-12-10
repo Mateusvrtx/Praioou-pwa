@@ -1,4 +1,12 @@
-const modal = document.getElementById('modalBk');
+
+
+
+// dark mode
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Verifica a preferência armazenada no localStorage
+  const darkMode = localStorage.getItem('darkMode') === 'true';
+  const modal = document.getElementById('modalBk');
 const openModal = document.getElementById('filtro');
 const closeModal = document.getElementById('btnL');
 
@@ -22,4 +30,17 @@ window.addEventListener('click', (event) => {
 });
 
 // Atualizar ao carregar a página
-updateSlider();
+
+
+  if (darkMode) {
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
+      updateImages(true);
+  } else {
+      document.body.classList.add('light');
+      document.body.classList.remove('dark');
+      updateImages(false);
+  }
+  
+  updateSlider();
+});

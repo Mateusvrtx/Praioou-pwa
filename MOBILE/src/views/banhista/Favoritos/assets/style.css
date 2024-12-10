@@ -8,6 +8,26 @@ body {
   margin-bottom: 25vw;
 }
 
+body.dark{
+    background-image: url(img/fundinho.svg);
+    background-color: #282828;
+
+    .caixa{
+        background-color: #282828;
+    }
+
+    .barraca-favorita{
+        background-color: #D8D8D8;
+    }
+
+    .titulos{
+        color: #FFF;
+    }
+}
+
+
+
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -67,7 +87,7 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.25);
     border-radius: 2vw;
-    padding: 0.5vw;
+    padding: 1vw;
 }
 
 .barra input[type="search"] {
@@ -95,7 +115,10 @@ body {
     padding: 1.5vw;
     font-size: 4vw;
     border-radius: 3vw;
-    width: 30vw;
+    width: 25vw;
+    filter: grayscale(100%);
+    box-shadow: #e9f6ff2b 2px 2px 20px 3px;
+    
 }
 
 .favoritas {
