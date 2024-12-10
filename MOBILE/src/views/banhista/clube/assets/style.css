@@ -44,6 +44,11 @@ body.dark{
     .tt {
         color: #FFF;
     }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
 }
 
 .corpo {
