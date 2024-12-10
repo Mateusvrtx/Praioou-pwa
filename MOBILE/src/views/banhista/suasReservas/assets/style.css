@@ -92,6 +92,22 @@ body.dark{
     background-color: #282828;
     color: #FFF;
   }
+
+  
+.reservaCanceladaConfirmada {
+  background-color: #282828;
+  color: #ffffff;
+}
+
+.textoLembrete{
+  color: #FFF;
+}
+
+.lembreteConfirmado{
+  background-color: #282828;
+  color: #FFF;
+}
+
 }
 
 .suasReservas {

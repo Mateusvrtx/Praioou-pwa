@@ -73,6 +73,13 @@ body.dark{
         border: solid 1px #535353b9;
     }
     
+    .Excluir h3{
+        color: #FFF;
+    }
+
+    .Excluir{
+        background-color: #282828;
+    }
 }
 
 .blur {
@@ -395,6 +402,7 @@ section {
     position: fixed;
     background-color: #ffffff;
     width: 90%;
+    color: #000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

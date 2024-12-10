@@ -90,15 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        btnExcluir?.addEventListener('click', () => {
-            if (produtoElement) {
-                produtoElement.remove();
-            }
-            if (modalExcluir) {
-                modalExcluir.style.display = 'none';
-            }
-        });
-
         // ===================== Dark Mode =====================
         const darkMode = localStorage.getItem('darkMode') === 'true';
         if (darkMode) {

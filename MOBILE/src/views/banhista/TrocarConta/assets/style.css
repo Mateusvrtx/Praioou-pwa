@@ -26,6 +26,10 @@ body.dark{
     h1, h4, p{
         color: #ffffff;
     }
+
+    .modal-content{
+    background-color: #282828;
+    }
 }
 
 .navbar {
