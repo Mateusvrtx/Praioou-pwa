@@ -42,6 +42,11 @@ body.dark{
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
+
 }
 
 .Clube{

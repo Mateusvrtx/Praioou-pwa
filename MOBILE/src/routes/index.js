@@ -85,6 +85,7 @@ router.get('/DetalhesCardapio', auth.verificarAutenticacao, async (req, resp) =>
 router.get('/EscolhidoClube', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/CardapioEscolhaClube/index.ejs'); });
 router.get('/ProdutoEscolhidoClube', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/ProdutoCarrinhoClube/index.ejs'); });
 router.get('/TutorialB', async (req, resp) => { return resp.render('banhista/TutorialB/index.ejs'); })
+router.get('/favoritos', auth.verificarAutenticacao, async (req, resp) => { return resp.render('banhista/Favoritos/index.ejs'); });
 
 
 // AMBULANTE

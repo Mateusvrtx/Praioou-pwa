@@ -27,12 +27,25 @@ body{
     margin-top: 40vw;
 }
 
+.titulos h5{
+    margin-top: -1.6vw;
+    text-align: center;
+    color: #515151;
+    width: 96vw;
+    font-size: 3vw;
+}
+    
 .denu{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    gap:3vw
+    gap:3vw;
+    color: #00404A;
+}
+
+.denu img{
+    padding-top: 1.5vw;
 }
 
 .form{
@@ -41,21 +54,82 @@ body{
     align-items: center;
     flex-direction: column;
     width: 100%;
-  gap: 5vw;
+    gap: 5vw;
 }
 
 .row{
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     align-self: center;
     flex-direction: row;
+    gap: 14vw;
 }
 
-.input{
+input, textarea, select{
+    padding: 1vw;
+    border: #00404A 1px solid;
+    border-radius: 1vw;
+}
+
+label{
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: #00404A;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input{
+    width: 90vw;   
+}
+
+.inputs textarea{
     width: 90vw;
+    height: 20vw;
 }
 
+.inputs-data{
+    display: flex;
+    flex-direction: column;
+}
 
+.inputs-data input{
+    padding: 1vw;
+    width: 40vw;   
+}
 
+.btn-enviar{
+    padding-bottom: 10vw;
+}
+
+.btn-enviar button{
+    color: #fff;
+    background-color: #00404A;
+    border: none;
+    padding: 2vw;
+    width: 40vw;
+    border-radius: 5vw;
+    font-weight: 500;
+}
+
+textarea{
+    font-weight: bold;
+    font-size: 3.2vw;
+}
+
+select {
+    appearance: none; 
+    background: url('/sac/denuncia/assets/img/seta-denuncia.svg') no-repeat;
+    background-position: right 4vw center; 
+    background-size: 4vw 4vw; 
+}
+
+option {
+    background-color: #fff; 
+    color: #00404A;
+    font-size: 4vw; 
+}

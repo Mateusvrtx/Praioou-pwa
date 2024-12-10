@@ -36,6 +36,11 @@ body.dark {
     background-color: #3a3a3a;
     border: 2px solid #fff;
   }
+  .navbar{
+    background-color: #555555;
+    border: solid 1px #535353b9;
+}
+
 }
 
 .logo {

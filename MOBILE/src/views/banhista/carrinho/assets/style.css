@@ -64,6 +64,11 @@ body.dark {
         background-color: #FFF;
         border: 0.8vw solid #00404A;
     }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
 }
 
 .corpo {

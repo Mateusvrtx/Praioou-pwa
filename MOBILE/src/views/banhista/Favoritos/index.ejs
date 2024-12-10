@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/banhista/favoritos/assets/style.css" >
+    <link rel="stylesheet" href="/banhista/padrao/style.css">
+    <title>Favoritos</title>
+</head>
+<body>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/banhista/padrao/img/voltar.svg" id="voltar"></a>
+    </header>
+
+    <header class="navSup">
+        <a onclick="window.history.back()"><img src="/banhista/padrao/img/voltar.svg" id="voltar"></a>
+    </header>
+
+    <div class="corpo">
+        <nav class="navbar">
+            <a href="/inicial" class="active" id="NavInicio"><img src="/banhista/padrao/img/inicio.png" >Inicio</a>
+            <a href="/suasReservas" class="active" id="NavReserva"> <img src="/banhista/cardapio/assets/img/Reserva.png" alt="">Reserva</a>
+            <a href="/Sacola" class="active" id="NavPedido"> <img src="/banhista/cardapio/assets/img/Pedido.png" alt="">Sacola</a>
+            <a href="/perfil" class="active" id="NavPerfil" style="color: #008B92"> <img src="/banhista/padrao/img/perfil-colorido.png" alt="">Perfil</a>
+          </nav>
+    </div>
+
+    <img src="banhista/perfilConfig/assets/img/logo.png" class="logo">
+
+    <div class="titulos">
+        <h1>Favoritos</h1>
+        <p>Suas barracas favoritas em um só lugar</p>
+    </div>
+
+    <div class="caixa">
+        <div class="pesquisa-filtro">
+            <div class="barra">
+                <input type="search" placeholder="Digite o nome da barraca favorita">
+                <img src="/banhista/favoritos/assets/img/search 3.svg" alt="Ícone de pesquisa">
+            </div>
+            <button class="btn-filtro">
+                Filtrar
+                <img src="/banhista/favoritos/assets/img/filtro 2.svg" alt="Ícone de filtro">
+            </button>
+        </div>
+
+        <div class="favoritas">
+            <div class="barraca-favorita">
+                <div class="barraca-card">
+                    <div class="img-barraca">
+                        <img src="/banhista/favoritos/assets/img/img-barraca.svg" class="barraca-imagem">
+                    </div>
+                    <div class="barraca-info">
+                        <div class="barraca-header">
+                            <h3>Barraca do Roberto</h3>
+                            <img src="/banhista/favoritos/assets/img/coracao.svg" class="favorito-icone">
+                        </div>
+                        <p>Descrição da localização na praia. Lorem ipsum dolor sit amet.
+                        Descrição da localização na praia. Lorem ipsum dolor sit amet.</p>
+                        <div class="barraca-footer">
+                            <p class="cadeiras">Por 4 cadeiras</p>
+                            <span class="preco">R$ 45,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="barraca-favorita">
+                <div class="barraca-card">
+                    <div class="img-barraca">
+                        <img src="/banhista/favoritos/assets/img/img-barraca.svg" class="barraca-imagem">
+                    </div>
+                    <div class="barraca-info">
+                        <div class="barraca-header">
+                            <h3>Barraca do Roberto</h3>
+                            <img src="/banhista/favoritos/assets/img/coracao.svg" class="favorito-icone">
+                        </div>
+                        <p>Descrição da localização na praia. Lorem ipsum dolor sit amet.
+                        Descrição da localização na praia. Lorem ipsum dolor sit amet.</p>
+                        <div class="barraca-footer">
+                            <p class="cadeiras">Por 4 cadeiras</p>
+                            <span class="preco">R$ 45,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+</body>
+</html>
