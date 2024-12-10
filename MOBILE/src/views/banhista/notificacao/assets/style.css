@@ -6,8 +6,7 @@
 
 body{
     background-color: rgb(231, 170, 77);
-    background-image: url(img/fundo.png);
-    background-repeat: no-repeat;
+    background-image: url(img/Ellipse.png);
     background-size: 100%;
 }
 
@@ -88,11 +87,15 @@ body.dark{
 
 .caixa{ 
     z-index: -2;
-    width: 100%;
-    background-color: #ffffff6d;
+    width: 95%;
+    background-color: #ffffffa0;
     margin-top: 17vw;
     border-radius: 3vw;
-
+    height: 190vw;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 
 .titulo p{

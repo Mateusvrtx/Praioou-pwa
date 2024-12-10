@@ -18,7 +18,40 @@ body {
 
 body.dark{
     background-color: #00404A;
-    background-image: url(img/perigo.png);
+    background-image: url(img/fundinho.svg);
+
+    .reserva{
+        background-color: #282828;
+        color: #FFF;
+    }
+
+    .dia-container{
+        background-color: #00404A;
+    }
+
+    .ajuste-quantidade span{
+        color: #0A9396;
+        background-color: rgba(0, 119, 137, 0.296);
+    
+    }
+
+    #reserva-valor{
+        color:#0A9396;
+    }
+
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
+    }
+
+    .ajusteTexto {
+        background-color: #282828;
+        color: #FFF;
+    }
+
+    legenda{
+        color: #FFF;
+    }
 }
 
 .reserva {

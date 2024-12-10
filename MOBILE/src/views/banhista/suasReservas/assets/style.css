@@ -73,6 +73,25 @@ body.dark{
   .reservasFuturas{
     color: #ffffffba;
   }
+
+  
+  .modal{
+    background-color: #282828;
+    color: #FFF;
+  }
+
+  #btnL{
+    background-color: #FFF;
+  }
+
+  .ajusteModal h3{
+    color: #FFF;
+  }
+
+  input#display{
+    background-color: #282828;
+    color: #FFF;
+  }
 }
 
 .suasReservas {
