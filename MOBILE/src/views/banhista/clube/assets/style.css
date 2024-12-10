@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     font-family: "Montserrat", sans-serif;
 }
 
 body {
-    background-image: url(img/fundo.png) ;
+    background-image: url(img/fundo.png);
     background-repeat: no-repeat;
     background-color: #E9F6FF;
     background-size: 100%;
     margin: 0 0 25vw 0;
 }
 
-.corpo{
+.corpo {
     padding: 0;
     margin: 0;
 }
@@ -31,7 +31,7 @@ body {
     border: solid 1px #CCCCCC;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-  
+
 .navbar a {
     display: flex;
     align-items: center;
@@ -43,12 +43,12 @@ body {
     font-size: 4vw;
 }
 
-.navbar .active img{
+.navbar .active img {
     width: 7vw;
 }
 
 #NavInicio {
-    color: #008B92;  
+    color: #008B92;
 }
 
 #voltar {
@@ -84,7 +84,7 @@ body {
     font-weight: bold;
 }
 
-.ttl h3{
+.ttl h3 {
     margin: 0;
     font-size: 5vw;
     font-weight: 500;
@@ -120,7 +120,7 @@ container {
 
 .pontos p {
     text-align: center;
-    margin: -2.5vw 0 0 0 ;
+    margin: -2.5vw 0 0 0;
     font-weight: 600;
     font-size: 3.5vw;
 }
@@ -129,7 +129,7 @@ container {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-around;  
+    justify-content: space-around;
 }
 
 #btnRecompensas {
@@ -159,7 +159,7 @@ container {
     align-items: center;
     gap: 5vw;
     margin-left: 4vw;
-    margin-bottom: 10vw;
+    margin-bottom: 5vw;
 }
 
 .infoHist h1 {
@@ -171,4 +171,64 @@ container {
     margin: 0;
     font-size: 4.5vw;
     color: #00930F;
+}
+
+.hist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10vw;
+}
+
+.container {
+    width: 90%;
+}
+
+.ajuste {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 5vw 0vw;
+}
+
+.ttvd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    color: #00930F;
+}
+
+.ttvm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    color: #B50F10;
+}
+
+.ajuste img {
+    width: 15vw;
+}
+
+.tt {
+    height: 0vw;
+}
+
+.pajuste {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+.hr {
+    position: relative;
+    transform: rotate(90deg);
+    right: 35vw;
+    top: 54vw;
+    color: #000;
+    background-color: #676767;
 }

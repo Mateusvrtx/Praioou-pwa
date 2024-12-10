@@ -1,0 +1,374 @@
+section {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#btnPular {
+    font-size: 5vw;
+    font-weight: 600;
+    background-color: #0A9396;
+    color: #ffffff;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    padding: 3vw 5vw;
+    left: 58vw;
+    top: 14vw;
+    border-radius: 2vw;
+    width: 26vw;
+}
+
+.blur {
+    background-color: #84898C;
+    height: 100vh;
+    width: 100%;
+    opacity: .9;
+}
+
+#parte1 {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+img {
+    width: 100%;
+}
+
+.fundo {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+    object-position: top;
+}
+
+.fundoSp {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 178vh;
+}
+
+.CardP1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 27vw;
+}
+
+.baseP1 {
+    width: 95%;
+    height: 35vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1vw;
+    border-color: #0A9396;
+    border-radius: 5vw;
+}
+
+p {
+    width: 95%;
+    text-align: center;
+    font-size: 3.5vw;
+    margin-top: 4vw;
+}
+
+.pontos {
+    width: 20vw;
+}
+
+.DownT {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    justify-content: end;
+    width: 95%;
+    position: absolute;
+    bottom: 2vw;
+    right: 6vw;
+}
+
+.imgSeta {
+    width: 6vw;
+}
+
+.imgCoquinhoP1 {
+    position: absolute;
+    left: -1vw;
+    top: -18vw;
+    width: 30vw;
+}
+
+#btnTutorial {
+    width: 50vw;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#parte2{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte3{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP3 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 21vw;
+}
+
+.baseP3 {
+    width: 95%;
+    height: 42vw;
+    background-color: #ffffff;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1vw;
+    border-color: #0A9396;
+    border-radius: 5vw;
+}
+
+#parte4{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte5{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP5 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 52vw;
+}
+
+#parte6{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP6 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
+
+#parte7{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP7 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
+
+#parte8{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP8 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 20vw;
+}
+
+#parte9{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP9 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 20vw;
+}
+
+#parte10{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP10 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
+
+#parte11{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP11 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
+
+#parte12{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP12 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
+
+#parte13{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP13 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
+
+#parte14{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte15{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte16{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte17{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte18{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+#parte19{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    display: none;
+}
+
+.CardP16 {
+    width: 100%;
+    display: flex
+;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 30vw;
+}
