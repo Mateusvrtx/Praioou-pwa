@@ -15,11 +15,6 @@ body.dark{
     background-image: url(img/fundinhoo.png);
     background-color: #9F6C00;
 
-    .navbar{
-        background-color: #555555;
-        border: solid 1px #535353b9;
-    }
-    
     .h3{
         color: #FFF;
     }
@@ -43,6 +38,11 @@ body.dark{
 
     #btnL{
         background-color: #FFF;
+    }
+    
+    .navbar{
+        background-color: #555555;
+        border: solid 1px #535353b9;
     }
 }
 

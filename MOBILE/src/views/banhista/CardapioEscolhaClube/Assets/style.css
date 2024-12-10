@@ -3,13 +3,14 @@ body {
 }
 
 body.dark{
-    background-image: url(img/fundinhoo.png);
+    background-image: url(img/fundinho.svg);
     background-color: #9F6C00;
 
     .h3{
         color: #FFF;
     }
 
+    
     .card{
         background-color: #dddddd;
         color: #000000;
