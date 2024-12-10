@@ -549,3 +549,51 @@ a {
     width: 30vw;
     margin-top: -0.5vw;
 }
+
+#modalDemo {
+    position: fixed;
+    top: 0;
+    display: none;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    left: 0;
+}
+
+#modalVersaoDemo {
+    background-color: white;
+    position: relative;
+    display: flex; /* oh aqui Ó */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+    border-radius: 2vw;
+    padding: 4vw;
+    text-align: center;
+}
+
+#modalVersaoDemo img {
+    width: 45vw;
+}
+
+#modalVersaoDemo p {
+    margin-top: 8vw;
+    color: #00404A;
+    font-weight: 500;
+}
+
+#modalVersaoDemo span {
+    font-size: 4rem;
+    font-weight: 300;
+    position: absolute;
+    right: 3vw;
+    top: -1vw;
+}
+
+.blur {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}

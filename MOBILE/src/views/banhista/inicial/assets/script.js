@@ -163,3 +163,19 @@ document.addEventListener('DOMContentLoaded', () => {
         updateImages(false);
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const modalDemo = document.getElementById('modalDemo');
+    const btnFechar = document.getElementById('btnFechar');
+
+    if (!localStorage.getItem('modalDemoOn')) {
+        modalDemo.style.display = 'flex';
+        
+        localStorage.setItem('modalDemoOn', 'true');
+    }
+    
+    btnFechar.addEventListener('click', function() {
+        modalDemo.style.display = 'none';
+    })
+})
