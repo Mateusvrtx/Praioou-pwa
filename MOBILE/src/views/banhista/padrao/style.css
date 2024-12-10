@@ -71,3 +71,25 @@ body{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); 
 }
+
+@media screen and (min-width: 700px) {
+
+    .logo {
+      width: 15vw;  
+    }
+
+    .navbar {
+        left: 2.5vw;
+        width: 95%;
+        padding: 1vw 0vw;
+        bottom: 0.5vw;
+    }
+
+    .navbar a {
+        font-size: 2.5vw;
+    }
+
+    .navbar .active img {
+        width: 5vw;
+    }
+}

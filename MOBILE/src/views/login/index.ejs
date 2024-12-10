@@ -120,6 +120,20 @@
             console.log('PWA foi instalado');
             installBtn.style.display = 'none'; // Esconde o botão após a instalação
         });
+
+
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock("portrait") // ou "landscape"
+            .then(() => {
+            console.log("Orientação bloqueada!");
+            })
+            .catch((error) => {
+            console.error("Falha ao bloquear a orientação:", error);
+            });
+        } else {
+        console.log("API de Orientação de Tela não suportada neste navegador.");
+        }
+
 </script>
 
 </html>
